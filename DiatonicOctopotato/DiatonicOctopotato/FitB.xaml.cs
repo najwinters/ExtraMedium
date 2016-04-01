@@ -24,7 +24,7 @@ namespace DiatonicOctopotato
             InitializeComponent();
         }
 
-        private void FitB1_Closed(object sender, EventArgs e)
+        private void Window_Closed(object sender, EventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
