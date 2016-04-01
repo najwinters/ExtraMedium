@@ -16,11 +16,10 @@
         </Grid.ColumnDefinitions>
         <Button x:Name="button" Content="Start Game" HorizontalAlignment="Left" Height="37" Margin="0,10,0,0" VerticalAlignment="Top" Width="82" Click="button_Click" Grid.Column="1"/>
         <Button x:Name="btnTerm1" Content="Term1" HorizontalAlignment="Left" Height="38" Margin="55,60,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
-        <Button x:Name="btnTerm2" Content="Term2" HorizontalAlignment="Left" Height="38" Margin="55,111,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4"/>
-        <Button x:Name="btnTerm3" Content="Term3" HorizontalAlignment="Left" Height="38" Margin="55,167,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4"/>
-        <Button x:Name="btnTerm4" Content="Term4" HorizontalAlignment="Left" Height="38" Margin="55,228,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4"/>
+        <Button x:Name="btnTerm2" Content="Term2" HorizontalAlignment="Left" Height="38" Margin="55,111,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
+        <Button x:Name="btnTerm3" Content="Term3" HorizontalAlignment="Left" Height="38" Margin="55,167,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
+        <Button x:Name="btnTerm4" Content="Term4" HorizontalAlignment="Left" Height="38" Margin="55,228,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
         <Label x:Name="label1" Content="Match the definition with the term" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="26" Width="192" Grid.Column="1"/>
-        <Label x:Name="lblAnswer" Content="Answer" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="10,300,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBlock x:Name="txtblkDefinition" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="145" Margin="10,121,0,0" TextWrapping="Wrap" Text="Definition" VerticalAlignment="Top" Width="154"/>
 
     </Grid>
