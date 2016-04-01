@@ -38,6 +38,7 @@ namespace DiatonicOctopotato
         {
             MultipleChoice mCWin = new MultipleChoice();
             mCWin.Show();
+            this.Hide();
 
            
         }
@@ -62,6 +63,11 @@ namespace DiatonicOctopotato
             for (int i = 0; i < termNums; i++) {
                 termList.Items.Add(Assignment.GetList(i, 0));
             }
+        }
+
+        private void fBBN_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

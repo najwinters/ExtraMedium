@@ -8,9 +8,11 @@ namespace DiatonicOctopotato
 {
     class Assignment
     {
-        public Assignment()
-        {
+        string name;
 
+        public Assignment(string inName)
+        {
+            name = inName;
         }
         static string[,] list = new string[40, 2];
 

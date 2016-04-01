@@ -29,15 +29,16 @@ namespace DiatonicOctopotato
         public string term2;
         public string term3;
         public string term4;
-        public string correctAnswer = "Mammel";
+        public string correctAnswer = "Mammal";
         string[] currentProblem = new string[4];
+
 
         //start game button
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Random randy = new Random();
-            currentProblem = new string[] { "Reptile", "Insect", "Mammel", "Amphibion" };//,"What is a Pig","Mammel","Animal Kingdom"};
-            txtblkDefinition.Text = "What is a Pig";
+            currentProblem = new string[] { "Reptile", "Insect", "Mammal", "Amphibian" };//,"What is a Pig","Mammel","Animal Kingdom"};
+            txtblkDefinition.Text = "What is a Pig?";
             string[] rndAnswers = currentProblem.OrderBy(x => randy.Next()).ToArray();
             btnTerm1.Content = rndAnswers[0]; 
             btnTerm2.Content = rndAnswers[1];
@@ -68,5 +69,10 @@ namespace DiatonicOctopotato
             btnTerm4.Background = Brushes.White;
         }
 
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
     }
 }
