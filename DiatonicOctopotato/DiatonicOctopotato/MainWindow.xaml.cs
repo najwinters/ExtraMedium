@@ -20,12 +20,21 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class MainWindow : Window
     {
-        public String[,] list = new string[2, 10];
+        int i;
+        
         public MainWindow()
         {
             InitializeComponent();
-            
-
+            int termNums = 0;
+            for (int i = 0; i < 40; i++)
+            {
+                if (Assignment.GetList(i, 0) != "") {
+                    termNums++;
+                }
+            }
+            for (int i = 0; i < termNums; i++) {
+                termList.Items.Add(Assignment.GetList(i, 0));
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

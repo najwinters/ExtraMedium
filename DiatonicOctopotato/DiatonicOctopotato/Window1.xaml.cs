@@ -19,22 +19,38 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class Window1 : Window
     {
+        int termNum = 0;
         public Window1()
         {
             InitializeComponent();
+            
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        public void button_Click(object sender, RoutedEventArgs e)
         {
-            String term = termTB.Text;
-            String definition = defTB.Text;
-
+            string term = termTB.Text;
+            string definition = defTB.Text;
+            Assignment.Save(term, termNum, 0);
+            Assignment.Save(definition, termNum, 1);
+            termTB.Text = "";
+            defTB.Text = "";
+            termNum++;
+            tNLabel.Content = "Number of Terms: " + termNum;
+            if (termNum == 40) {
+                button.IsEnabled = false;
+            }
 
         }
 
         private void termTB_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            
+           
         }
     }
 }
