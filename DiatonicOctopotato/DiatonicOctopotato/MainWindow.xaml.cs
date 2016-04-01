@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DiatonicOctopotato
@@ -20,63 +19,9 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class MainWindow : Window
     {
-        
         public MainWindow()
         {
             InitializeComponent();
-            
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            Window1 nTWin = new Window1();
-            nTWin.Show();
-            this.Hide();
-        }
-
-        private void OpenManagement_Click(object sender, RoutedEventArgs e)
-        {
-            Management ManageWindow = new Management();
-            ManageWindow.Show();
-        }
-
-        private void mCBN_Click(object sender, RoutedEventArgs e)
-        {
-            MultipleChoice mCWin = new MultipleChoice();
-            mCWin.Show();
-            this.Hide();
-
-           
-        }
-
-        private void inputListBN_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            tBDef.Text = Assignment.getList((termList.SelectedIndex), 1);
-        }
-        public void doLB() {
-            int termNums = 0;
-            for (int i = 0; i < 40; i++)
-            {
-                if (Assignment.GetList(i, 0) != "") {
-                    termNums++;
-                }
-            }
-            for (int i = 0; i < termNums; i++) {
-                termList.Items.Add(Assignment.GetList(i, 0));
-            }
-        }
-
-        private void fBBN_Click(object sender, RoutedEventArgs e)
-        {
-            FitB fITB = new FitB();
-            fITB.Show();
-            this.Hide();
         }
     }
 }
-
