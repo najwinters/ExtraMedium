@@ -20,10 +20,12 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class MainWindow : Window
     {
+        public String[,] list = new string[2, 10];
         public MainWindow()
         {
             InitializeComponent();
             
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -34,7 +36,7 @@ namespace DiatonicOctopotato
 
         private void mCBN_Click(object sender, RoutedEventArgs e)
         {
-            MultiplyChoice mCWin = new MultiplyChoice();
+            MultipleChoice mCWin = new MultipleChoice();
             mCWin.Show();
 
            
