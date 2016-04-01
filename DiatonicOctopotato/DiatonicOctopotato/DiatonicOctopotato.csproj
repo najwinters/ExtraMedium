@@ -64,6 +64,9 @@
     <Compile Include="Management.xaml.cs">
       <DependentUpon>Management.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MenuWindow.xaml.cs">
+      <DependentUpon>MenuWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MultipleChoice.xaml.cs">
       <DependentUpon>MultipleChoice.xaml</DependentUpon>
     </Compile>
@@ -90,6 +93,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Management.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
