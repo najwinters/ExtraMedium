@@ -23,6 +23,7 @@ namespace DiatonicOctopotato
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -30,5 +31,24 @@ namespace DiatonicOctopotato
             Window1 nTWin = new Window1();
             nTWin.Show();
         }
+
+        private void mCBN_Click(object sender, RoutedEventArgs e)
+        {
+            MultiplyChoice mCWin = new MultiplyChoice();
+            mCWin.Show();
+
+           
+        }
+
+        private void inputListBN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
+//Ignore this line. Added for testing purposes.
