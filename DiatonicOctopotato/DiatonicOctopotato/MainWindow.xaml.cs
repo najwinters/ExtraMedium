@@ -73,7 +73,9 @@ namespace DiatonicOctopotato
 
         private void fBBN_Click(object sender, RoutedEventArgs e)
         {
-
+            FitB fITB = new FitB();
+            fITB.Show();
+            this.Hide();
         }
     }
 }
