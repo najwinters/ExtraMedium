@@ -21,7 +21,7 @@ namespace DiatonicOctopotato
     public partial class MainWindow : Window
     {
         int i;
-        public string[,] list = new string[2, 40];
+        
         public MainWindow()
         {
             InitializeComponent();
