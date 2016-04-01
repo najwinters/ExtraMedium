@@ -32,3 +32,7 @@ C:\Users\wintenat000\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicO
 C:\Users\wintenat000\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\DiatonicOctopotato.MultiplyChoice.resources
 C:\Users\wintenat000\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\DiatonicOctopotato.Properties.Resources.resources
 C:\Users\wintenat000\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\DiatonicOctopotato.csproj.GenerateResource.Cache
+C:\Users\43773\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\MultipleChoice.g.cs
+C:\Users\43773\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\Window1.g.cs
+C:\Users\43773\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\MultipleChoice.baml
+C:\Users\43773\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\Window1.baml

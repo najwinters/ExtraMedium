@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace DiatonicOctopotato
 {
@@ -23,11 +24,33 @@ namespace DiatonicOctopotato
         {
             InitializeComponent();
         }
+        public string defintion;
+        public string term1;
+        public string term2;
+        public string term3;
+        public string term4;
+        string[] currentProblem = new string[4];
 
         //start game button
         private void button_Click(object sender, RoutedEventArgs e)
         {
-           
+            Random randy = new Random();
+            currentProblem = new string[] { "Reptile", "Insect", "Mammel", "Amphibion" };//,"What is a Pig","Mammel","Animal Kingdom"};
+            txtblkDefinition.Text = "What is a Pig";
+            string[] rndAnswers = currentProblem.OrderBy(x => randy.Next()).ToArray();
+            btnTerm1.Content = rndAnswers[0]; //currentProblem[0];
+            btnTerm2.Content = rndAnswers[1];
+            btnTerm3.Content = rndAnswers[2];
+            btnTerm4.Content = rndAnswers[3];
+        }
+
+        private void btnTerm1_Click(object sender, RoutedEventArgs e)
+        {
+          //if(btnTerm1.Content == "Mammel")
+            //{
+
+
+            //} 
         }
     }
 }
