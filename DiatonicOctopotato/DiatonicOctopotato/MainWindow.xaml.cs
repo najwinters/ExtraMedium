@@ -34,6 +34,12 @@ namespace DiatonicOctopotato
             this.Hide();
         }
 
+        private void OpenManagement_Click(object sender, RoutedEventArgs e)
+        {
+            Management ManageWindow = new Management();
+            ManageWindow.Show();
+        }
+
         private void mCBN_Click(object sender, RoutedEventArgs e)
         {
             MultipleChoice mCWin = new MultipleChoice();
