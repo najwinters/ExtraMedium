@@ -36,6 +36,9 @@ namespace DiatonicOctopotato
             defTB.Text = "";
             termNum++;
             tNLabel.Content = "Number of Terms: " + termNum;
+            if (termNum == 40) {
+                button.IsEnabled = false;
+            }
 
         }
 
@@ -46,7 +49,7 @@ namespace DiatonicOctopotato
 
         private void Window_Closed(object sender, EventArgs e)
         {
-
+            
            
         }
     }
