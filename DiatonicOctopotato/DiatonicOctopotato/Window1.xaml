@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
-        Title="Term Input" Height="350" Width="300" Closed="Window_Closed">
+        Title="Term Input" Height="350" Width="300" Closed="Window_Closed" ResizeMode="NoResize">
     <Grid Margin="0,0,-8,-20">
        
         <TextBox x:Name="termTB" HorizontalAlignment="Left" Height="50" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="16" SpellCheck.IsEnabled="True"/>

@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace DiatonicOctopotato
 {
-    static class Assignment
+    class Assignment
     {
+        public Assignment()
+        {
 
+        }
         static string[,] list = new string[40, 2];
 
         public static void Save(string value, int i, int j)
