@@ -23,6 +23,8 @@ namespace DiatonicOctopotato
         public MainWindow()
         {
             InitializeComponent();
+
+            ArrayList
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -33,7 +35,9 @@ namespace DiatonicOctopotato
 
         private void mCBN_Click(object sender, RoutedEventArgs e)
         {
-
+            MultiplyChoice mCWin = new MultiplyChoice();
+            mCWin.Show();
+           
         }
 
         private void inputListBN_Click(object sender, RoutedEventArgs e)

@@ -29,6 +29,12 @@ namespace DiatonicOctopotato
             String term = termTB.Text;
             String definition = defTB.Text;
 
+
+        }
+
+        private void termTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
