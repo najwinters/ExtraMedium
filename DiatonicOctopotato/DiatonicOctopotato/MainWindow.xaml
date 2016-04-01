@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000">
     <Grid>
-        <Button x:Name="newListBN" Content="Create Study List" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Click="button_Click" Height="41"/>
+        <Button x:Name="newListBN" Content="Create Study List" HorizontalAlignment="Left" Margin="61,29,0,0" VerticalAlignment="Top" Width="151" Click="button_Click" Height="41"/>
         <Label x:Name="label" Content="Study Terms" HorizontalAlignment="Left" Margin="192,104,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="377" VerticalAlignment="Top" Width="340" Margin="61,135,0,0"/>
+        <ListBox x:Name="termList" HorizontalAlignment="Left" Height="377" VerticalAlignment="Top" Width="340" Margin="61,135,0,0" SelectionChanged="listBox_SelectionChanged"/>
+        <Button x:Name="newListBN_Copy" Content="Input Study List File" HorizontalAlignment="Left" Margin="250,29,0,0" VerticalAlignment="Top" Width="151" Click="button_Click" Height="41"/>
+        <Button x:Name="newListBN_Copy1" Content="Create Study List" HorizontalAlignment="Left" Margin="427,29,0,0" VerticalAlignment="Top" Width="151" Click="button_Click" Height="41"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="517,135,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="377" Width="340"/>
+        <Label x:Name="label1" Content="Definition:" HorizontalAlignment="Left" Margin="547,104,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
