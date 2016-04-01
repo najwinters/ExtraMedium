@@ -19,16 +19,19 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class Window1 : Window
     {
+        int termNum = 0;
         public Window1()
         {
             InitializeComponent();
+            
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            termNum++;
             String term = termTB.Text;
             String definition = defTB.Text;
-
+            
 
         }
 
