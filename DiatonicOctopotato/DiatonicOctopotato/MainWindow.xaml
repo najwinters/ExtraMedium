@@ -18,7 +18,7 @@
         <Button x:Name="newListBN" Content="Create Study List" HorizontalAlignment="Left" Margin="61,29,0,0" VerticalAlignment="Top" Width="151" Click="button_Click" Height="41"/>
         <Label x:Name="label" Content="Study Terms" HorizontalAlignment="Left" Margin="192,104,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="termList" HorizontalAlignment="Left" Height="377" VerticalAlignment="Top" Width="340" Margin="61,135,0,0" SelectionChanged="listBox_SelectionChanged"/>
-        <Button x:Name="inputListBN" Content="Input Study List File" HorizontalAlignment="Left" Margin="250,29,0,0" VerticalAlignment="Top" Width="151" Click="inputListBN_Click" Height="41"/>
+        <Button x:Name="inputListBN" Content="Manage Study List(s)&#xD;&#xA;(Blame Nathan not Me)" HorizontalAlignment="Left" Margin="250,29,0,0" VerticalAlignment="Top" Width="151" Click="inputListBN_Click" Height="41"/>
         <Button x:Name="mCBN" Content="Study Multiple Choice" HorizontalAlignment="Left" Margin="460,29,0,0" VerticalAlignment="Top" Width="151" Click="mCBN_Click" Height="41"/>
         <Label x:Name="label1" Content="Definitions" HorizontalAlignment="Left" Margin="654,104,0,0" VerticalAlignment="Top"/>
         <Button x:Name="newListBN_Copy2" Content="Create Study List" HorizontalAlignment="Left" Margin="640,29,0,0" VerticalAlignment="Top" Width="151" Click="button_Click" Height="41"/>
