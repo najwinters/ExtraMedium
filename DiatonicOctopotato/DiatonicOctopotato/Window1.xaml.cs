@@ -26,18 +26,28 @@ namespace DiatonicOctopotato
             
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        public void button_Click(object sender, RoutedEventArgs e)
         {
+            string term = termTB.Text;
+            string definition = defTB.Text;
+            Assignment.Save(term, termNum, 0);
+            Assignment.Save(definition, termNum, 1);
+            termTB.Text = "";
+            defTB.Text = "";
             termNum++;
-            String term = termTB.Text;
-            String definition = defTB.Text;
-            
+            tNLabel.Content = "Number of Terms: " + termNum;
 
         }
 
         private void termTB_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+
+           
         }
     }
 }
