@@ -39,27 +39,23 @@ namespace DiatonicOctopotato
             int a = rnd.Next(0, termNums--);
             txtblkDefinition.Text = Assignment.GetList(a, 1);
             correctAnswer = Assignment.getList(a, 0);
-            int b = randInt(a);
-            int c = randInt(a);
-            int d = randInt(a);
-            answers = new string[4] { correctAnswer, Assignment.GetList(b, 0), Assignment.GetList(c, 0), Assignment.GetList(d, 0)};  
-            return answers;
+            termNums++;
+            int b = GiveMeANumber(a, a, a);
+            int c = GiveMeANumber(a, b, b);
+            int d = GiveMeANumber(a, b, c);
+            answers = new string[4] { correctAnswer, Assignment.GetList(b, 0), Assignment.GetList(c, 0), Assignment.GetList(d, 0)};
+            string[] rndTemp = answers.OrderBy(x => rnd.Next()).ToArray();
+            return rndTemp;
         }
-        public int randInt(int a)
+        private int GiveMeANumber(int a, int b, int c)
         {
-            Random rnd = new Random();
-            int b = rnd.Next(0, termNums--);
-            if (b != a)
-            {
-                termNums++;
-                return b;
-            }
-            else
-            {
-                termNums++;
-                randInt(a);
-            }
-            return -1;
+            var exclude = new HashSet<int>() {a,b,c};
+            var range = Enumerable.Range(0, termNums--).Where(i => !exclude.Contains(i));
+
+            var rand = new System.Random();
+            int index = rand.Next(0, termNums - exclude.Count);
+            termNums++;
+            return range.ElementAt(index);
         }
         public string defintion;
         public string term1;
