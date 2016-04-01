@@ -23,6 +23,10 @@ namespace DiatonicOctopotato
         public MultipleChoice()
         {
             InitializeComponent();
+           // btnTerm1.IsEnabled = false;
+            //btnTerm2.IsEnabled = false;
+           // btnTerm3.IsEnabled = false;
+            //btnTerm4.IsEnabled = false;
         }
         public string[] setAnswers()
         {

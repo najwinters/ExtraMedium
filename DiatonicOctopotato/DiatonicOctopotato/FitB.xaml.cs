@@ -22,6 +22,7 @@ namespace DiatonicOctopotato
         public FitB()
         {
             InitializeComponent();
+            txtFillInAnswer.IsEnabled = false;
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace DiatonicOctopotato
         private void btnStartGame_Click(object sender, RoutedEventArgs e)
         {
             //randomly assign a definition
+            txtFillInAnswer.IsEnabled = true;
             txtblkDefinition.Text = "What is a pig";
             txtFillInAnswer.Text = "";
             lblCorrect.Content = "";
