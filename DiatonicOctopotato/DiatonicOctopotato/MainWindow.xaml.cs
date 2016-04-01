@@ -30,5 +30,20 @@ namespace DiatonicOctopotato
             Window1 nTWin = new Window1();
             nTWin.Show();
         }
+
+        private void mCBN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void inputListBN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

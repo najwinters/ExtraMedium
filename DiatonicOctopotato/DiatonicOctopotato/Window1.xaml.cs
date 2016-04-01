@@ -26,7 +26,9 @@ namespace DiatonicOctopotato
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            
+            String term = termTB.Text;
+            String definition = defTB.Text;
+
         }
     }
 }
