@@ -27,7 +27,8 @@ namespace DiatonicOctopotato
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
+            Window1 nTWin = new Window1();
+            nTWin.Show();
         }
     }
 }
