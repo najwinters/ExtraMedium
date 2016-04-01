@@ -38,19 +38,31 @@ namespace DiatonicOctopotato
             tNLabel.Content = "Number of Terms: " + termNum;
             if (termNum == 40) {
                 button.IsEnabled = false;
+                tLLabel.Content = "Term Limit Reached!";
+                tLLabel.Visibility = Visibility.Visible;
             }
-
-        }
-
-        private void termTB_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            
-           
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+
+            int termNums = 0;
+            for (int i = 0; i < 40; i++)
+            {
+                if (Assignment.GetList(i, 0) != "")
+                {
+                    termNums++;
+                }
+            }
+            for (int i = 0; i < termNums; i++)
+            {
+                mainWindow.termList.Items.Add(Assignment.GetList(i, 0));
+            }
+
+
         }
     }
 }
