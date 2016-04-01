@@ -13,3 +13,6 @@ C:\Users\43773\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopot
 C:\Users\43773\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\DiatonicOctopotato.csproj.GenerateResource.Cache
 C:\Users\43773\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\DiatonicOctopotato.exe
 C:\Users\43773\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\DiatonicOctopotato.pdb
+C:\Users\wintenat000\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\bin\Debug\DiatonicOctopotato.exe.config
+C:\Users\wintenat000\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\DiatonicOctopotato.exe
+C:\Users\wintenat000\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\obj\Debug\DiatonicOctopotato.pdb
