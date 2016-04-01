@@ -46,8 +46,8 @@ namespace DiatonicOctopotato
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            MenuWindow menuWindow = new MenuWindow();
+            menuWindow.Show();
 
             int termNums = 0;
             for (int i = 0; i < 40; i++)
@@ -59,7 +59,7 @@ namespace DiatonicOctopotato
             }
             for (int i = 0; i < termNums; i++)
             {
-                mainWindow.termList.Items.Add(Assignment.GetList(i, 0));
+                menuWindow.termList.Items.Add(Assignment.GetList(i, 0));
             }
 
 
