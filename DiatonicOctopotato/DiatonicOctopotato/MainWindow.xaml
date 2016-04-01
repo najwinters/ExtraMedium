@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
-        Title="Start" Height="300" Width="300">
-    <Grid>
-
+        Title="Main Window" Height="675" Width="1200">
+    <Grid x:Name="back_ground">
+        <Image Source="/images/untitled-3.jpg"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="88" Stroke="Black" VerticalAlignment="Top" Width="1192" StrokeThickness="0"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="274,238,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
     </Grid>
 </Window>
+
+    
