@@ -24,23 +24,61 @@ namespace DiatonicOctopotato
         {
             InitializeComponent();
         }
+        public string[] setAnswers()
+        {
+            termNums = 0;
+            for (int i = 0; i < 40; i++)
+            {
+                if (Assignment.GetList(i, 0) != null)
+                {
+                    termNums++;
+                }
+            }
+            Random rnd = new Random();
+            string[] answers;
+            int a = rnd.Next(0, termNums--);
+            txtblkDefinition.Text = Assignment.GetList(a, 1);
+            correctAnswer = Assignment.getList(a, 0);
+            int b = randInt(a,-1,-1);
+            int c = randInt(a, b, -1);
+            int d = randInt(a, b, c);
+            answers = new string[4] {correctAnswer, Assignment.GetList(b, 0), Assignment.GetList(c,0), Assignment.GetList(d,0) };
+            return answers;
+        }
+        public int randInt(int a, int c, int d)
+        {
+            Random rnd = new Random();
+            int b = rnd.Next(0, termNums--);
+            if (b != a && b != c && b != d)
+            {
+                termNums++;
+                return b;
+            }
+            else
+            {
+                termNums++;
+                randInt(a, c, d);
+            }
+            return -1;
+        }
         public string defintion;
         public string term1;
         public string term2;
         public string term3;
         public string term4;
-        public string correctAnswer = "Mammal";
+        public string correctAnswer;
         string[] currentProblem = new string[4];
+        int termNums;
 
 
         //start game button
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Random randy = new Random();
-            currentProblem = new string[] { "Reptile", "Insect", "Mammal", "Amphibian" };//,"What is a Pig","Mammel","Animal Kingdom"};
-            txtblkDefinition.Text = "What is a Pig?";
-            string[] rndAnswers = currentProblem.OrderBy(x => randy.Next()).ToArray();
-            btnTerm1.Content = rndAnswers[0]; 
+            Random rnd = new Random();
+            currentProblem = setAnswers();
+            
+            string[] rndAnswers = currentProblem.OrderBy(x => rnd.Next()).ToArray();
+            btnTerm1.Content = rndAnswers[0];
             btnTerm2.Content = rndAnswers[1];
             btnTerm3.Content = rndAnswers[2];
             btnTerm4.Content = rndAnswers[3];
