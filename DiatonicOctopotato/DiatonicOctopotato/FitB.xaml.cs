@@ -40,7 +40,7 @@ namespace DiatonicOctopotato
         }
         private void KeyEvent()
         {
-            if(txtFillInAnswer.Text == "Mammal")
+            if(txtFillInAnswer.Text == "Mammal")//get the correct answer from the list for the random definition
             {
                 lblCorrect.Content = "Correct";
                 lblCorrect.Background = Brushes.Green;
@@ -57,7 +57,7 @@ namespace DiatonicOctopotato
         {
             //randomly assign a definition
             txtFillInAnswer.IsEnabled = true;
-            txtblkDefinition.Text = "What is a pig";
+            txtblkDefinition.Text = "What is a pig";//get a random Definition from the list
             txtFillInAnswer.Text = "";
             lblCorrect.Content = "";
             lblCorrect.Background = Brushes.White;

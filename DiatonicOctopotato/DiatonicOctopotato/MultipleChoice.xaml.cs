@@ -23,10 +23,10 @@ namespace DiatonicOctopotato
         public MultipleChoice()
         {
             InitializeComponent();
-           // btnTerm1.IsEnabled = false;
-            //btnTerm2.IsEnabled = false;
-           // btnTerm3.IsEnabled = false;
-            //btnTerm4.IsEnabled = false;
+           btnTerm1.IsEnabled = false;
+           btnTerm2.IsEnabled = false;
+           btnTerm3.IsEnabled = false;
+           btnTerm4.IsEnabled = false;
         }
         public string[] setAnswers()
         {
@@ -108,20 +108,8 @@ namespace DiatonicOctopotato
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            MenuWindow menuWindow = new MenuWindow();
-            menuWindow.Show();
-            int termNums = 0;
-            for (int i = 0; i < 40; i++)
-            {
-                if (Assignment.GetList(i, 0) != "")
-                {
-                    termNums++;
-                }
-            }
-            for (int i = 0; i < termNums; i++)
-            {
-                menuWindow.termList.Items.Add(Assignment.GetList(i, 0));
-            }
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
         }
     }
 }
