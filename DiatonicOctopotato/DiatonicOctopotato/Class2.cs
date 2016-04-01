@@ -29,6 +29,10 @@ namespace DiatonicOctopotato
             return list[i,j];
         }
 
+        internal static string getList(int selectedIndex, int v)
+        {
+            return list[selectedIndex, v];
+        }
     }
 }
 

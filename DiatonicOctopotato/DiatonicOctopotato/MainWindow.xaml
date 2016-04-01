@@ -7,8 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000">
     <Grid>
-        <TextBlock x:Name="tBDef" HorizontalAlignment="Left" Margin="517,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="377" Width="340" ClipToBounds="True"><Run Text="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="0"/><LineBreak/><Run Text="000000000000000000000000000000000000000000000000000000"/></TextBlock>
+        <TextBlock x:Name="tBDef_Copy" HorizontalAlignment="Left" Margin="61,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="372" Width="340" ClipToBounds="True"/>
+
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="377" Margin="517,135,0,0" VerticalAlignment="Top" Width="340"/>
+
+        <TextBlock x:Name="tBDef" HorizontalAlignment="Left" Margin="517,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="372" Width="340" ClipToBounds="True"/>
 
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="99" Stroke="Black" VerticalAlignment="Top" Width="992"/>
 
