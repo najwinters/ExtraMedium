@@ -41,9 +41,9 @@ namespace DiatonicOctopotato {
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 14 "..\..\MainWindow.xaml"
+        #line 10 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button newListBN;
+        internal System.Windows.Controls.TextBlock tBDef;
         
         #line default
         #line hidden
@@ -51,7 +51,7 @@ namespace DiatonicOctopotato {
         
         #line 15 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label;
+        internal System.Windows.Controls.Button newListBN;
         
         #line default
         #line hidden
@@ -59,7 +59,7 @@ namespace DiatonicOctopotato {
         
         #line 16 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ListBox termList;
+        internal System.Windows.Controls.Label label;
         
         #line default
         #line hidden
@@ -67,7 +67,7 @@ namespace DiatonicOctopotato {
         
         #line 17 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button inputListBN;
+        internal System.Windows.Controls.ListBox termList;
         
         #line default
         #line hidden
@@ -75,7 +75,7 @@ namespace DiatonicOctopotato {
         
         #line 18 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button mCBN;
+        internal System.Windows.Controls.Button inputListBN;
         
         #line default
         #line hidden
@@ -83,7 +83,7 @@ namespace DiatonicOctopotato {
         
         #line 19 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock tBDef;
+        internal System.Windows.Controls.Button mCBN;
         
         #line default
         #line hidden
@@ -143,46 +143,46 @@ namespace DiatonicOctopotato {
             switch (connectionId)
             {
             case 1:
+            this.tBDef = ((System.Windows.Controls.TextBlock)(target));
+            return;
+            case 2:
             this.newListBN = ((System.Windows.Controls.Button)(target));
             
-            #line 14 "..\..\MainWindow.xaml"
+            #line 15 "..\..\MainWindow.xaml"
             this.newListBN.Click += new System.Windows.RoutedEventHandler(this.button_Click);
             
             #line default
             #line hidden
             return;
-            case 2:
+            case 3:
             this.label = ((System.Windows.Controls.Label)(target));
             return;
-            case 3:
+            case 4:
             this.termList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 16 "..\..\MainWindow.xaml"
+            #line 17 "..\..\MainWindow.xaml"
             this.termList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.listBox_SelectionChanged);
             
             #line default
             #line hidden
             return;
-            case 4:
+            case 5:
             this.inputListBN = ((System.Windows.Controls.Button)(target));
             
-            #line 17 "..\..\MainWindow.xaml"
+            #line 18 "..\..\MainWindow.xaml"
             this.inputListBN.Click += new System.Windows.RoutedEventHandler(this.inputListBN_Click);
             
             #line default
             #line hidden
             return;
-            case 5:
+            case 6:
             this.mCBN = ((System.Windows.Controls.Button)(target));
             
-            #line 18 "..\..\MainWindow.xaml"
+            #line 19 "..\..\MainWindow.xaml"
             this.mCBN.Click += new System.Windows.RoutedEventHandler(this.mCBN_Click);
             
             #line default
             #line hidden
-            return;
-            case 6:
-            this.tBDef = ((System.Windows.Controls.TextBlock)(target));
             return;
             case 7:
             this.label1 = ((System.Windows.Controls.Label)(target));

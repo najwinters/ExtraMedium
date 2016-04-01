@@ -91,7 +91,7 @@ namespace DiatonicOctopotato {
         
         #line 17 "..\..\Window1.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label3;
+        internal System.Windows.Controls.Label label2;
         
         #line default
         #line hidden
@@ -165,7 +165,7 @@ namespace DiatonicOctopotato {
             this.tNLabel = ((System.Windows.Controls.Label)(target));
             return;
             case 8:
-            this.label3 = ((System.Windows.Controls.Label)(target));
+            this.label2 = ((System.Windows.Controls.Label)(target));
             return;
             }
             this._contentLoaded = true;
