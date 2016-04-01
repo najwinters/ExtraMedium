@@ -15,26 +15,19 @@ using System.Windows.Shapes;
 namespace DiatonicOctopotato
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MultipleChoice.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class MultipleChoice : Window
     {
-        public Window1()
+        public MultipleChoice()
         {
             InitializeComponent();
         }
 
+        //start game button
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            String term = termTB.Text;
-            String definition = defTB.Text;
-
-
-        }
-
-        private void termTB_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+           
         }
     }
 }

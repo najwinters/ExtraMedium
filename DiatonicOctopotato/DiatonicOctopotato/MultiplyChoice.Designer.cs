@@ -96,9 +96,9 @@
             this.lblAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnswer.Location = new System.Drawing.Point(187, 440);
             this.lblAnswer.Name = "lblAnswer";
-            this.lblAnswer.Size = new System.Drawing.Size(79, 22);
+            this.lblAnswer.Size = new System.Drawing.Size(31, 22);
             this.lblAnswer.TabIndex = 5;
-            this.lblAnswer.Text = "Answers";
+            this.lblAnswer.Text = "git";
             // 
             // btnStartGame
             // 

@@ -20,15 +20,36 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class MainWindow : Window
     {
+        public String[,] list = new string[2, 10];
         public MainWindow()
         {
             InitializeComponent();
+            
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Window1 nTWin = new Window1();
             nTWin.Show();
+        }
+
+        private void mCBN_Click(object sender, RoutedEventArgs e)
+        {
+            MultipleChoice mCWin = new MultipleChoice();
+            mCWin.Show();
+
+           
+        }
+
+        private void inputListBN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
