@@ -39,17 +39,17 @@ namespace DiatonicOctopotato
             int a = rnd.Next(0, termNums--);
             txtblkDefinition.Text = Assignment.GetList(a, 1);
             correctAnswer = Assignment.getList(a, 0);
-            int b = randInt(a,-1,-1);
-            int c = randInt(a, b, -1);
-            int d = randInt(a, b, c);
-            answers = new string[4] {correctAnswer, Assignment.GetList(b, 0), Assignment.GetList(c,0), Assignment.GetList(d,0) };
+            int b = randInt(a);
+            int c = randInt(a);
+            int d = randInt(a);
+            answers = new string[4] { correctAnswer, Assignment.GetList(b, 0), Assignment.GetList(c, 0), Assignment.GetList(d, 0)};  
             return answers;
         }
-        public int randInt(int a, int c, int d)
+        public int randInt(int a)
         {
             Random rnd = new Random();
             int b = rnd.Next(0, termNums--);
-            if (b != a && b != c && b != d)
+            if (b != a)
             {
                 termNums++;
                 return b;
@@ -57,7 +57,7 @@ namespace DiatonicOctopotato
             else
             {
                 termNums++;
-                randInt(a, c, d);
+                randInt(a);
             }
             return -1;
         }
@@ -76,7 +76,6 @@ namespace DiatonicOctopotato
         {
             Random rnd = new Random();
             currentProblem = setAnswers();
-            
             string[] rndAnswers = currentProblem.OrderBy(x => rnd.Next()).ToArray();
             btnTerm1.Content = rndAnswers[0];
             btnTerm2.Content = rndAnswers[1];
