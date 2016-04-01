@@ -7,10 +7,11 @@
         mc:Ignorable="d"
         Title="Study List Management" Height="300" Width="300">
     <Grid>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="211" Margin="10,10,0,0" VerticalAlignment="Top" Width="172"/>
+        <Menu x:Name="ListMenu" HorizontalAlignment="Left" Height="211" Margin="10,10,0,0" VerticalAlignment="Top" Width="172"/>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="66"/>
-        <Button x:Name="button_Copy" Content="Button" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="76"/>
-        <Button x:Name="button_Copy1" Content="Button" HorizontalAlignment="Left" Height="24" Margin="106,235,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="ExportList" Content="Export List" HorizontalAlignment="Left" Height="24" Margin="106,235,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="button1" Content="Edit Terms" HorizontalAlignment="Left" Height="22" Margin="193,10,0,0" VerticalAlignment="Top" Width="89"/>
 
     </Grid>
 </Window>
