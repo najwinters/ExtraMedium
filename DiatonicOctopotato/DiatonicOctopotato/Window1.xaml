@@ -8,13 +8,13 @@
         Title="Term Input" Height="350" Width="300" Closed="Window_Closed">
     <Grid Margin="0,0,-8,-20">
        
-        <TextBox x:Name="termTB" HorizontalAlignment="Left" Height="50" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="16" TextChanged="termTB_TextChanged" SpellCheck.IsEnabled="True"/>
+        <TextBox x:Name="termTB" HorizontalAlignment="Left" Height="50" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="16" SpellCheck.IsEnabled="True"/>
         <TextBox x:Name="defTB" HorizontalAlignment="Left" Height="50" Margin="10,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="16" AutomationProperties.IsRequiredForForm="True" SpellCheck.IsEnabled="True"/>
         <Label x:Name="label" Content="Term:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="46"/>
         <Button x:Name="button" Content="Add Term" HorizontalAlignment="Left" Margin="84,241,0,0" VerticalAlignment="Top" Width="130" Click="button_Click" Height="40" FontSize="18"/>
         <Label x:Name="label1" Content="Definition:" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top"/>
         <Label x:Name="tNLabel" Content="Number of Terms: 0" HorizontalAlignment="Center" Margin="84,210,86,0" VerticalAlignment="Top" Width="130"/>
-        <Label x:Name="label2" Content="Term Limit Reached!" HorizontalAlignment="Left" Margin="84,184,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label x:Name="tLLabel" Content="Term Limit Reached!" HorizontalAlignment="Left" Margin="84,184,0,0" VerticalAlignment="Top" Width="130" Visibility="Hidden"/>
 
     </Grid>
 </Window>

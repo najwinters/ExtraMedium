@@ -20,27 +20,18 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class MainWindow : Window
     {
-        int i;
         
         public MainWindow()
         {
             InitializeComponent();
-            int termNums = 0;
-            for (int i = 0; i < 40; i++)
-            {
-                if (Assignment.GetList(i, 0) != "") {
-                    termNums++;
-                }
-            }
-            for (int i = 0; i < termNums; i++) {
-                termList.Items.Add(Assignment.GetList(i, 0));
-            }
+            
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Window1 nTWin = new Window1();
             nTWin.Show();
+            this.Hide();
         }
 
         private void mCBN_Click(object sender, RoutedEventArgs e)
@@ -58,8 +49,20 @@ namespace DiatonicOctopotato
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            tBDef.Text = Assignment.getList((termList.SelectedIndex), 1);
+        }
+        public void doLB() {
+            int termNums = 0;
+            for (int i = 0; i < 40; i++)
+            {
+                if (Assignment.GetList(i, 0) != "") {
+                    termNums++;
+                }
+            }
+            for (int i = 0; i < termNums; i++) {
+                termList.Items.Add(Assignment.GetList(i, 0));
+            }
         }
     }
 }
-//Ignore this line. Added for testing purposes.
+
