@@ -163,26 +163,5 @@ namespace DiatonicOctopotato
             m.Show();
             this.Close();
         }
-
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-            FitB f = new FitB();
-            f.Show();
-            this.Close();
-        }
-
-        private void button4_Click(object sender, RoutedEventArgs e)
-        {
-            AnalyticsPage a = new AnalyticsPage();
-            a.Show();
-            this.Close();
-        }
-
-        private void button5_Click(object sender, RoutedEventArgs e)
-        {
-            Flashcards f = new Flashcards();
-            f.Show();
-            this.Close();
-        }
     }
 }
