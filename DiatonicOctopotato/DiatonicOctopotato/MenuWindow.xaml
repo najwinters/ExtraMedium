@@ -21,7 +21,7 @@
         <Label x:Name="label1" Content="Definitions" HorizontalAlignment="Left" Margin="654,104,0,0" VerticalAlignment="Top"/>
         <Button x:Name="fBBN" Content="Fill in the Blank&#xA;" HorizontalAlignment="Left" Margin="784,29,0,0" VerticalAlignment="Top" Width="151" Click="fBBN_Click" Height="41" Grid.IsSharedSizeScope="True"/>
         <Button x:Name="btnFlashCards" Content="Flash Cards" HorizontalAlignment="Left" Margin="332,29,0,0" VerticalAlignment="Top" Width="150" Click="btnFlashCards_Click" Height="41"/>
-
+        <Image Source="/images/general interface screen.jpg" Margin="-2,-592,-10,-43" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
 

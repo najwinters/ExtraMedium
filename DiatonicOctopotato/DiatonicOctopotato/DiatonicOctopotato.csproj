@@ -147,6 +147,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="images\mySound - Copy.pkf" />
+    <None Include="images\mySound.pkf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,9 +158,40 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\general interface screen.jpg" />
+    <Resource Include="images\home white.jpg" />
+    <Resource Include="images\study white.jpg" />
+    <Resource Include="images\white Assignments.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="images\Untitled-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\analytics - Copy.jpg" />
+    <Resource Include="images\analytics.jpg" />
+    <Resource Include="images\assignment sub button - Copy.jpg" />
+    <Resource Include="images\assignment sub button.jpg" />
+    <Resource Include="images\edit white - Copy.jpg" />
+    <Resource Include="images\edit white.jpg" />
+    <Resource Include="images\Flash cards white - Copy.jpg" />
+    <Resource Include="images\Flash cards white.jpg" />
+    <Resource Include="images\general interface screen - Copy.jpg" />
+    <Resource Include="images\general study interface screen - Copy.jpg" />
+    <Resource Include="images\general study interface screen.jpg" />
+    <Content Include="images\mySound - Copy.wav" />
+    <Content Include="images\mySound.wav" />
+    <Resource Include="images\new white - Copy.jpg" />
+    <Resource Include="images\new white.jpg" />
+    <Resource Include="images\remove white - Copy.jpg" />
+    <Resource Include="images\remove white.jpg" />
+    <Resource Include="images\speller white - Copy.jpg" />
+    <Resource Include="images\speller white.jpg" />
+    <Resource Include="images\study white - Copy.jpg" />
+    <Resource Include="images\test white - Copy.jpg" />
+    <Resource Include="images\test white.jpg" />
+    <Resource Include="images\Untitled-3 - Copy.jpg" />
+    <Resource Include="images\white Assignments - Copy.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
