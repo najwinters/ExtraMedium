@@ -23,16 +23,17 @@ namespace DiatonicOctopotato
         List<Question> listOQuestions = new List<Question>();
         bool isTerm = false;
         int currentIndex = 0;
-        int MAX_ASSIGNMENTS = AssignmentList.getAssignment().getTotal();
+        int MAX_TERMS = AssignmentList.getAssignment().getTotal();
 
 
         public Flashcards()
         {
+            Assignment currentAssignment = AssignmentList.getAssignment();
             InitializeComponent();
-            for (int i = 0; i < MAX_ASSIGNMENTS; i++)
+            for (int i = 0; i < MAX_TERMS; i++) 
             {
-                Assignment question = AssignmentList.getAssignment(i);
-                Question q = new Question(question.GetList(i, 0), question.GetList(i, 1));
+                
+                Question q = new Question(currentAssignment.GetList(i, 0), currentAssignment.GetList(i, 1));
                 listOQuestions.Add(q);
             }
             btnFlashCard.Content = listOQuestions[currentIndex].definition;
@@ -63,7 +64,7 @@ namespace DiatonicOctopotato
             currentIndex++;
             isTerm = true;
             //go to the next definition
-            if(currentIndex == MAX_ASSIGNMENTS)
+            if(currentIndex == MAX_TERMS)
             {
                 currentIndex = 0;
             }
@@ -79,9 +80,13 @@ namespace DiatonicOctopotato
             //go to the next definition
             if (currentIndex == 0)
             {
-                currentIndex = MAX_ASSIGNMENTS-1;
+                currentIndex = MAX_TERMS-1;
             }
             btnFlashCard_Click(new object(), new RoutedEventArgs());
+        }
+        private void Flashcards1_Closed(object sender, EventArgs e)
+        {
+
         }
     }
     public class Question
