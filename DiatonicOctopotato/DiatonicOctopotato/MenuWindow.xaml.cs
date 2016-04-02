@@ -56,21 +56,14 @@ namespace DiatonicOctopotato
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            tBDef.Text = Assignment.getList((termList.SelectedIndex), 1);
+            tBDef.Text = AssignmentList.getAssignment().getList((termList.SelectedIndex), 1);
         }
         public void doLB()
         {
-            int termNums = 0;
-            for (int i = 0; i < 40; i++)
+            
+            for (int i = 0; i < AssignmentList.getAssignment().getTotal(); i++)
             {
-                if (Assignment.GetList(i, 0) != "")
-                {
-                    termNums++;
-                }
-            }
-            for (int i = 0; i < termNums; i++)
-            {
-                termList.Items.Add(Assignment.GetList(i, 0));
+                termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
             }
         }
 
