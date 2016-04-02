@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
-        Title="MultipleChoice" Height="399.065" Width="410.28" Closed="Window_Closed" ResizeMode="NoResize">
+        Title="MultipleChoice" Height="399.065" Width="410.28" Closed="Window_Closed" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="13*"/>

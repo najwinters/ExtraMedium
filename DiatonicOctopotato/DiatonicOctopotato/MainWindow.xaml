@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
 
-        Title="Main Window" Height="675" Width="1200" ResizeMode="NoResize">
+        Title="Main Window" Height="675" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid x:Name="back_ground">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
