@@ -96,6 +96,7 @@ namespace DiatonicOctopotato
                             curAssignment.incTotal();
                         }
                     }
+                    sr.Close();
                 }
             }
             loadAssignmentList();
@@ -103,7 +104,27 @@ namespace DiatonicOctopotato
 
         private void ExportListButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if(studyLists.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an assignment first!");
+            }
+            else
+            {
+                SaveFileDialog saveDialog = new SaveFileDialog();
+                if(saveDialog.ShowDialog() == true)
+                {
+                    using (StreamWriter sw = new StreamWriter(saveDialog.FileName))
+                    {
+                        Assignment curAssignment = AssignmentList.getAssignment(studyLists.SelectedIndex);
+                        sw.WriteLine(curAssignment.getName());
+                        for(int i = 0; i < curAssignment.getTotal(); i++)
+                        {
+                            sw.WriteLine(curAssignment.GetList(i, 0) + "\t" + curAssignment.getList(i, 1));
+                        }
+                        sw.Close();
+                    }
+                }
+            }
         }
 
         private void removeList_Click(object sender, RoutedEventArgs e)
@@ -123,9 +144,14 @@ namespace DiatonicOctopotato
         private void Management1_Closed(object sender, EventArgs e)
         {
             MenuWindow menuWindow = new MenuWindow();
-            if (AssignmentList.getTotal() == 0)
+            if (AssignmentList.getTotal() == 0 || AssignmentList.getAssignment().getTotal() == 0)
             {
                 menuWindow.fBBN.IsEnabled = false;
+                menuWindow.mCBN.IsEnabled = false;
+                menuWindow.Show();
+            }
+            else if(AssignmentList.getAssignment().getTotal() < 4)
+            {
                 menuWindow.mCBN.IsEnabled = false;
                 menuWindow.Show();
             }

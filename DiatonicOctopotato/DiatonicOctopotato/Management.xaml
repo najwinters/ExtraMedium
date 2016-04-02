@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
-        Title="Study List Management" Height="300" Width="300" Closed="Management1_Closed" ResizeMode="NoResize">
+        Title="Study List Management" Height="675" Width="1200" Closed="Management1_Closed" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="66"/>
-        <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="76" Click="ImportListButton_Click"/>
-        <Button x:Name="ExportList" Content="Export List" HorizontalAlignment="Left" Height="24" Margin="106,235,0,0" VerticalAlignment="Top" Width="76" Click="ExportListButton_Click"/>
-        <Button x:Name="newList" Content="New List" HorizontalAlignment="Left" Height="22" Margin="193,10,0,0" VerticalAlignment="Top" Width="89" Click="newList_Click"/>
-        <Button x:Name="removeList" Content="Remove List" HorizontalAlignment="Left" Height="22" Margin="193,37,0,0" VerticalAlignment="Top" Width="89" Click="removeList_Click"/>
-        <Button x:Name="editList" Content="Edit List" HorizontalAlignment="Left" Height="22" Margin="193,64,0,0" VerticalAlignment="Top" Width="89" Click="editTerms_Click"/>
-        <ListBox x:Name="studyLists" HorizontalAlignment="Left" Height="211" Margin="10,10,0,0" VerticalAlignment="Top" Width="172" SelectionChanged="studyLists_SelectionChanged"/>
-        <Button x:Name="selectTerms" Content="Select List" HorizontalAlignment="Left" Height="22" Margin="193,91,0,0" VerticalAlignment="Top" Width="89" Click="selectList_Click"/>
+        <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="24" Margin="28,599,0,0" VerticalAlignment="Top" Width="76" Click="ImportListButton_Click"/>
+        <Button x:Name="ExportList" Content="Export List" HorizontalAlignment="Left" Height="24" Margin="233,599,0,0" VerticalAlignment="Top" Width="76" Click="ExportListButton_Click"/>
+        <Button x:Name="newList" Content="New List" HorizontalAlignment="Left" Height="22" Margin="355,182,0,0" VerticalAlignment="Top" Width="89" Click="newList_Click"/>
+        <Button x:Name="removeList" Content="Remove List" HorizontalAlignment="Left" Height="22" Margin="355,210,0,0" VerticalAlignment="Top" Width="89" Click="removeList_Click"/>
+        <Button x:Name="editList" Content="Edit List" HorizontalAlignment="Left" Height="22" Margin="355,236,0,0" VerticalAlignment="Top" Width="89" Click="editTerms_Click"/>
+        <ListBox x:Name="studyLists" HorizontalAlignment="Left" Height="417" Margin="10,163,0,0" VerticalAlignment="Top" Width="314" SelectionChanged="studyLists_SelectionChanged"/>
+        <Button x:Name="selectTerms" Content="Select List" HorizontalAlignment="Left" Height="22" Margin="355,264,0,0" VerticalAlignment="Top" Width="89" Click="selectList_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="778,286,0,0" TextWrapping="Wrap" Text="Will fix layout after Dallin finished design. Don't worry." VerticalAlignment="Top" Height="181" Width="226" FontSize="20"/>
 
     </Grid>
 </Window>

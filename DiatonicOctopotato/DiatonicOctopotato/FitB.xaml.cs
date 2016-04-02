@@ -48,8 +48,14 @@ namespace DiatonicOctopotato
         public FitB()
         {
             InitializeComponent();
+            if (AssignmentList.getAssignment().getTotal() == 0)
+            {
+                MessageBox.Show("Sorry, you need to have terms in your assignment!");
+                MenuWindow menuWindow = new MenuWindow();
+                menuWindow.Show();
+
+            }
         }
-        int termNums;
         int a;
         public string correctAnswer;
 
@@ -95,6 +101,7 @@ namespace DiatonicOctopotato
             lblCorrect.Content = "";
             lblCorrect.Background = Brushes.White;
             btnNextGame.Visibility = Visibility.Visible;
+            btnNextGame.IsEnabled = false;
 
 
         }
@@ -111,7 +118,16 @@ namespace DiatonicOctopotato
 
         private void btnNextGame_Click(object sender, RoutedEventArgs e)
         {
-
+            btnStartGame.Visibility = Visibility.Hidden;
+            txtFillInAnswer.IsEnabled = true;
+            Random rnd = new Random();
+            a = rnd.Next(0, AssignmentList.getAssignment().getTotal());
+            txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
+            txtFillInAnswer.Text = "";
+            lblCorrect.Content = "";
+            lblCorrect.Background = Brushes.White;
+            btnNextGame.Visibility = Visibility.Visible;
+            btnNextGame.IsEnabled = false;
         }
     }
 }
