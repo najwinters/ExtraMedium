@@ -8,7 +8,7 @@
         Title="Flashcards" Height="675" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Flashcards1_Closed_1">
     <Grid>
 
-        <Image x:Name="image" HorizontalAlignment="Left" Height="647" VerticalAlignment="Top" Width="1194" Source="images/general study interface screen.jpg" Grid.ColumnSpan="2"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="647" VerticalAlignment="Top" Width="1194" Source="images/games interface.jpg" Grid.ColumnSpan="2"/>
         <Image  HorizontalAlignment="Left" Height="647" VerticalAlignment="Top" Width="1194" Source="images/flash cards page.jpg" Grid.ColumnSpan="2" Margin="0,105,0,-105"/>
 
 

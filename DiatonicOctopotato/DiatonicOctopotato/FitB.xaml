@@ -10,7 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="646" VerticalAlignment="Top" Width="1194" Source="images/general interface screen.jpg"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="646" VerticalAlignment="Top" Width="1194" Source="images/games interface.jpg"/>
 
         <TextBlock x:Name="txtblkDefinition" HorizontalAlignment="Left" Height="80" Margin="519,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"><InlineUIContainer>
         		<Border BorderBrush="Black" BorderThickness="1" Height="80" Width="177"/>
