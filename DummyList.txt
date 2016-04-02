@@ -1,6 +1,6 @@
-DummyList
-W1	A1
-W2	A2
-W3	A3
-W4	A4
-W5	A5
+::Name|DummyText
+::Term|T1	D1
+::Term|T2	D2
+::Term|T3	D3
+::Term|T4	D4
+::Term|T5	D5
