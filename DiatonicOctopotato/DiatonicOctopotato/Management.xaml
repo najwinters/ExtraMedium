@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
-        Title="Study List Management" Height="300" Width="300" Closed="Management1_Closed">
+        Title="Study List Management" Height="300" Width="300" Closed="Management1_Closed" ResizeMode="NoResize">
     <Grid>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="66"/>
         <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="76"/>

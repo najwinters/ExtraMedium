@@ -6,21 +6,25 @@
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
 
-        Title="Main Window" Height="675" Width="1200">
+        Title="Main Window" Height="675" Width="1200" ResizeMode="NoResize">
     <Grid x:Name="back_ground">
-        <Image Source="/images/untitled-3.jpg" Margin="10,0,-10,0"/>
-        <Rectangle x:Name="topRect" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="88" Stroke="Black" VerticalAlignment="Top" Width="1192" StrokeThickness="0"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="537*"/>
+            <ColumnDefinition Width="59*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/images/untitled-3.jpg" Margin="10,0,-10,0" Grid.ColumnSpan="2"/>
+        <Rectangle x:Name="topRect" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="88" Stroke="Black" VerticalAlignment="Top" Width="1192" StrokeThickness="0" Grid.ColumnSpan="2"/>
 
         <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="557" Margin="0,88,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="36"/>
-        <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="557" Margin="1156,88,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="36"/>
-      
+        <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="557" Margin="82.301,88,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="36" Grid.Column="1"/>
+
         <Rectangle Name="studybutton" HorizontalAlignment="Left" Height="43" Margin="654,30,0,0" Stroke="#63BD63"  StrokeThickness="1" VerticalAlignment="Top" Width="102"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="52" Margin="254,317,0,0" TextWrapping="Wrap" Text="Study Smarter" VerticalAlignment="Top" Width="221" FontSize="30" Foreground="#FF4A8E8E" TextAlignment="Center"/>
         <TextBlock x:Name="textblock2" HorizontalAlignment="Left" Height="52" Margin="704,317,0,0" TextWrapping="Wrap" Text="Learn Faster" VerticalAlignment="Top" Width="221" FontSize="30" Foreground="#FF4A8E8E" TextAlignment="Center"/>
         <Rectangle Name="studybutton2" HorizontalAlignment="Left" Height="43" Margin="434,30,0,0" Stroke="#63BD63"  StrokeThickness="1" VerticalAlignment="Top" Width="102"/>
         <Button x:Name="MyAssignment" HorizontalAlignment="Left" Margin="434,30,0,0" VerticalAlignment="Top" Width="102" Click="MyAssignmentbutton_Click" Height="43" Opacity="0"></Button>
-        <TextBlock x:Name="textBlock1" Height="38" TextWrapping="Wrap" Text="Assignments" Width="99" Margin="437,45,656,562" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" OpacityMask="#FF3C3A3A" Foreground="#FF3C6640" FontSize="16"/>
-       <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="43" Margin="654,40,0,0" TextWrapping="Wrap" Text="Study" VerticalAlignment="Top" Width="102" TextAlignment="Center" FontSize="16" Foreground="#FF3C6640"/>
+        <TextBlock x:Name="textBlock1" Height="38" TextWrapping="Wrap" Text="Assignments" Width="99" Margin="437,45,537.699,562" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" OpacityMask="#FF3C3A3A" Foreground="#FF3C6640" FontSize="16"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="43" Margin="654,40,0,0" TextWrapping="Wrap" Text="Study" VerticalAlignment="Top" Width="102" TextAlignment="Center" FontSize="16" Foreground="#FF3C6640"/>
         <Button  Content="Button" HorizontalAlignment="Left" Margin="654,30,0,0" VerticalAlignment="Top" Width="102" Click="button_Click" Height="43" Opacity="0"/>
     </Grid>
 </Window>
