@@ -78,7 +78,7 @@ namespace DiatonicOctopotato
             currentIndex--;
             isTerm = true;
             //go to the next definition
-            if (currentIndex == 0)
+            if (currentIndex == -1)
             {
                 currentIndex = MAX_TERMS-1;
             }
