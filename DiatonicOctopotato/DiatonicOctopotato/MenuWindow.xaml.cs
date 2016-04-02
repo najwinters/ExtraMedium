@@ -28,12 +28,6 @@ namespace DiatonicOctopotato
             
         }
         int termNum;
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            Window1 nTWin = new Window1();
-            nTWin.Show();
-           
-        }
 
         private void OpenManagement_Click(object sender, RoutedEventArgs e)
         {

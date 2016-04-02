@@ -59,7 +59,7 @@ namespace DiatonicOctopotato
         {
             if (studyLists.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select an item first!");
+                MessageBox.Show("Please select an assignment first!");
             }
             else
             {
@@ -77,6 +77,14 @@ namespace DiatonicOctopotato
         private void removeList_Click(object sender, RoutedEventArgs e)
         {
             //DECKER GET YOUR CRAP TOGETHER
+            if (studyLists.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an assignment first!");
+            }
+            else
+            {
+                studyLists.Items.RemoveAt(studyLists.SelectedIndex);
+            }
         }
 
         private void Management1_Closed(object sender, EventArgs e)

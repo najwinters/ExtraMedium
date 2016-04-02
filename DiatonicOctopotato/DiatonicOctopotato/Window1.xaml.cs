@@ -86,6 +86,17 @@ namespace DiatonicOctopotato
                 defTB.Text = curAssignment.GetList(termList.SelectedIndex, 1);
             }
         }
+        private void removeTerm_Click(object sender, RoutedEventArgs e)
+        {
+            if (termList.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a term first!");
+            }
+            else
+            {
+                termList.Items.RemoveAt(termList.SelectedIndex);
+            }
+        }
 
     }
 }

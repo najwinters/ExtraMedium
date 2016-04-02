@@ -37,10 +37,10 @@ namespace DiatonicOctopotato
         }
         private void MyAssignmentbutton_Click(object sender, RoutedEventArgs e)
         {
-
-            MenuWindow menuWindow = new MenuWindow();
+            Window1 win1 = new Window1();
+            win1.Show();
             this.Close();
-            menuWindow.Show();
+            
         }
 
 

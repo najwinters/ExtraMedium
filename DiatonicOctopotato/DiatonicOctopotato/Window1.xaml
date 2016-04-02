@@ -80,6 +80,16 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Button x:Name="addTerm_Copy" Content="Remove Term" HorizontalAlignment="Left" Margin="150,275,0,0" VerticalAlignment="Top" Width="129" Click="removeTerm_Click" Height="32" FontSize="16" RenderTransformOrigin="0.428,-0.084">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.001" Y="-0.16"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
     </Grid>
 </Window>
