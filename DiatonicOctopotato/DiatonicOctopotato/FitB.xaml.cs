@@ -43,11 +43,14 @@ namespace DiatonicOctopotato
                 lblCorrect.Content = "Correct";
                 lblCorrect.Background = Brushes.Green;
                 txtFillInAnswer.IsEnabled = false;
+                btnNextGame.IsEnabled = true;
             }
             else
             {
                 lblCorrect.Content = "Incorrect. Try Again";
                 lblCorrect.Background = Brushes.Red;
+
+                
             }
 
         }
@@ -55,14 +58,15 @@ namespace DiatonicOctopotato
         private void btnStartGame_Click(object sender, RoutedEventArgs e)
         {
             //randomly assign a definition
+            btnStartGame.Visibility = Visibility.Hidden;
             txtFillInAnswer.IsEnabled = true;
             Random rnd = new Random();
-            a = rnd.Next(0, termNums);
+            a = rnd.Next(0, AssignmentList.getAssignment().getTotal());
             txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
             txtFillInAnswer.Text = "";
             lblCorrect.Content = "";
             lblCorrect.Background = Brushes.White;
-            btnStartGame.Content = "Next Question";
+            btnNextGame.Visibility = Visibility.Visible;
 
 
         }
@@ -70,18 +74,16 @@ namespace DiatonicOctopotato
         {
             MenuWindow menuWindow = new MenuWindow();
             menuWindow.Show();
-            termNums = 0;
-            for (int i = 0; i < 40; i++)
-            {
-                if (AssignmentList.getAssignment().GetList(i, 0) != "")
-                {
-                    termNums++;
-                }
-            }
-            for (int i = 0; i < termNums; i++)
+           
+            for (int i = 0; i < AssignmentList.getAssignment().getTotal(); i++)
             {
                 menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
             }
+        }
+
+        private void btnNextGame_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
