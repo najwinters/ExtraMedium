@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -26,12 +27,12 @@ namespace DiatonicOctopotato
             InitializeComponent();
 
         }
-
+        int termNum;
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Window1 nTWin = new Window1();
             nTWin.Show();
-            this.Hide();
+           
         }
 
         private void OpenManagement_Click(object sender, RoutedEventArgs e)
@@ -44,7 +45,7 @@ namespace DiatonicOctopotato
         {
             MultipleChoice mCWin = new MultipleChoice();
             mCWin.Show();
-            this.Hide();
+            
 
 
         }
@@ -72,6 +73,17 @@ namespace DiatonicOctopotato
             FitB fITB = new FitB();
             fITB.Show();
             this.Hide();
+        }
+        private int getTermNum()
+        {
+            for (int i = 0; i < 40; i++)
+            {
+                if (Assignment.GetList(i, 0) != "")
+                {
+                    termNum++;
+                }
+            }
+            return termNum;
         }
     }
 }

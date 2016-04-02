@@ -64,7 +64,7 @@ namespace DiatonicOctopotato
         {
             Assignment curAssignment = AssignmentList.getAssignment();
             curAssignment.Save("Term", curAssignment.getTotal(), 0);
-            curAssignment.Save("Deffinition", curAssignment.getTotal(), 1);
+            curAssignment.Save("Definition", curAssignment.getTotal(), 1);
             curAssignment.incTotal();
             loadTermList();
         }
