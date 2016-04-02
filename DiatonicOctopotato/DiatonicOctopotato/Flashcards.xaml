@@ -11,7 +11,7 @@
         <Image x:Name="image" HorizontalAlignment="Left" Height="647" VerticalAlignment="Top" Width="1194" Source="images/general study interface screen.jpg" Grid.ColumnSpan="2"/>
         <Image  HorizontalAlignment="Left" Height="647" VerticalAlignment="Top" Width="1194" Source="images/flash cards page.jpg" Grid.ColumnSpan="2" Margin="0,105,0,-105"/>
 
-        <Button x:Name="btnFlashCard" Content="Definition" HorizontalAlignment="Left" Height="265" Margin="386,148,0,0" VerticalAlignment="Top" Width="430" Click="btnFlashCard_Click" Grid.ColumnSpan="2" Opacity="0.025"/>
+        
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Height="75" Margin="396,467,0,0" VerticalAlignment="Top" Width="99" Click="btnBack_Click" Opacity="0"/>
         <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Height="75" Margin="100,467,0,0" VerticalAlignment="Top" Width="99" Click="btnNext_Click" Grid.Column="1" Opacity="0"/>
         <Button x:Name="btnRight" Content="I got it right." HorizontalAlignment="Left" Height="39" Margin="170,409,0,0" VerticalAlignment="Top" Width="119" Click="btnRight_Click"/>
@@ -23,6 +23,8 @@
         
         <TextBlock x:Name="flashcardText" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="265" Margin="386,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430"/>
         <Button x:Name="analyticsBTN" Content="Button" HorizontalAlignment="Left" Margin="371,59,0,0" VerticalAlignment="Top" Width="140" Height="46" Opacity="0" Click="analyticsBTN_Click"/>
+        <Button x:Name="btnFlashCard" Content="Definition" HorizontalAlignment="Left" Height="265" Margin="386,148,0,0" VerticalAlignment="Top" Width="430"  Click="btnFlashCard_Click" Grid.ColumnSpan="2" Opacity="100"/>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
