@@ -78,5 +78,6 @@ namespace DiatonicOctopotato
                 defTB.Text = curAssignment.GetList(termList.SelectedIndex, 1);
             }
         }
+
     }
 }
