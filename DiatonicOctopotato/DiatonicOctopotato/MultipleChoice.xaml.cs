@@ -56,7 +56,7 @@ namespace DiatonicOctopotato
 
             do
             {
-                number = rnd.Next(0, z--);
+                number = rnd.Next(0, z-1);
             } while (excludedNumbers.Contains(number));
             return number;
         }
