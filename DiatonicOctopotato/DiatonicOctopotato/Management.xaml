@@ -15,6 +15,6 @@
         <ListBox x:Name="studyLists" HorizontalAlignment="Left" Height="417" Margin="10,163,0,0" VerticalAlignment="Top" Width="314" SelectionChanged="studyLists_SelectionChanged"/>
         <Button x:Name="selectTerms" Content="Select List" HorizontalAlignment="Left" Height="22" Margin="355,264,0,0" VerticalAlignment="Top" Width="89" Click="selectList_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="778,286,0,0" TextWrapping="Wrap" Text="Will fix layout after Dallin finished design. Don't worry." VerticalAlignment="Top" Height="181" Width="226" FontSize="20"/>
-
+        
     </Grid>
 </Window>

@@ -88,6 +88,26 @@ namespace DiatonicOctopotato
         {
 
         }
+
+        private void Flashcards1_Closed_1(object sender, EventArgs e)
+        {
+            MenuWindow menuWindow = new MenuWindow();
+            if (AssignmentList.getAssignment().getTotal() < 4)
+            {
+                menuWindow.mCBN.IsEnabled = false;
+                menuWindow.Show();
+            }
+            else
+            {
+                menuWindow.Show();
+                int termNums = AssignmentList.getAssignment().getTotal();
+
+                for (int i = 0; i < termNums; i++)
+                {
+                    menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
+                }
+            }
+        }
     }
     public class Question
     {
