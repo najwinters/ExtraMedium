@@ -10,7 +10,9 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="txtblkDefinition" HorizontalAlignment="Left" Height="80" Margin="60,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
+        <TextBlock x:Name="txtblkDefinition" HorizontalAlignment="Left" Height="80" Margin="60,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"><InlineUIContainer>
+        		<Border BorderBrush="Black" BorderThickness="1" Height="76" Width="173"/>
+        	</InlineUIContainer></TextBlock>
         <Label x:Name="label" Content="Fill In The Blank" HorizontalAlignment="Left" Height="24" Margin="87,10,0,0" VerticalAlignment="Top" Width="111"/>
         <Label x:Name="label_Copy" Content="Fill In the Term That Matches the Definition" HorizontalAlignment="Left" Height="24" Margin="23,41,0,0" VerticalAlignment="Top" Width="238"/>
         <TextBox x:Name="txtFillInAnswer" HorizontalAlignment="Left" Height="24" Margin="60,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" KeyDown="txtFillInAnswer_KeyDown" IsEnabled="False"/>

@@ -148,7 +148,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\general interface screen.jpg" />
+    <Resource Include="images\home white.jpg" />
+    <Resource Include="images\study white.jpg" />
+    <Resource Include="images\white Assignments.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="images\Untitled-3.jpg" />
   </ItemGroup>
