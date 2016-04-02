@@ -45,16 +45,22 @@ namespace DiatonicOctopotato
 
         private void mCBN_Click(object sender, RoutedEventArgs e)
         {
-            MultipleChoice mCWin = new MultipleChoice();
-            mCWin.Show();
-            this.Hide();
+            if (AssignmentList.getAssignment() != null)
+            {
+                MultipleChoice mCWin = new MultipleChoice();
+                mCWin.Show();
+                this.Hide();
+            }
         }
 
         private void fBBN_Click(object sender, RoutedEventArgs e)
         {
-            FitB fITB = new FitB();
-            fITB.Show();
-            this.Hide();
+            if (AssignmentList.getAssignment() != null)
+            {
+                FitB fITB = new FitB();
+                fITB.Show();
+                this.Hide();
+            }
         }
         private int getTermNum()
         {
@@ -70,9 +76,12 @@ namespace DiatonicOctopotato
 
         private void btnFlashCards_Click(object sender, RoutedEventArgs e)
         {
-            Flashcards fCWin = new Flashcards();
-            fCWin.Show();
-            this.Hide();
+            if (AssignmentList.getAssignment() != null)
+            {
+                Flashcards fCWin = new Flashcards();
+                fCWin.Show();
+                this.Hide();
+            }
         }
 
         private void analyticsBTN_Click(object sender, RoutedEventArgs e)

@@ -1,0 +1,15 @@
+::Name|Elements
+::Term|Al	aluminum
+::Term|C	carbon
+::Term|Cl	chlorine
+::Term|Cu	copper
+::Term|Au	gold
+::Term|He	helium
+::Term|H	hydrogen
+::Term|Fe	iron
+::Term|Hg	mercury
+::Term|Ne	neon
+::Term|N	nitrogen
+::Term|O	oxygen
+::Term|Na	sodium
+::Term|S	sulfur
