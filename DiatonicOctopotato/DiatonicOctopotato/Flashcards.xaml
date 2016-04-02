@@ -22,7 +22,6 @@
         <Label x:Name="lblTryCount" Content="0" HorizontalAlignment="Left" Margin="293,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.375,3.115" Grid.Column="1"/>
         
         <TextBlock x:Name="flashcardText" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="265" Margin="386,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430"/>
-        <Button x:Name="analyticsBTN" Content="Button" HorizontalAlignment="Left" Margin="371,59,0,0" VerticalAlignment="Top" Width="140" Height="46" Opacity="0" Click="analyticsBTN_Click"/>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
