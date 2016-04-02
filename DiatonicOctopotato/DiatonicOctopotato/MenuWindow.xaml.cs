@@ -106,13 +106,6 @@ namespace DiatonicOctopotato
 
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            AnalyticsPage a = new AnalyticsPage();
-            a.Show();
-            this.Close();
-        }
-
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             Management m = new Management();
