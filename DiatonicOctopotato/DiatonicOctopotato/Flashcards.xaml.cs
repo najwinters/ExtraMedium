@@ -23,5 +23,20 @@ namespace DiatonicOctopotato
         {
             InitializeComponent();
         }
+
+        private void Flashcards1_Closed(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nextBN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void flashBN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
