@@ -35,7 +35,7 @@ namespace DiatonicOctopotato
         }
 
         public void incTotal() //YES I KNOW THIS IS A BAD SOLUTION. SHUT UP!
-        {
+        {   //Just make sure this is only called when a term is added.
             total++;
         }
 

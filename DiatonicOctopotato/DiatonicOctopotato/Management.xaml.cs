@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using Microsoft.Win32;
 
 namespace DiatonicOctopotato
 {
@@ -74,6 +76,16 @@ namespace DiatonicOctopotato
             this.Close();
         }
 
+        private void ImportListButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openDialog = new OpenFileDialog();
+        }
+
+        private void ExportListButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void removeList_Click(object sender, RoutedEventArgs e)
         {
             //DECKER GET YOUR CRAP TOGETHER
@@ -107,5 +119,6 @@ namespace DiatonicOctopotato
                 }
             }
         }
+
     }
 }

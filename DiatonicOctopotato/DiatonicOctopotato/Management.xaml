@@ -8,8 +8,8 @@
         Title="Study List Management" Height="300" Width="300" Closed="Management1_Closed" ResizeMode="NoResize">
     <Grid>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="66"/>
-        <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="76"/>
-        <Button x:Name="ExportList" Content="Export List" HorizontalAlignment="Left" Height="24" Margin="106,235,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="76" Click="ImportListButton_Click"/>
+        <Button x:Name="ExportList" Content="Export List" HorizontalAlignment="Left" Height="24" Margin="106,235,0,0" VerticalAlignment="Top" Width="76" Click="ExportListButton_Click"/>
         <Button x:Name="newList" Content="New List" HorizontalAlignment="Left" Height="22" Margin="193,10,0,0" VerticalAlignment="Top" Width="89" Click="newList_Click"/>
         <Button x:Name="removeList" Content="Remove List" HorizontalAlignment="Left" Height="22" Margin="193,37,0,0" VerticalAlignment="Top" Width="89" Click="removeList_Click"/>
         <Button x:Name="editList" Content="Edit List" HorizontalAlignment="Left" Height="22" Margin="193,64,0,0" VerticalAlignment="Top" Width="89" Click="editTerms_Click"/>
