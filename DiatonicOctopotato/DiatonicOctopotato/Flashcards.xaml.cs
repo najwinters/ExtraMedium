@@ -65,7 +65,21 @@ namespace DiatonicOctopotato
                 //reverse isTerm
                 isTerm = !isTerm;
             }
-
+            if (isTerm)
+            {
+                //switch to def 
+                flashcardText.Text = listOQuestions[currentIndex].definition;
+                //reverse isTerm
+                isTerm = !isTerm;
+            }
+            else
+            {
+                //switch to term
+                flashcardText.Text = listOQuestions[currentIndex].term;
+                //reverse isTerm
+                isTerm = !isTerm;
+            }
+             
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
