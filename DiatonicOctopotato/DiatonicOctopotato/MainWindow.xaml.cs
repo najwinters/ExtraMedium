@@ -22,18 +22,25 @@ namespace DiatonicOctopotato
         public MainWindow()
         {
             InitializeComponent();
+
         }
+
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+
             MenuWindow menuWindow = new MenuWindow();
-            this.Hide();
+            this.Close();
             menuWindow.Show();           
         }
-
-        private void inputListBN_Click(object sender, RoutedEventArgs e)
+        private void MyAssignmentbutton_Click(object sender, RoutedEventArgs e)
         {
 
+            MenuWindow menuWindow = new MenuWindow();
+            this.Close();
+            menuWindow.Show();
         }
+
+
     }
 }
