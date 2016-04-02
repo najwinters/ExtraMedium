@@ -226,19 +226,8 @@ namespace DiatonicOctopotato
         private void homeBTN_Click(object sender, RoutedEventArgs e)
         {
             MenuWindow menuWindow = new MenuWindow();
-            if (AssignmentList.getTotal() == 0 || AssignmentList.getAssignment().getTotal() == 0)
-            {
-
-                menuWindow.Show();
-            }
-            else if (AssignmentList.getAssignment().getTotal() < 4)
-            {
-                menuWindow.Show();
-            }
-            else
-            {
-                menuWindow.Show();
-            }
+            menuWindow.Show();
+            this.Close();
         }
 
         private void studyBTN_Click(object sender, RoutedEventArgs e)
