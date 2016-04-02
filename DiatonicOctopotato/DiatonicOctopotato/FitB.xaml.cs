@@ -22,7 +22,6 @@ namespace DiatonicOctopotato
         public FitB()
         {
             InitializeComponent();
-            txtFillInAnswer.IsEnabled = false;
         }
         int termNums;
         int a;
@@ -43,6 +42,7 @@ namespace DiatonicOctopotato
             {
                 lblCorrect.Content = "Correct";
                 lblCorrect.Background = Brushes.Green;
+                txtFillInAnswer.IsEnabled = false;
             }
             else
             {
@@ -55,7 +55,7 @@ namespace DiatonicOctopotato
         private void btnStartGame_Click(object sender, RoutedEventArgs e)
         {
             //randomly assign a definition
-
+            txtFillInAnswer.IsEnabled = true;
             Random rnd = new Random();
             a = rnd.Next(0, termNums);
             txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
