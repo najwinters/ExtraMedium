@@ -9,9 +9,9 @@
     <Grid>
         <Image x:Name="image" HorizontalAlignment="Left" Height="118" VerticalAlignment="Top" Width="1194" Source="images/general study interface screen.jpg"/>
         <TextBlock x:Name="errorBlock" HorizontalAlignment="Left" Margin="10,150,0,0" TextWrapping="Wrap" Text="Please Select an Assignment" VerticalAlignment="Top" Height="90" Width="1174" TextAlignment="Center" FontSize="36"/>
-        <Button x:Name="fBBN" Content="fBBN" HorizontalAlignment="Left" Margin="206,66,0,0" VerticalAlignment="Top" Width="77" Height="35" Click="fBBN_Click"/>
-        <Button x:Name="mCBN" Content="mCBN" HorizontalAlignment="Left" Margin="306,66,0,0" VerticalAlignment="Top" Width="50" Height="35" Click="mCBN_Click_1"/>
-            <Button x:Name="btnFlashCards" Content="btnFlashCards" HorizontalAlignment="Left" Height="35" Margin="58,66,0,0" VerticalAlignment="Top" Width="125" Click="btnFlashCards_Click"/>
+        <Button x:Name="fBBN" Content="fBBN" HorizontalAlignment="Left" Margin="206,66,0,0" VerticalAlignment="Top" Width="77" Height="35" Click="fBBN_Click" Opacity="0"/>
+        <Button x:Name="mCBN" Content="mCBN" HorizontalAlignment="Left" Margin="306,66,0,0" VerticalAlignment="Top" Width="50" Height="35" Click="mCBN_Click_1" Opacity="0"/>
+            <Button x:Name="btnFlashCards" Content="btnFlashCards" HorizontalAlignment="Left" Height="35" Margin="58,66,0,0" VerticalAlignment="Top" Width="125" Click="btnFlashCards_Click" Opacity="0"/>
     </Grid>
 </Window>
 
