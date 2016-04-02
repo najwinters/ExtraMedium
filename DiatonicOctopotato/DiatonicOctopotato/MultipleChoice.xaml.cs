@@ -147,11 +147,6 @@ namespace DiatonicOctopotato
             Analytics.mCReport(score);
             MenuWindow menuWindow = new MenuWindow();
             menuWindow.Show();
-            int termNums = AssignmentList.getAssignment().getTotal();
-            for (int i = 0; i < termNums; i++)
-            {
-                menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
-            }
 
         }
     }
