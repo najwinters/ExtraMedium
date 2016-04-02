@@ -19,9 +19,11 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+            
 
         }
 
@@ -31,14 +33,16 @@ namespace DiatonicOctopotato
 
             MenuWindow menuWindow = new MenuWindow();
             this.Close();
-            menuWindow.Show();           
+            menuWindow.Show(); 
+            //if ()
+            {
+
+            }         
         }
         private void MyAssignmentbutton_Click(object sender, RoutedEventArgs e)
         {
 
-            MenuWindow menuWindow = new MenuWindow();
-            this.Close();
-            menuWindow.Show();
+            
         }
 
 
