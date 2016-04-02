@@ -27,7 +27,7 @@
         <Border BorderBrush="Black" BorderThickness="1" Margin="433,187,10,315"/>
         <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="208" Height="50" Click="button1_Click" Opacity="0"/>
         <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="223,5,0,0" VerticalAlignment="Top" Width="235" Height="60" Click="button2_Click" Opacity="0"/>
-        <Rectangle Fill="#63BD65" HorizontalAlignment="Left" Height="29" Margin="370,70,0,0" VerticalAlignment="Top" Width="116" OpacityMask="#FF6FC9ED"/>
+        <Rectangle Fill="#FF6DC9ED" HorizontalAlignment="Left" Height="29" Margin="370,70,0,0" VerticalAlignment="Top" Width="116" OpacityMask="#FF6FC9ED"/>
 
     </Grid>
 </Window>

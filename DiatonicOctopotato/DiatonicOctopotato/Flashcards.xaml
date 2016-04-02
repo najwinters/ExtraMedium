@@ -25,6 +25,7 @@
         <Button x:Name="btnFlashCard" Content="Definition" HorizontalAlignment="Left" Height="265" Margin="386,148,0,0" VerticalAlignment="Top" Width="430"  Click="btnFlashCard_Click" Grid.ColumnSpan="2" Opacity="100"/>
         <Button x:Name="homeButton" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="206" Height="51" Click="homeButton_Click" Opacity="0"/>
         <Button x:Name="AssignemntButton" Content="Button" HorizontalAlignment="Left" Margin="241,10,0,0" VerticalAlignment="Top" Width="191" Height="51" Click="AssignmentButton_Click" Opacity="0"/>
+        <Rectangle Fill="#FF6DC9ED" HorizontalAlignment="Left" Height="34" Margin="368,66,0,0" VerticalAlignment="Top" Width="127"/>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

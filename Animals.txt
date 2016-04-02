@@ -1,0 +1,20 @@
+::Name|Animals
+::Term|lion	King of the African Savannah.
+::Term|snake 	A long limbless reptile.
+::Term|baboon	Monkey with a weird looking face.
+::Term|ant	Small insect, definitely not your relative.
+::Term|salamander	Amphibious lizard-like animal.
+::Term|bee	Ouch! This makes honey.
+::Term|beaver	Builds dams, has big teeth.
+::Term|rhino	Has a large horn and lives in Africa.
+::Term|deer	Has antlers, lives in a forest.
+::Term|gecko	The Geico Mascot!
+::Term|frog	Eats flies on a lily pad.
+::Term|cardinal	A red bird that serves as a baseball mascot.
+::Term|tiger	Tony is one, a member of the cat family.
+::Term|fox	A red, wild dog.
+::Term|raven	A large black bird that inspired Nevermore.
+::Term|dolphin	An intelligent swimming mammal.
+::Term|raccoon	Small animal known fro being a thief with rings around its tail.
+::Term|human	What you are.
+::Term|penguin	Waddles around on ice.
