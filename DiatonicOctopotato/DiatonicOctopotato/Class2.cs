@@ -6,35 +6,57 @@ using System.Threading.Tasks;
 
 namespace DiatonicOctopotato
 {
-    class Assignment
+    public class Assignment
     {
-        string name;
+        private string name;
+        private string[,] list;
+        private int total;
 
-        public Assignment(string inName)
+        public Assignment()
+        {
+            name = "New Study List";
+            list = new string[40, 2];
+            total = 0;
+        }
+
+        public void setName(string inName)
         {
             name = inName;
         }
-        static string[,] list = new string[40, 2];
 
-        public static void Save(string value, int i, int j)
+        public string getName()
         {
-            
+            return name;
+        }
+
+        public int getTotal()
+        {
+            return total;
+        }
+
+        public void incTotal() //YES I KNOW THIS IS A BAD SOLUTION. SHUT UP!
+        {
+            total++;
+        }
+
+        public void Save(string value, int i, int j)
+        {
             list[i, j] = value;
         }
 
-        public static void Display()
+        public void Display()
         {
             foreach (var value in list)
             {
                 System.Windows.MessageBox.Show(value);
             }
         }
-        public static string GetList(int i, int j)
+        public string GetList(int i, int j)
         {
             return list[i,j];
         }
 
-        internal static string getList(int selectedIndex, int v)
+        internal string getList(int selectedIndex, int v)
         {
             return list[selectedIndex, v];
         }

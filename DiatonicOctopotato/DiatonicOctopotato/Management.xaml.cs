@@ -22,6 +22,48 @@ namespace DiatonicOctopotato
         public Management()
         {
             InitializeComponent();
+            loadAssignmentList();
+        }
+
+        private void loadAssignmentList()
+        {
+            int total = AssignmentList.getTotal();
+            if (total > 0)
+            {
+                studyLists.Items.Clear();
+                for (int i = 0; i < total; i++)
+                {
+                    studyLists.Items.Add(AssignmentList.getAssignment(i).getName());
+                }
+            }
+        }
+
+        private void newList_Click(object sender, System.EventArgs e)
+        {
+            NewAssignment nameWindow = new NewAssignment();
+            nameWindow.Closed += newClosed;
+            nameWindow.Show();
+        }
+
+        private void newClosed(object sender, System.EventArgs e)
+        {
+            loadAssignmentList();
+        }
+
+        private void studyLists_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            AssignmentList.setAssignment(studyLists.SelectedIndex);
+        }
+
+        private void editTerms_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 editBox = new Window1();
+            editBox.Show();
+        }
+
+        private void selectList_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

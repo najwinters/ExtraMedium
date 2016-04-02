@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="Study List Management" Height="300" Width="300">
     <Grid>
-        <Menu x:Name="ListMenu" HorizontalAlignment="Left" Height="211" Margin="10,10,0,0" VerticalAlignment="Top" Width="172"/>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="66"/>
         <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="24" Margin="10,235,0,0" VerticalAlignment="Top" Width="76"/>
         <Button x:Name="ExportList" Content="Export List" HorizontalAlignment="Left" Height="24" Margin="106,235,0,0" VerticalAlignment="Top" Width="76"/>
-        <Button x:Name="button1" Content="Select List" HorizontalAlignment="Left" Height="22" Margin="193,10,0,0" VerticalAlignment="Top" Width="89"/>
-        <Button x:Name="button1_Copy" Content="New List" HorizontalAlignment="Left" Height="22" Margin="193,37,0,0" VerticalAlignment="Top" Width="89"/>
-        <Button x:Name="button1_Copy1" Content="Remove List" HorizontalAlignment="Left" Height="22" Margin="193,64,0,0" VerticalAlignment="Top" Width="89"/>
-        <Button x:Name="button1_Copy2" Content="Edit Terms" HorizontalAlignment="Left" Height="22" Margin="193,91,0,0" VerticalAlignment="Top" Width="89"/>
+        <Button x:Name="newList" Content="New List" HorizontalAlignment="Left" Height="22" Margin="193,10,0,0" VerticalAlignment="Top" Width="89" Click="newList_Click"/>
+        <Button x:Name="removeList" Content="Remove List" HorizontalAlignment="Left" Height="22" Margin="193,37,0,0" VerticalAlignment="Top" Width="89"/>
+        <Button x:Name="editList" Content="Edit List" HorizontalAlignment="Left" Height="22" Margin="193,64,0,0" VerticalAlignment="Top" Width="89" Click="editTerms_Click"/>
+        <ListBox x:Name="studyLists" HorizontalAlignment="Left" Height="211" Margin="10,10,0,0" VerticalAlignment="Top" Width="172" SelectionChanged="studyLists_SelectionChanged"/>
+        <Button x:Name="selectTerms" Content="Select List" HorizontalAlignment="Left" Height="22" Margin="193,91,0,0" VerticalAlignment="Top" Width="89" Click="selectList_Click"/>
 
     </Grid>
 </Window>
