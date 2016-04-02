@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Flashcards" Height="300" Width="300">
     <Grid>
-        
+        <Button x:Name="btnFlashCard" Content="Definition" HorizontalAlignment="Left" Height="172" Margin="34,24,0,0" VerticalAlignment="Top" Width="223" Click="btnFlashCard_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Height="34" Margin="22,214,0,0" VerticalAlignment="Top" Width="61" Click="btnBack_Click"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Height="34" Margin="212,214,0,0" VerticalAlignment="Top" Width="61" Click="btnNext_Click"/>
+
     </Grid>
 </Window>

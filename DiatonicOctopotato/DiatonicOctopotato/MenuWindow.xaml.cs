@@ -81,6 +81,13 @@ namespace DiatonicOctopotato
             }
             return termNum;
         }
+
+        private void btnFlashCards_Click(object sender, RoutedEventArgs e)
+        {
+            Flashcards fCWin = new Flashcards();
+            fCWin.Show();
+            this.Hide();
+        }
     }
 }
 
