@@ -103,6 +103,13 @@ namespace DiatonicOctopotato
         {
 
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Management apage = new Management();
+            apage.Show();
+            this.Hide();
+        }
     }
 }
 

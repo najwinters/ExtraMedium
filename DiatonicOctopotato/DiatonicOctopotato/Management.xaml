@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Study List Management" Height="675" Width="1200" Closed="Management1_Closed" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="661" VerticalAlignment="Top" Width="1194" Margin="0,0,0,-14" Source="images/general interface screen.jpg"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="661" VerticalAlignment="Top" Width="1194" Margin="0,0,0,-14" Source="images/assignment sub button.jpg"/>
 
         <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="40" Margin="745,291,0,0" VerticalAlignment="Top" Width="133" Click="ImportListButton_Click"/>
         <Button x:Name="ExportList" Content="Export List" HorizontalAlignment="Left" Height="40" Margin="745,336,0,0" VerticalAlignment="Top" Width="133" Click="ExportListButton_Click" RenderTransformOrigin="0.474,0.458"/>
@@ -18,6 +18,7 @@
         <Button x:Name="selectTerms" Content="Select List" HorizontalAlignment="Left" Height="40" Margin="745,246,0,0" VerticalAlignment="Top" Width="133" Click="selectList_Click"/>
         <Button x:Name="homeBTN" Content="Button" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="111" Height="64" Click="homeBTN_Click" Opacity="0"/>
         <Button x:Name="studyBTN" Content="Button" HorizontalAlignment="Left" Margin="121,0,0,0" VerticalAlignment="Top" Width="105" Height="64" Click="studyBTN_Click" Opacity="0"/>
-
+        <Image  HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="351" Margin="231,0,0,0" Source="images/white assignments.jpg"/>
+        <Rectangle Fill="#63BD65" HorizontalAlignment="Left" Height="54" Margin="378,10,0,0"  VerticalAlignment="Top" Width="54"/>
     </Grid>
 </Window>

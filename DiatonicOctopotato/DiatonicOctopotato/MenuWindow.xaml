@@ -12,6 +12,7 @@
         <Button x:Name="fBBN" Content="fBBN" HorizontalAlignment="Left" Margin="206,66,0,0" VerticalAlignment="Top" Width="77" Height="35" Click="fBBN_Click" Opacity="0"/>
         <Button x:Name="mCBN" Content="mCBN" HorizontalAlignment="Left" Margin="306,66,0,0" VerticalAlignment="Top" Width="50" Height="35" Click="mCBN_Click_1" Opacity="0"/>
             <Button x:Name="btnFlashCards" Content="btnFlashCards" HorizontalAlignment="Left" Height="35" Margin="58,66,0,0" VerticalAlignment="Top" Width="125" Click="btnFlashCards_Click" Opacity="0"/>
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="51" Margin="225,10,0,0" VerticalAlignment="Top" Width="213" Click="button_Click" Background="{x:Null}" Opacity="0"/>
 
     </Grid>
 </Window>
