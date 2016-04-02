@@ -31,7 +31,7 @@
 
         <Image Source="/images/home white.jpg"  Margin="-2,-75,483,510" Grid.ColumnSpan="1"/>
         <Button  Content="Button" HorizontalAlignment="Left" Margin="114,0,0,0" VerticalAlignment="Top" Width="112" Click="button_Click" Height="61" Opacity="0"/>
-        <Button x:Name="asgnBTN" Content="Button" HorizontalAlignment="Left" Margin="242,0,0,0" VerticalAlignment="Top" Width="193" RenderTransformOrigin="-2.827,-0.318" Height="61" Click="asgnBTN_Click"/>
+        <Button x:Name="asgnBTN" Content="Button" HorizontalAlignment="Left" Margin="242,0,0,0" VerticalAlignment="Top" Width="193" RenderTransformOrigin="-2.827,-0.318" Height="61" Click="asgnBTN_Click" Opacity="0"/>
     </Grid>
 </Window>
 
