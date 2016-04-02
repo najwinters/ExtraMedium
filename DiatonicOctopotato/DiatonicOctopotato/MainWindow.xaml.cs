@@ -34,9 +34,8 @@ namespace DiatonicOctopotato
         {
 
             MenuWindow menuWindow = new MenuWindow();
+            menuWindow.Show();
             this.Close();
-
-            menuWindow.Show(); 
             //rectangleFade.Margin = (100,100,100,100);
             //rectangleFade.
             
