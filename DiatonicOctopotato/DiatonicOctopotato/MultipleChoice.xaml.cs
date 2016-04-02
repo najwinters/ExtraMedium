@@ -74,6 +74,11 @@ namespace DiatonicOctopotato
         //start game button
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            btnTerm1.IsEnabled = true;
+            btnTerm2.IsEnabled = true;
+            btnTerm3.IsEnabled = true;
+            btnTerm4.IsEnabled = true;
+
             Random rnd = new Random();
             currentProblem = setAnswers();
             string[] rndAnswers = currentProblem.OrderBy(x => rnd.Next()).ToArray();
