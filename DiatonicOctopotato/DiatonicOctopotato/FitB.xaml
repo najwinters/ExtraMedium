@@ -24,7 +24,7 @@
         <Label x:Name="label1" Content="Score:" HorizontalAlignment="Left" Margin="551,317,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblScore" Content="0" HorizontalAlignment="Left" Margin="616,317,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="206" Height="51" Click="button_Click" Opacity="0"/>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="241,10,0,0" VerticalAlignment="Top" Width="191" Height="51" Click="button1_Click"/>
+        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="241,10,0,0" VerticalAlignment="Top" Width="191" Height="51" Click="button1_Click" Opacity="0"/>
 
     </Grid>
 </Window>
