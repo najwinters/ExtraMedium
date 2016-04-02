@@ -88,6 +88,21 @@ namespace DiatonicOctopotato
             fCWin.Show();
             this.Hide();
         }
+
+        private void analyticsBTN_Click(object sender, RoutedEventArgs e)
+        {
+            AnalyticsPage aPage = new AnalyticsPage();
+            aPage.Show();
+            this.Hide();
+        }
+
+        private void homeBTN_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Hide();
+        }
+
     }
 }
 

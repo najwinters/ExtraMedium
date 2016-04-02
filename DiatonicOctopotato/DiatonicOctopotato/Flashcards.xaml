@@ -8,6 +8,8 @@
         Title="Flashcards" Height="675" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Flashcards1_Closed_1">
     <Grid>
 
+        <Image x:Name="image" HorizontalAlignment="Left" Height="647" VerticalAlignment="Top" Width="1194" Source="images/general study interface screen.jpg" Grid.ColumnSpan="2"/>
+
         <Button x:Name="btnFlashCard" Content="Definition" HorizontalAlignment="Left" Height="172" Margin="442,186,0,0" VerticalAlignment="Top" Width="223" Click="btnFlashCard_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Height="34" Margin="430,376,0,0" VerticalAlignment="Top" Width="61" Click="btnBack_Click"/>
         <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Height="34" Margin="23,376,0,0" VerticalAlignment="Top" Width="61" Click="btnNext_Click" Grid.Column="1"/>
@@ -18,7 +20,6 @@
         <Label x:Name="lblScore" Content="0" HorizontalAlignment="Left" Margin="495,492,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="TryCount:" HorizontalAlignment="Left" Margin="2,492,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label x:Name="lblTryCount" Content="0" HorizontalAlignment="Left" Margin="62,492,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.375,3.115" Grid.Column="1"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="647" VerticalAlignment="Top" Width="1194" Source="images/general study interface screen.jpg" Grid.ColumnSpan="2"/>
         <Button x:Name="analyticsBTN" Content="Button" HorizontalAlignment="Left" Margin="371,59,0,0" VerticalAlignment="Top" Width="140" Height="46" Opacity="0" Click="analyticsBTN_Click"/>
 
         <Grid.ColumnDefinitions>
