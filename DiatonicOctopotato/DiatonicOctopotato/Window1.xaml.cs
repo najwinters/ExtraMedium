@@ -19,50 +19,64 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class Window1 : Window
     {
-        int termNum = 0;
         public Window1()
         {
             InitializeComponent();
-            
+            loadTermList();   
+        }
+
+        private void loadTermList()
+        {
+            Assignment curAssignment = AssignmentList.getAssignment();
+            int total = curAssignment.getTotal();
+            if (total > 0)
+            {
+                termList.Items.Clear();
+                for (int i = 0; i < total; i++)
+                {
+                    termList.Items.Add(curAssignment.GetList(i, 0)); // 0 == term. Should set a const for it but whatev.
+                }
+            }
         }
 
         public void button_Click(object sender, RoutedEventArgs e)
         {
             string term = termTB.Text;
             string definition = defTB.Text;
-            Assignment.Save(term, termNum, 0);
-            Assignment.Save(definition, termNum, 1);
-            termTB.Text = "";
-            defTB.Text = "";
-            termNum++;
-            tNLabel.Content = "Number of Terms: " + termNum;
-            if (termNum == 40) {
+            Assignment curAssignment = AssignmentList.getAssignment();
+            curAssignment.Save(term, termList.SelectedIndex, 0);
+            curAssignment.Save(definition, termList.SelectedIndex, 1);
+            tNLabel.Content = "Number of Terms: " + curAssignment.getTotal();
+            if (curAssignment.getTotal() == 40) {
                 button.IsEnabled = false;
                 tLLabel.Content = "Term Limit Reached!";
                 tLLabel.Visibility = Visibility.Visible;
             }
-
+            loadTermList();
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            MenuWindow menuWindow = new MenuWindow();
-            menuWindow.Show();
+            //Nathan you're a terrible person.
+        }
 
-            int termNums = 0;
-            for (int i = 0; i < 40; i++)
+        private void addTerm_Click(object sender, RoutedEventArgs e)
+        {
+            Assignment curAssignment = AssignmentList.getAssignment();
+            curAssignment.Save("Term", curAssignment.getTotal(), 0);
+            curAssignment.Save("Deffinition", curAssignment.getTotal(), 1);
+            curAssignment.incTotal();
+            loadTermList();
+        }
+
+        private void termList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (termList.SelectedIndex >= 0)
             {
-                if (Assignment.GetList(i, 0) != "")
-                {
-                    termNums++;
-                }
+                Assignment curAssignment = AssignmentList.getAssignment();
+                termTB.Text = curAssignment.GetList(termList.SelectedIndex, 0);
+                defTB.Text = curAssignment.GetList(termList.SelectedIndex, 1);
             }
-            for (int i = 0; i < termNums; i++)
-            {
-                menuWindow.termList.Items.Add(Assignment.GetList(i, 0));
-            }
-
-
         }
 
     }

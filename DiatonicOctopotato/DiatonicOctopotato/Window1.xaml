@@ -5,16 +5,81 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
-        Title="Term Input" Height="350" Width="300" Closed="Window_Closed" ResizeMode="NoResize">
+        Title="Term Input" Height="350" Width="609.315" Closed="Window_Closed" ResizeMode="NoResize">
     <Grid Margin="0,0,-8,-20">
-       
-        <TextBox x:Name="termTB" HorizontalAlignment="Left" Height="50" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="16" SpellCheck.IsEnabled="True"/>
-        <TextBox x:Name="defTB" HorizontalAlignment="Left" Height="50" Margin="10,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="16" AutomationProperties.IsRequiredForForm="True" SpellCheck.IsEnabled="True"/>
-        <Label x:Name="label" Content="Term:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="46"/>
-        <Button x:Name="button" Content="Add Term" HorizontalAlignment="Left" Margin="84,241,0,0" VerticalAlignment="Top" Width="130" Click="button_Click" Height="40" FontSize="18"/>
-        <Label x:Name="label1" Content="Definition:" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="tNLabel" Content="Number of Terms: 0" HorizontalAlignment="Center" Margin="84,210,86,0" VerticalAlignment="Top" Width="130"/>
+
+        <TextBox x:Name="termTB" HorizontalAlignment="Left" Height="50" Margin="311,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="16" SpellCheck.IsEnabled="True" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.16"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="defTB" HorizontalAlignment="Left" Height="50" Margin="311,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="16" AutomationProperties.IsRequiredForForm="True" SpellCheck.IsEnabled="True" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.161"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label x:Name="label" Content="Term:" HorizontalAlignment="Left" Margin="311,22,0,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.001" Y="-0.161"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button x:Name="button" Content="Commit Changes" HorizontalAlignment="Left" Margin="380,232,0,0" VerticalAlignment="Top" Width="130" Click="button_Click" Height="40" FontSize="16" RenderTransformOrigin="0.428,-0.084">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.001" Y="-0.16"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="label1" Content="Definition:" HorizontalAlignment="Left" Margin="311,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.161"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="tNLabel" Content="Number of Terms: 0" HorizontalAlignment="Center" Margin="460,22,28,0" VerticalAlignment="Top" Width="123" RenderTransformOrigin="0.476,0.049">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.031" Y="0.411"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
         <Label x:Name="tLLabel" Content="Term Limit Reached!" HorizontalAlignment="Left" Margin="84,184,0,0" VerticalAlignment="Top" Width="130" Visibility="Hidden"/>
+        <ListBox x:Name="termList" HorizontalAlignment="Left" Height="254" Margin="10,10,0,0" VerticalAlignment="Top" Width="271" SelectionChanged="termList_SelectionChanged"/>
+        <Button x:Name="addTerm" Content="Add Term" HorizontalAlignment="Left" Margin="12,275,0,0" VerticalAlignment="Top" Width="129" Click="addTerm_Click" Height="32" FontSize="16" RenderTransformOrigin="0.428,-0.084">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.001" Y="-0.16"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
     </Grid>
 </Window>
