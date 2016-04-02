@@ -116,11 +116,20 @@ namespace DiatonicOctopotato
         private void Window_Closed(object sender, EventArgs e)
         {
             MenuWindow menuWindow = new MenuWindow();
-            menuWindow.Show();
-           
-            for (int i = 0; i < AssignmentList.getAssignment().getTotal(); i++)
+            if (AssignmentList.getAssignment().getTotal() < 4)
             {
-                menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
+                menuWindow.mCBN.IsEnabled = false;
+                menuWindow.Show();
+            }
+            else
+            {
+                menuWindow.Show();
+                int termNums = AssignmentList.getAssignment().getTotal();
+
+                for (int i = 0; i < termNums; i++)
+                {
+                    menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
+                }
             }
         }
 

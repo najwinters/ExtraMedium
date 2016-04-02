@@ -93,20 +93,33 @@ namespace DiatonicOctopotato
             {
                 using (StreamReader sr = new StreamReader(openDialog.FileName))
                 {
-                    AssignmentList.createList(sr.ReadLine());
-                    Assignment curAssignment = AssignmentList.getAssignment(AssignmentList.getTotal()-1); //Because Reasons. Don't question it.
-                    while(!sr.EndOfStream)
+                    string name = sr.ReadLine();
+                    string[] subName = name.Split('|');
+                    if(subName.Length == 2 && subName[0] == "::Name")
                     {
-                        string line = sr.ReadLine();
-                        string[] term = line.Split('\t');
-                        if(term.Length == 2)
+                        AssignmentList.createList(subName[1]);
+                        Assignment curAssignment = AssignmentList.getAssignment(AssignmentList.getTotal() - 1); //Because Reasons. Don't question it.
+                        while (!sr.EndOfStream && curAssignment.getTotal() < 40)
                         {
-                            curAssignment.Save(term[0], curAssignment.getTotal(), 0);
-                            curAssignment.Save(term[1], curAssignment.getTotal(), 1);
-                            curAssignment.incTotal();
+                            string line = sr.ReadLine();
+                            string[] term = line.Split('\t');
+                            if (term.Length == 2)
+                            {
+                                string[] subTerm = term[0].Split('|');
+                                if (subTerm.Length == 2 && subTerm[0] == "::Term")
+                                {
+                                    curAssignment.Save(subTerm[1], curAssignment.getTotal(), 0);
+                                    curAssignment.Save(term[1], curAssignment.getTotal(), 1);
+                                    curAssignment.incTotal();
+                                }
+                            }
                         }
+                        sr.Close();
                     }
-                    sr.Close();
+                    else
+                    {
+                        MessageBox.Show("Please select a valid assignment file.");
+                    }
                 }
             }
             loadAssignmentList();
@@ -126,10 +139,10 @@ namespace DiatonicOctopotato
                     using (StreamWriter sw = new StreamWriter(saveDialog.FileName))
                     {
                         Assignment curAssignment = AssignmentList.getAssignment(studyLists.SelectedIndex);
-                        sw.WriteLine(curAssignment.getName());
+                        sw.WriteLine("::Name|"+curAssignment.getName());
                         for(int i = 0; i < curAssignment.getTotal(); i++)
                         {
-                            sw.WriteLine(curAssignment.GetList(i, 0) + "\t" + curAssignment.getList(i, 1));
+                            sw.WriteLine("::Term|"+curAssignment.GetList(i, 0) + "\t" + curAssignment.getList(i, 1));
                         }
                         sw.Close();
                     }
@@ -160,7 +173,7 @@ namespace DiatonicOctopotato
 
         void kEE()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\wintenat000\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\images\mySound.wav");
+            SoundPlayer simpleSound = new SoundPlayer(@"images\mySound.wav");
             simpleSound.Play();
         }
         private void removeList_Click(object sender, RoutedEventArgs e)
@@ -176,6 +189,7 @@ namespace DiatonicOctopotato
                 AssignmentList.removeAssignment(studyLists.SelectedIndex);
                 loadAssignmentList();
             }
+            loadAssignmentList();
         }
 
         private void Management1_Closed(object sender, EventArgs e)

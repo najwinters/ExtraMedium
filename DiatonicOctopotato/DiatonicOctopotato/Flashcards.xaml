@@ -8,22 +8,24 @@
         Title="Flashcards" Height="675" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Flashcards1_Closed_1">
     <Grid>
 
-        <Button x:Name="btnFlashCard" Content="Definition" HorizontalAlignment="Left" Height="172" Margin="34,24,0,0" VerticalAlignment="Top" Width="223" Click="btnFlashCard_Click"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Height="34" Margin="22,214,0,0" VerticalAlignment="Top" Width="61" Click="btnBack_Click"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Height="34" Margin="212,214,0,0" VerticalAlignment="Top" Width="61" Click="btnNext_Click"/>
-        <Button x:Name="btnRight" Content="I got it right." HorizontalAlignment="Left" Height="39" Margin="34,272,0,0" VerticalAlignment="Top" Width="119" Click="btnRight_Click"/>
-        <Button x:Name="btnWrong" Content="I got it wrong." HorizontalAlignment="Left" Height="39" Margin="191,272,0,0" VerticalAlignment="Top" Width="119" Click="btnWrong_Click"/>
-        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Score:" HorizontalAlignment="Left" Margin="45,330,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblScore" Content="0" HorizontalAlignment="Left" Margin="87,330,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="TryCount:" HorizontalAlignment="Left" Margin="191,330,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblTryCount" Content="0" HorizontalAlignment="Left" Margin="251,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.375,3.115"/>
+        <Button x:Name="btnFlashCard" Content="Definition" HorizontalAlignment="Left" Height="172" Margin="442,186,0,0" VerticalAlignment="Top" Width="223" Click="btnFlashCard_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Height="34" Margin="430,376,0,0" VerticalAlignment="Top" Width="61" Click="btnBack_Click"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Height="34" Margin="23,376,0,0" VerticalAlignment="Top" Width="61" Click="btnNext_Click" Grid.Column="1"/>
+        <Button x:Name="btnRight" Content="I got it right." HorizontalAlignment="Left" Height="39" Margin="442,434,0,0" VerticalAlignment="Top" Width="119" Click="btnRight_Click"/>
+        <Button x:Name="btnWrong" Content="I got it wrong." HorizontalAlignment="Left" Height="39" Margin="2,434,0,0" VerticalAlignment="Top" Width="119" Click="btnWrong_Click" Grid.Column="1"/>
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="408,162,0,0"/>
+        <Label x:Name="label1" Content="Score:" HorizontalAlignment="Left" Margin="453,492,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblScore" Content="0" HorizontalAlignment="Left" Margin="495,492,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="TryCount:" HorizontalAlignment="Left" Margin="2,492,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lblTryCount" Content="0" HorizontalAlignment="Left" Margin="62,492,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.375,3.115" Grid.Column="1"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="647" VerticalAlignment="Top" Width="1194" Source="images/general study interface screen.jpg" Grid.ColumnSpan="2"/>
+        <Button x:Name="analyticsBTN" Content="Button" HorizontalAlignment="Left" Margin="371,59,0,0" VerticalAlignment="Top" Width="140" Height="46" Opacity="0" Click="analyticsBTN_Click"/>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-       
+
 
 
     </Grid>
