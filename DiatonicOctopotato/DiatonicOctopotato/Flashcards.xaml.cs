@@ -36,8 +36,8 @@ namespace DiatonicOctopotato
         {
             Assignment currentAssignment = AssignmentList.getAssignment();
             InitializeComponent();
-            btnBack.IsEnabled = false;
-            btnNext.IsEnabled = false;
+            btnBack.IsEnabled = true;
+            btnNext.IsEnabled = true;
             for (int i = 0; i < MAX_TERMS; i++) 
             {
                 
@@ -81,9 +81,9 @@ namespace DiatonicOctopotato
                 currentIndex = 0;
             }
             btnFlashCard_Click(new object(), new RoutedEventArgs());
-            CheckScore();
-            btnBack.IsEnabled = false;
-            btnNext.IsEnabled = false;
+            //CheckScore();
+            btnBack.IsEnabled = true;
+            btnNext.IsEnabled = true;
 
         }
 
@@ -101,9 +101,9 @@ namespace DiatonicOctopotato
                 currentIndex = MAX_TERMS-1;
             }
             btnFlashCard_Click(new object(), new RoutedEventArgs());
-            CheckScore();
-            btnBack.IsEnabled = false;
-            btnNext.IsEnabled = false;
+            //CheckScore();
+            btnBack.IsEnabled = true;
+            btnNext.IsEnabled = true;
         }
 
         private void Flashcards1_Closed_1(object sender, EventArgs e)
@@ -120,26 +120,7 @@ namespace DiatonicOctopotato
             }
         }
 
-        private void btnRight_Click(object sender, RoutedEventArgs e)
-        {
-            rightClicked = true;
-            //score++;
-            
-            btnBack.IsEnabled = true;
-            btnNext.IsEnabled = true;
-            CheckScore();
-        }
-
-        private void btnWrong_Click(object sender, RoutedEventArgs e)
-        {
-            wrongClicked = true;
-            //score--;
-           
-            btnBack.IsEnabled = true;
-            btnNext.IsEnabled = true;
-            CheckScore();
-        }
-        private void CheckScore()
+        /*private void CheckScore()
         {
             if(backClicked && rightClicked)
             {
@@ -180,7 +161,7 @@ namespace DiatonicOctopotato
                 this.Close();
             }
 
-        }
+        }*/
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
