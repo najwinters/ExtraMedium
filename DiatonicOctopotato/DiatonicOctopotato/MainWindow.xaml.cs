@@ -31,6 +31,8 @@ namespace DiatonicOctopotato
 
             MenuWindow menuWindow = new MenuWindow();
             this.Close();
+            menuWindow.mCBN.IsEnabled = false;
+            menuWindow.fBBN.IsEnabled = false;
             menuWindow.Show();           
         }
         private void MyAssignmentbutton_Click(object sender, RoutedEventArgs e)

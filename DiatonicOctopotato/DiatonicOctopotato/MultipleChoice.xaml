@@ -1,12 +1,11 @@
-﻿
-    <Window x:Class="DiatonicOctopotato.MultipleChoice"
+﻿<Window x:Class="DiatonicOctopotato.MultipleChoice"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
-        Title="MultipleChoice" Height="399.065" Width="410.28" Closed="Window_Closed">
+        Title="MultipleChoice" Height="399.065" Width="410.28" Closed="Window_Closed" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="13*"/>
@@ -23,6 +22,9 @@
         <Button x:Name="btnTerm4" Content="Term4" HorizontalAlignment="Left" Height="38" Margin="55,228,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
         <Label x:Name="label1" Content="Match the definition with the term" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="26" Width="192" Grid.Column="1"/>
         <TextBlock x:Name="txtblkDefinition" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="145" Margin="10,121,0,0" TextWrapping="Wrap" Text="Definition" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="label2" Content="Score:" Grid.Column="1" HorizontalAlignment="Left" Margin="20,332,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblScore" Content="0" Grid.Column="1" HorizontalAlignment="Left" Margin="67,332,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.313,0.558"/>
+        <Label x:Name="lblCorrect" Grid.ColumnSpan="3" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="44,291,0,0" VerticalAlignment="Top" Width="153"/>
 
     </Grid>
 </Window>
