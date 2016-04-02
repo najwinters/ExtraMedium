@@ -121,12 +121,6 @@ namespace DiatonicOctopotato
             else
             {
                 menuWindow.Show();
-                int termNums = AssignmentList.getAssignment().getTotal();
-
-                for (int i = 0; i < termNums; i++)
-                {
-                    menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
-                }
             }
         }
 

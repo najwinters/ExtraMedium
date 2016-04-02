@@ -25,7 +25,14 @@ namespace DiatonicOctopotato
         public MenuWindow()
         {
             InitializeComponent();
-            
+            if(AssignmentList.getAssignment() == null)
+            {
+                errorBlock.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorBlock.Visibility = Visibility.Hidden;
+            }
         }
         int termNum;
 
@@ -41,27 +48,6 @@ namespace DiatonicOctopotato
             MultipleChoice mCWin = new MultipleChoice();
             mCWin.Show();
             this.Hide();
-            
-
-
-        }
-
-        private void inputListBN_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            tBDef.Text = AssignmentList.getAssignment().getList((termList.SelectedIndex), 1);
-        }
-        public void doLB()
-        {
-            
-            for (int i = 0; i < AssignmentList.getAssignment().getTotal(); i++)
-            {
-                termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
-            }
         }
 
         private void fBBN_Click(object sender, RoutedEventArgs e)
