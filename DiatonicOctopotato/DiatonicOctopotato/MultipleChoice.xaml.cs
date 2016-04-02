@@ -20,6 +20,7 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class MultipleChoice : Window
     {
+        public int score = 0;
         public MultipleChoice()
         {
             InitializeComponent();
@@ -89,6 +90,7 @@ namespace DiatonicOctopotato
             btnTerm4.Content = rndAnswers[3];
             ResetTheButtons();
             button.IsEnabled = false;
+            lblScore.Content = score;
         }
 
         private void btnTerm1_Click(object sender, RoutedEventArgs e)
@@ -98,20 +100,18 @@ namespace DiatonicOctopotato
             {
                 answer.Background = Brushes.PaleGreen;
                 button.IsEnabled = true;
-                /*Random rnd = new Random();
-                currentProblem = setAnswers();
-                string[] rndAnswers = currentProblem.OrderBy(x => rnd.Next()).ToArray();
-                btnTerm1.Content = rndAnswers[0];
-                btnTerm2.Content = rndAnswers[1];
-                btnTerm3.Content = rndAnswers[2];
-                btnTerm4.Content = rndAnswers[3];
-                ResetTheButtons();*/
-                //switch questions  
-                                                       
+                score++;
+                lblScore.Content = score;
+                btnTerm1.IsEnabled = false;
+                btnTerm2.IsEnabled = false;
+                btnTerm3.IsEnabled = false;
+                btnTerm4.IsEnabled = false;
             }
             else
             {
                 answer.Background = Brushes.Red;
+                score--;
+                lblScore.Content = score;
 
             } 
         }

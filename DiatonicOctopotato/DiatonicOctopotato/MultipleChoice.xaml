@@ -23,6 +23,8 @@
         <Button x:Name="btnTerm4" Content="Term4" HorizontalAlignment="Left" Height="38" Margin="55,228,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
         <Label x:Name="label1" Content="Match the definition with the term" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="26" Width="192" Grid.Column="1"/>
         <TextBlock x:Name="txtblkDefinition" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="145" Margin="10,121,0,0" TextWrapping="Wrap" Text="Definition" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="label2" Content="Score:" Grid.Column="1" HorizontalAlignment="Left" Margin="20,332,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblScore" Content="0" Grid.Column="1" HorizontalAlignment="Left" Margin="67,332,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.313,0.558"/>
 
     </Grid>
 </Window>
