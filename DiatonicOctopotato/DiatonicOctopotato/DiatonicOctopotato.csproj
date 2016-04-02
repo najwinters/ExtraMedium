@@ -57,6 +57,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Analytics.cs" />
+    <Compile Include="AnalyticsPage.xaml.cs">
+      <DependentUpon>AnalyticsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AssignmentList.cs" />
     <Compile Include="Class2.cs" />
     <Compile Include="FitB.xaml.cs">
@@ -80,6 +84,10 @@
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Page Include="AnalyticsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="FitB.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
