@@ -57,6 +57,11 @@ namespace DiatonicOctopotato
             
         }
 
-
+        private void asgnBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Management manage = new Management();
+            manage.Show();
+            this.Close();
+        }
     }
 }
