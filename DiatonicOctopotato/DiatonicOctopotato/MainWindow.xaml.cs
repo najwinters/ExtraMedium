@@ -19,10 +19,12 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
+        Rectangle rectangleFade;
         public MainWindow()
         {
             InitializeComponent();
+             rectangleFade= new Rectangle();
             
 
         }
@@ -35,10 +37,10 @@ namespace DiatonicOctopotato
             this.Close();
 
             menuWindow.Show(); 
-           
-           
-
-                     
+            //rectangleFade.Margin = (100,100,100,100);
+            //rectangleFade.
+            
+                         
           menuWindow.mCBN.IsEnabled = false;
             menuWindow.fBBN.IsEnabled = false;
             menuWindow.Show();           
