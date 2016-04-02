@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="675" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
+       
         <Image x:Name="image" HorizontalAlignment="Left" Height="118" VerticalAlignment="Top" Width="1194" Source="images/general study interface screen.jpg"/>
         <TextBlock x:Name="errorBlock" HorizontalAlignment="Left" Margin="0,144,0,0" TextWrapping="Wrap" Text="Please Select an Assignment" VerticalAlignment="Top" Height="90" Width="1174" TextAlignment="Center" FontSize="36"/>
         <Button x:Name="fBBN" Content="fBBN" HorizontalAlignment="Left" Margin="206,66,0,0" VerticalAlignment="Top" Width="77" Height="35" Click="fBBN_Click" Opacity="0"/>
@@ -14,6 +15,7 @@
         <Button x:Name="btnFlashCards" Content="btnFlashCards" HorizontalAlignment="Left" Height="35" Margin="58,66,0,0" VerticalAlignment="Top" Width="125" Click="btnFlashCards_Click" Opacity="0"/>
         <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="237,10,0,0" VerticalAlignment="Top" Width="227" Height="51" Click="button1_Click" Opacity="0"/>
         <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="107" Height="51" Click="button2_Click" Opacity="0"/>
+        <Image Source="/images/study White.jpg" Margin="16,0,867,580"/>
 
     </Grid>
 </Window>
