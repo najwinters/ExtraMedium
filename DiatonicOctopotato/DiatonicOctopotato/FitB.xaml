@@ -13,7 +13,7 @@
         <Image x:Name="image" HorizontalAlignment="Left" Height="646" VerticalAlignment="Top" Width="1194" Source="images/games interface.jpg"/>
 
         <TextBlock x:Name="txtblkDefinition" HorizontalAlignment="Left" Height="80" Margin="519,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"><InlineUIContainer>
-        		<Border BorderBrush="Black" BorderThickness="1" Height="80" Width="177"/>
+        		<Border BorderBrush="Black" BorderThickness="1" Height="80" Width="174"/>
         	</InlineUIContainer></TextBlock>
         <Label x:Name="label" Content="Fill In The Blank" HorizontalAlignment="Left" Height="24" Margin="551,112,0,0" VerticalAlignment="Top" Width="111"/>
         <Label x:Name="label_Copy" Content="Fill In the Term That Matches the Definition" HorizontalAlignment="Left" Height="24" Margin="492,155,0,0" VerticalAlignment="Top" Width="238"/>
