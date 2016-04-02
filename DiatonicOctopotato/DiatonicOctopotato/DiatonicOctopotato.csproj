@@ -62,6 +62,9 @@
     <Compile Include="FitB.xaml.cs">
       <DependentUpon>FitB.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Flashcards.xaml.cs">
+      <DependentUpon>Flashcards.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Management.xaml.cs">
       <DependentUpon>Management.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,10 @@
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Page Include="FitB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Flashcards.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

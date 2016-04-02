@@ -94,9 +94,19 @@ namespace DiatonicOctopotato
             }
             else
             {
-                termList.Items.RemoveAt(termList.SelectedIndex);
+                Assignment curAssignment = AssignmentList.getAssignment(termList.SelectedIndex);
+                for (int i = termList.SelectedIndex; i < curAssignment.getTotal(); i++)
+                {
+                    curAssignment.Save(curAssignment.GetList(i+1, 0), i, 0);
+                    curAssignment.Save(curAssignment.GetList(i+1, 1), i, 1);
+                }
+                curAssignment.decTotal();
             }
         }
 
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

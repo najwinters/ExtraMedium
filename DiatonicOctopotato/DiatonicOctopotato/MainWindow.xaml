@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
 
-        Title="Main Window" Height="675" Width="1200" ResizeMode="NoResize">
+        Title="Main Window" Height="675" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid x:Name="back_ground">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -14,6 +14,9 @@
         </Grid.ColumnDefinitions>
         <Image Source="/images/untitled-3.jpg" Margin="10,76,-10,-76" Grid.ColumnSpan="2"/>
         <Rectangle x:Name="topRect" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="88" Stroke="Black" VerticalAlignment="Top" Width="1192" StrokeThickness="0" Grid.ColumnSpan="2"/>
+
+        <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="557" Margin="0,88,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="80"/>
+        <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="557" Margin="571,88,-10,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="36" Grid.Column="1"/>
 
 
         <Rectangle Name="studybutton" HorizontalAlignment="Left" Height="43" Margin="544,18,0,0" Stroke="#63BD63"  StrokeThickness="1" VerticalAlignment="Top" Width="102" Grid.ColumnSpan="2"/>
@@ -23,11 +26,11 @@
         <Image Source="/images/home white.jpg"  Margin="-2,-70,483,505" Grid.ColumnSpan="1"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="52" Margin="242,376,0,0" TextWrapping="Wrap" Text="Study Smarter" VerticalAlignment="Top" Width="221" FontSize="30" Foreground="#FF4A8E8E" TextAlignment="Center"/>
         <TextBlock x:Name="textblock2" HorizontalAlignment="Left" Height="52" Margin="142,376,0,0" TextWrapping="Wrap" Text="Learn Faster" VerticalAlignment="Top" Width="222" FontSize="30" Foreground="#FF4A8E8E" TextAlignment="Center" Grid.Column="1"/>
-        <Button  Content="Button" HorizontalAlignment="Left" Margin="114,0,0,0" VerticalAlignment="Top" Width="112" Click="button_Click" Height="61" Opacity="0"/>
+       
         <Image Source="/images/general interface screen.jpg" Margin="-2,-592,-10,-43" Grid.ColumnSpan="2"/>
-        <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="622" Margin="-2,96,0,-66" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="52"/>
-        <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="622" Margin="568,96,0,-66" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="36" Grid.Column="1"/>
-
+        
+        
+        <Button  Content="Button" HorizontalAlignment="Left" Margin="114,0,0,0" VerticalAlignment="Top" Width="112" Click="button_Click" Height="61" Opacity="0"/>
     </Grid>
 </Window>
 

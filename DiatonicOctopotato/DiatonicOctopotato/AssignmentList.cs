@@ -47,7 +47,19 @@ namespace DiatonicOctopotato
             curAssignment = selector;
         }
 
-        static public void createList(string name)
+        static public void removeAssignment(int index)
+        {
+            if(index < total)
+            {
+                for(int i = index; i < total-1; i++)
+                {
+                    list[i] = list[i + 1];
+                }
+                total--;
+            }
+        }
+
+        static public void createList(string name) //Should be createAssignment().
         {
             if (total < 10)
             {
@@ -59,10 +71,6 @@ namespace DiatonicOctopotato
             {
                 MessageBox.Show("You've reached the maximum number of assignments!");
             }
-        }
-        static public void getAsmTotal()
-        {
-
         }
     }
 

@@ -21,6 +21,8 @@ namespace DiatonicOctopotato
     public partial class MultipleChoice : Window
     {
         public int score = 0;
+        //int currentIndex = 0;
+       // int MAX_TERMS = AssignmentList.getAssignment().getTotal();
         public MultipleChoice()
         {
             InitializeComponent();
@@ -31,35 +33,41 @@ namespace DiatonicOctopotato
         }
         public string[] setAnswers()
         {
-            if (AssignmentList.getAssignment().getTotal() < 4)
-            {
-                MessageBox.Show("You must have four or more terms before using this feature!");
-                return null;
-            }
-            else {
+                /*Assignment currentAssignment = AssignmentList.getAssignment();
+                List<Question> listOQuestions = new List<Question>();
+                for (int i = 0; i < MAX_TERMS; i++)
+                {
+
+                    Question q = new Question(currentAssignment.GetList(i, 0), currentAssignment.GetList(i, 1));
+                    listOQuestions.Add(q);
+                }*/
                 Random rnd = new Random();
                 string[] answers;
-                int a = rnd.Next(0, termNums--);
+                int z = AssignmentList.getAssignment().getTotal();
+                int a = rnd.Next(0, z--);
                 txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
                 correctAnswer = AssignmentList.getAssignment().getList(a, 0);
-                termNums++;
                 int b = GiveMeANumber(a, a, a);
                 int c = GiveMeANumber(a, b, b);
                 int d = GiveMeANumber(a, b, c);
                 answers = new string[4] { correctAnswer, AssignmentList.getAssignment().GetList(b, 0), AssignmentList.getAssignment().GetList(c, 0), AssignmentList.getAssignment().GetList(d, 0) };
                 string[] rndTemp = answers.OrderBy(x => rnd.Next()).ToArray();
                 return rndTemp;
-            }
+            
         }
         private int GiveMeANumber(int a, int b, int c)
         {
-            var exclude = new HashSet<int>() {a,b,c};
-            var range = Enumerable.Range(0, termNums--).Where(i => !exclude.Contains(i));
+            var excludedNumbers = new List<int> {a, b, c};
+            int z = AssignmentList.getAssignment().getTotal();
+            Random rnd = new Random();
 
-            var rand = new System.Random();
-            int index = rand.Next(0, termNums - exclude.Count);
-            termNums++;
-            return range.ElementAt(index);
+            int number;
+
+            do
+            {
+                number = rnd.Next(0, z-1);
+            } while (excludedNumbers.Contains(number));
+            return number;
         }
         public string defintion;
         public string term1;
@@ -68,28 +76,35 @@ namespace DiatonicOctopotato
         public string term4;
         public string correctAnswer;
         string[] currentProblem = new string[4];
-        int termNums;
 
 
         //start game button
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            button.Content = "Next Question";
-            btnTerm1.IsEnabled = true;
-            btnTerm2.IsEnabled = true;
-            btnTerm3.IsEnabled = true;
-            btnTerm4.IsEnabled = true;
+            if (AssignmentList.getAssignment().getTotal() < 4)
+            {
+                MessageBox.Show("You must have four or more terms before using this feature!");
+                this.Close();
+            }
+            else
+            {
+                button.Content = "Next Question";
+                btnTerm1.IsEnabled = true;
+                btnTerm2.IsEnabled = true;
+                btnTerm3.IsEnabled = true;
+                btnTerm4.IsEnabled = true;
 
-            Random rnd = new Random();
-            currentProblem = setAnswers();
-            string[] rndAnswers = currentProblem.OrderBy(x => rnd.Next()).ToArray();
-            btnTerm1.Content = rndAnswers[0];
-            btnTerm2.Content = rndAnswers[1];
-            btnTerm3.Content = rndAnswers[2];
-            btnTerm4.Content = rndAnswers[3];
-            ResetTheButtons();
-            button.IsEnabled = false;
-            lblScore.Content = score;
+                Random rnd = new Random();
+                currentProblem = setAnswers();
+                string[] rndAnswers = currentProblem.OrderBy(x => rnd.Next()).ToArray();
+                btnTerm1.Content = rndAnswers[0];
+                btnTerm2.Content = rndAnswers[1];
+                btnTerm3.Content = rndAnswers[2];
+                btnTerm4.Content = rndAnswers[3];
+                ResetTheButtons();
+                button.IsEnabled = false;
+                lblScore.Content = score;
+            }
         }
 
         private void btnTerm1_Click(object sender, RoutedEventArgs e)

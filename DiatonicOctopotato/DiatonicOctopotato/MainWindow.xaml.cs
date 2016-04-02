@@ -43,6 +43,7 @@ namespace DiatonicOctopotato
                          
           menuWindow.mCBN.IsEnabled = false;
             menuWindow.fBBN.IsEnabled = false;
+            menuWindow.btnFlashCards.IsEnabled = false;
             menuWindow.Show();           
 
         }
