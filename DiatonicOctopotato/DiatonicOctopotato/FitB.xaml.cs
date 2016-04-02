@@ -73,7 +73,7 @@ namespace DiatonicOctopotato
         {
 
 
-            if (txtFillInAnswer.Text.Equals(correctAnswer))  //AssignmentList.getAssignment().GetList(a, 0))
+            if (txtFillInAnswer.Text.ToLower().Equals(correctAnswer))  //AssignmentList.getAssignment().GetList(a, 0))
 
             {
                 score++;
