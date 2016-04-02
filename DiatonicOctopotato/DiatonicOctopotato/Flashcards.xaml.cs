@@ -191,6 +191,14 @@ namespace DiatonicOctopotato
             }
 
         }
+
+        private void analyticsBTN_Click(object sender, RoutedEventArgs e)
+        {
+            AnalyticsPage aPage = new AnalyticsPage();
+            aPage.Show();
+            this.Close();
+            
+        }
     }
     public class Question
     {

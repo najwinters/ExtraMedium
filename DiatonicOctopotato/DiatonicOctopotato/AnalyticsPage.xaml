@@ -5,19 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
-        Title="AnalyticsPage" Height="300" Width="300" Closed="Window_Closed">
+        Title="AnalyticsPage" Height="675" Width="1200" Closed="Window_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="aVLBL" Content="Average Score:  " HorizontalAlignment="Left" Margin="58,65,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="96"/>
-        <Label x:Name="label" Content="Combined Score:  " HorizontalAlignment="Left" Margin="44,83,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="112"/>
-        <Label x:Name="hSLBL" Content=" Highest Score:   " HorizontalAlignment="Left" Margin="58,101,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="112"/>
+        <Canvas Margin="460,295,10,288" RenderTransformOrigin="4.66,2.917">
+            <Label x:Name="aVLBL" Content="Average Score:  " HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="96" Canvas.Left="14"/>
+            <Label x:Name="label" Content="Combined Score:  " HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Canvas.Top="18"/>
+            <Label x:Name="hSLBL" Content=" Highest Score:   " HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Canvas.Left="14" Canvas.Top="36"/>
+        </Canvas>
         <Label x:Name="aSLBL2" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="0,65,0,0" VerticalAlignment="Top"/>
         <Label x:Name="cSLBL2" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="0,83,0,0" VerticalAlignment="Top"/>
         <Label x:Name="hSLBL2" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="0,101,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="nEILBL" Content="Not enough information to form report.&#xD;&#xA;Please use every study method." HorizontalAlignment="Left" Margin="32,132,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="250" Visibility="Hidden"/>
+        <Label x:Name="nEILBL" Content="Not enough information to form report.&#xA;Please use every study method." HorizontalAlignment="Left" Margin="32,132,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="250" Visibility="Hidden"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="57,68,0,0" VerticalAlignment="Top" Width="1047" Source="images/Analytics.jpg" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
