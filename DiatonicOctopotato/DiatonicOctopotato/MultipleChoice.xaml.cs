@@ -21,6 +21,8 @@ namespace DiatonicOctopotato
     public partial class MultipleChoice : Window
     {
         public int score = 0;
+        //int currentIndex = 0;
+       // int MAX_TERMS = AssignmentList.getAssignment().getTotal();
         public MultipleChoice()
         {
             InitializeComponent();
@@ -31,7 +33,14 @@ namespace DiatonicOctopotato
         }
         public string[] setAnswers()
         {
-           
+                /*Assignment currentAssignment = AssignmentList.getAssignment();
+                List<Question> listOQuestions = new List<Question>();
+                for (int i = 0; i < MAX_TERMS; i++)
+                {
+
+                    Question q = new Question(currentAssignment.GetList(i, 0), currentAssignment.GetList(i, 1));
+                    listOQuestions.Add(q);
+                }*/
                 Random rnd = new Random();
                 string[] answers;
                 int z = AssignmentList.getAssignment().getTotal();
@@ -56,7 +65,7 @@ namespace DiatonicOctopotato
 
             do
             {
-                number = rnd.Next(0, z--);
+                number = rnd.Next(0, z-1);
             } while (excludedNumbers.Contains(number));
             return number;
         }
