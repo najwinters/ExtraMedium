@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiatonicOctopotato"
         mc:Ignorable="d"
-        Title="FitB" Height="300" Width="300" Closed="Window_Closed">
+        Title="FitB" Height="300" Width="300" Closed="Window_Closed" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -13,9 +13,9 @@
         <TextBlock x:Name="txtblkDefinition" HorizontalAlignment="Left" Height="80" Margin="60,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
         <Label x:Name="label" Content="Fill In The Blank" HorizontalAlignment="Left" Height="24" Margin="87,12,0,0" VerticalAlignment="Top" Width="111"/>
         <Label x:Name="label_Copy" Content="Fill In the Term That Matches the Definition" HorizontalAlignment="Left" Height="24" Margin="23,41,0,0" VerticalAlignment="Top" Width="238"/>
-        <TextBox x:Name="txtFillInAnswer" HorizontalAlignment="Left" Height="24" Margin="60,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" KeyDown="txtFillInAnswer_KeyDown"/>
+        <TextBox x:Name="txtFillInAnswer" HorizontalAlignment="Left" Height="24" Margin="60,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" KeyDown="txtFillInAnswer_KeyDown"/>
         <Button x:Name="btnStartGame" Content="Start Game" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" VerticalAlignment="Top" Width="72" Click="btnStartGame_Click"/>
-        <Label x:Name="lblCorrect" Content="" HorizontalAlignment="Left" Height="26" Margin="69,220,0,0" VerticalAlignment="Top" Width="150"/>
+        <Label x:Name="lblCorrect" Content="" HorizontalAlignment="Left" Height="48" Margin="60,198,0,0" VerticalAlignment="Top" Width="174" BorderThickness="2"/>
 
     </Grid>
 </Window>

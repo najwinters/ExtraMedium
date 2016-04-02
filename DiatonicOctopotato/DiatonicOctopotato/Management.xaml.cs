@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using Microsoft.Win32;
 
 namespace DiatonicOctopotato
 {
@@ -57,13 +59,58 @@ namespace DiatonicOctopotato
 
         private void editTerms_Click(object sender, RoutedEventArgs e)
         {
-            Window1 editBox = new Window1();
-            editBox.Show();
+            if (studyLists.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an item first!");
+            }
+            else
+            {
+                Window1 editBox = new Window1();
+                editBox.Show();
+            }
+            
         }
 
         private void selectList_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+        private void ImportListButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openDialog = new OpenFileDialog();
+        }
+
+        private void ExportListButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void removeList_Click(object sender, RoutedEventArgs e)
+        {
+            //DECKER GET YOUR CRAP TOGETHER
+        }
+
+        private void Management1_Closed(object sender, EventArgs e)
+        {
+            MenuWindow menuWindow = new MenuWindow();
+            if (AssignmentList.getTotal() == 0)
+            {
+                menuWindow.fBBN.IsEnabled = false;
+                menuWindow.mCBN.IsEnabled = false;
+                menuWindow.Show();
+            }
+            else
+            {
+                menuWindow.Show();
+                int termNums = AssignmentList.getAssignment().getTotal();
+
+                for (int i = 0; i < termNums; i++)
+                {
+                    menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
+                }
+            }
+        }
+
     }
 }

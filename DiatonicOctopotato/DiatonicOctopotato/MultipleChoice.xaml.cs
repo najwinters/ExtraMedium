@@ -20,6 +20,7 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class MultipleChoice : Window
     {
+        public int score = 0;
         public MultipleChoice()
         {
             InitializeComponent();
@@ -30,26 +31,25 @@ namespace DiatonicOctopotato
         }
         public string[] setAnswers()
         {
-            termNums = 0;
-            for (int i = 0; i < 40; i++)
+            if (AssignmentList.getAssignment().getTotal() < 4)
             {
-                if (AssignmentList.getAssignment().GetList(i, 0) != null)
-                {
-                    termNums++;
-                }
+                MessageBox.Show("You must have four or more terms before using this feature!");
+                return null;
             }
-            Random rnd = new Random();
-            string[] answers;
-            int a = rnd.Next(0, termNums--);
-            txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
-            correctAnswer = AssignmentList.getAssignment().getList(a, 0);
-            termNums++;
-            int b = GiveMeANumber(a, a, a);
-            int c = GiveMeANumber(a, b, b);
-            int d = GiveMeANumber(a, b, c);
-            answers = new string[4] { correctAnswer, AssignmentList.getAssignment().GetList(b, 0), AssignmentList.getAssignment().GetList(c, 0), AssignmentList.getAssignment().GetList(d, 0)};
-            string[] rndTemp = answers.OrderBy(x => rnd.Next()).ToArray();
-            return rndTemp;
+            else {
+                Random rnd = new Random();
+                string[] answers;
+                int a = rnd.Next(0, termNums--);
+                txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
+                correctAnswer = AssignmentList.getAssignment().getList(a, 0);
+                termNums++;
+                int b = GiveMeANumber(a, a, a);
+                int c = GiveMeANumber(a, b, b);
+                int d = GiveMeANumber(a, b, c);
+                answers = new string[4] { correctAnswer, AssignmentList.getAssignment().GetList(b, 0), AssignmentList.getAssignment().GetList(c, 0), AssignmentList.getAssignment().GetList(d, 0) };
+                string[] rndTemp = answers.OrderBy(x => rnd.Next()).ToArray();
+                return rndTemp;
+            }
         }
         private int GiveMeANumber(int a, int b, int c)
         {
@@ -89,6 +89,7 @@ namespace DiatonicOctopotato
             btnTerm4.Content = rndAnswers[3];
             ResetTheButtons();
             button.IsEnabled = false;
+            lblScore.Content = score;
         }
 
         private void btnTerm1_Click(object sender, RoutedEventArgs e)
@@ -96,22 +97,24 @@ namespace DiatonicOctopotato
             Button answer = (Button)sender;
             if ((string)answer.Content == correctAnswer) 
             {
-                answer.Background = Brushes.PaleGreen;
+                //answer.Background = Brushes.PaleGreen;
+                lblCorrect.Background = Brushes.Green;
+                lblCorrect.Content = "Correct!!";
                 button.IsEnabled = true;
-                /*Random rnd = new Random();
-                currentProblem = setAnswers();
-                string[] rndAnswers = currentProblem.OrderBy(x => rnd.Next()).ToArray();
-                btnTerm1.Content = rndAnswers[0];
-                btnTerm2.Content = rndAnswers[1];
-                btnTerm3.Content = rndAnswers[2];
-                btnTerm4.Content = rndAnswers[3];
-                ResetTheButtons();*/
-                //switch questions  
-                                                       
+                score++;
+                lblScore.Content = score;
+                btnTerm1.IsEnabled = false;
+                btnTerm2.IsEnabled = false;
+                btnTerm3.IsEnabled = false;
+                btnTerm4.IsEnabled = false;
             }
             else
             {
-                answer.Background = Brushes.Red;
+                //answer.Background = Brushes.Red;
+                lblCorrect.Background = Brushes.Red;
+                lblCorrect.Content = "Incorrect, Try Again :(";
+                score--;
+                lblScore.Content = score;
 
             } 
         }
@@ -121,6 +124,7 @@ namespace DiatonicOctopotato
             btnTerm2.Background = Brushes.White;
             btnTerm3.Background = Brushes.White;
             btnTerm4.Background = Brushes.White;
+            lblCorrect.Background = Brushes.White;
         }
 
         private void Window_Closed(object sender, EventArgs e)

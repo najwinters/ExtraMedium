@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DiatonicOctopotato
 {
@@ -31,6 +32,11 @@ namespace DiatonicOctopotato
             return list[index];
         }
 
+        static public int getCurIndex()
+        {
+            return curAssignment;
+        }
+
         static public int getTotal()
         {
             return total;
@@ -43,9 +49,20 @@ namespace DiatonicOctopotato
 
         static public void createList(string name)
         {
-            list[total] = new Assignment();
-            list[total].setName(name);
-            total++;
+            if (total < 10)
+            {
+                list[total] = new Assignment();
+                list[total].setName(name);
+                total++;
+            }
+            else
+            {
+                MessageBox.Show("You've reached the maximum number of assignments!");
+            }
+        }
+        static public void getAsmTotal()
+        {
+
         }
     }
 

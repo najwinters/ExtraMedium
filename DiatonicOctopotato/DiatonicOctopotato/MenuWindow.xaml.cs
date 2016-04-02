@@ -25,7 +25,7 @@ namespace DiatonicOctopotato
         public MenuWindow()
         {
             InitializeComponent();
-
+            
         }
         int termNum;
         private void button_Click(object sender, RoutedEventArgs e)
@@ -39,12 +39,14 @@ namespace DiatonicOctopotato
         {
             Management ManageWindow = new Management();
             ManageWindow.Show();
+            this.Hide();
         }
 
         private void mCBN_Click(object sender, RoutedEventArgs e)
         {
             MultipleChoice mCWin = new MultipleChoice();
             mCWin.Show();
+            this.Hide();
             
 
 
