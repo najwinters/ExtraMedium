@@ -129,7 +129,7 @@ namespace DiatonicOctopotato
             MenuWindow menuWindow = new MenuWindow();
             if (AssignmentList.getAssignment().getTotal() < 4)
             {
-                menuWindow.mCBN.IsEnabled = false;
+                
                 menuWindow.Show();
             }
             else

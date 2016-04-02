@@ -93,6 +93,16 @@ namespace DiatonicOctopotato
         {
 
         }
+
+        private void fBBN_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnFlashCards_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 

@@ -43,6 +43,7 @@ namespace DiatonicOctopotato
             menuWindow.mCBN.IsEnabled = false;
             menuWindow.fBBN.IsEnabled = false;
             menuWindow.btnFlashCards.IsEnabled = false;
+
             menuWindow.Show();           
 
         }
@@ -56,6 +57,11 @@ namespace DiatonicOctopotato
             
         }
 
-
+        private void asgnBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Management manage = new Management();
+            manage.Show();
+            this.Close();
+        }
     }
 }
