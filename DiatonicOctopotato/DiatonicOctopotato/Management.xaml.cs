@@ -173,7 +173,7 @@ namespace DiatonicOctopotato
 
         void kEE()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"images\mySound.wav");
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\wintenat000\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\images\mySound.wav");
             simpleSound.Play();
         }
         private void removeList_Click(object sender, RoutedEventArgs e)
@@ -225,8 +225,6 @@ namespace DiatonicOctopotato
         }
         private void homeBTN_Click(object sender, RoutedEventArgs e)
         {
-            MenuWindow menuWindow = new MenuWindow();
-            menuWindow.Show();
             this.Close();
         }
 
