@@ -7,14 +7,18 @@
         mc:Ignorable="d"
         Title="Study List Management" Height="675" Width="1200" Closed="Management1_Closed" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="24" Margin="28,599,0,0" VerticalAlignment="Top" Width="76" Click="ImportListButton_Click"/>
-        <Button x:Name="ExportList" Content="Export List" HorizontalAlignment="Left" Height="24" Margin="233,599,0,0" VerticalAlignment="Top" Width="76" Click="ExportListButton_Click"/>
-        <Button x:Name="newList" Content="New List" HorizontalAlignment="Left" Height="22" Margin="355,182,0,0" VerticalAlignment="Top" Width="89" Click="newList_Click"/>
-        <Button x:Name="removeList" Content="Remove List" HorizontalAlignment="Left" Height="22" Margin="355,210,0,0" VerticalAlignment="Top" Width="89" Click="removeList_Click"/>
-        <Button x:Name="editList" Content="Edit List" HorizontalAlignment="Left" Height="22" Margin="355,236,0,0" VerticalAlignment="Top" Width="89" Click="editTerms_Click"/>
-        <ListBox x:Name="studyLists" HorizontalAlignment="Left" Height="417" Margin="10,163,0,0" VerticalAlignment="Top" Width="314" SelectionChanged="studyLists_SelectionChanged"/>
-        <Button x:Name="selectTerms" Content="Select List" HorizontalAlignment="Left" Height="22" Margin="355,264,0,0" VerticalAlignment="Top" Width="89" Click="selectList_Click"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="778,286,0,0" TextWrapping="Wrap" Text="Will fix layout after Dallin finished design. Don't worry." VerticalAlignment="Top" Height="181" Width="226" FontSize="20"/>
-        
+        <Image x:Name="image" HorizontalAlignment="Left" Height="661" VerticalAlignment="Top" Width="1194" Margin="0,0,0,-14" Source="images/general study interface screen.jpg"/>
+
+        <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="40" Margin="745,291,0,0" VerticalAlignment="Top" Width="133" Click="ImportListButton_Click"/>
+        <Button x:Name="ExportList" Content="Export List" HorizontalAlignment="Left" Height="40" Margin="745,336,0,0" VerticalAlignment="Top" Width="133" Click="ExportListButton_Click" RenderTransformOrigin="0.474,0.458"/>
+        <Button x:Name="newList" Content="New List" HorizontalAlignment="Left" Height="40" Margin="745,111,0,0" VerticalAlignment="Top" Width="133" Click="newList_Click"/>
+        <Button x:Name="removeList" Content="Remove List" HorizontalAlignment="Left" Height="40" Margin="745,156,0,0" VerticalAlignment="Top" Width="133" Click="removeList_Click"/>
+        <Button x:Name="editList" Content="Edit List" HorizontalAlignment="Left" Height="40" Margin="745,201,0,0" VerticalAlignment="Top" Width="133" Click="editTerms_Click"/>
+        <ListBox x:Name="studyLists" HorizontalAlignment="Left" Height="510" Margin="378,111,0,0" VerticalAlignment="Top" Width="342" SelectionChanged="studyLists_SelectionChanged"/>
+        <Button x:Name="selectTerms" Content="Select List" HorizontalAlignment="Left" Height="40" Margin="745,246,0,0" VerticalAlignment="Top" Width="133" Click="selectList_Click"/>
+        <Button x:Name="testBTN" Content="Button" HorizontalAlignment="Left" Margin="289,67,0,0" VerticalAlignment="Top" Width="81" RenderTransformOrigin="-0.64,0.727" Height="34" Click="testBTN_Click" Opacity="0"/>
+        <Button x:Name="homeBTN" Content="Button" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="111" Height="64" Click="homeBTN_Click" Opacity="0"/>
+        <Button x:Name="studyBTN" Content="Button" HorizontalAlignment="Left" Margin="121,0,0,0" VerticalAlignment="Top" Width="105" Height="64" Click="studyBTN_Click"/>
+
     </Grid>
 </Window>

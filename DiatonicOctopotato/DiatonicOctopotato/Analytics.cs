@@ -11,7 +11,6 @@ namespace DiatonicOctopotato
         public static int mCScore;
         public static int fCScore;
         public static int fITBScore;
-        public static int average;
         public static bool gotMC = false;
         public static bool gotFC = false;
         public static bool gotFITB = false;

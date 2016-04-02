@@ -219,5 +219,51 @@ namespace DiatonicOctopotato
             }
         }
 
+        private void testBTN_Click(object sender, RoutedEventArgs e)
+        {
+            if (AssignmentList.getTotal() == 0 || AssignmentList.getAssignment().getTotal() == 0)
+            {
+
+            }
+            else
+            {
+                MultipleChoice mc = new MultipleChoice();
+                mc.Show();
+                this.Close();
+            }
+        }
+        private void homeBTN_Click(object sender, RoutedEventArgs e)
+        {
+            MenuWindow menuWindow = new MenuWindow();
+            if (AssignmentList.getTotal() == 0 || AssignmentList.getAssignment().getTotal() == 0)
+            {
+                menuWindow.fBBN.IsEnabled = false;
+                menuWindow.mCBN.IsEnabled = false;
+                menuWindow.btnFlashCards.IsEnabled = false;
+                menuWindow.Show();
+            }
+            else if (AssignmentList.getAssignment().getTotal() < 4)
+            {
+                menuWindow.mCBN.IsEnabled = false;
+                menuWindow.Show();
+            }
+            else
+            {
+                menuWindow.Show();
+                int termNums = AssignmentList.getAssignment().getTotal();
+
+                for (int i = 0; i < termNums; i++)
+                {
+                    menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
+                }
+            }
+        }
+
+        private void studyBTN_Click(object sender, RoutedEventArgs e)
+        {
+            MenuWindow mW = new MenuWindow();
+            mW.Show();
+            this.Close();
+        }
     }
 }
