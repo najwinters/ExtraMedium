@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
+using System.Media;
 
 namespace DiatonicOctopotato
 {
@@ -73,7 +74,16 @@ namespace DiatonicOctopotato
 
         private void selectList_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            MenuWindow menuWindow = new MenuWindow();
+            if (studyLists.SelectedIndex != -1) {
+                AssignmentList.setAssignment(studyLists.SelectedIndex);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please select an assignment first!");
+            }
+            
         }
 
         private void ImportListButton_Click(object sender, RoutedEventArgs e)
@@ -126,7 +136,33 @@ namespace DiatonicOctopotato
                 }
             }
         }
+        private static readonly Key[] _kC = new[] { Key.Up, Key.Up, Key.Down, Key.Down, Key.Left, Key.Right, Key.Left, Key.Right, Key.B, Key.A };
+        int _kCI = 0;
 
+
+        protected override void OnPreviewKeyDown(KeyEventArgs e)
+        {
+            base.OnPreviewKeyDown(e);
+            if (e.Key == _kC[_kCI])
+            {
+                _kCI++;
+                if (_kCI == _kC.Length)
+                {
+                    _kCI = 0;
+                    kEE();
+                }
+            }
+            else
+            {
+                _kCI = 0;
+            }
+        }
+
+        void kEE()
+        {
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\wintenat000\Documents\Visual Studio 2015\Projects\ExtraMedium\DiatonicOctopotato\DiatonicOctopotato\images\mySound.wav");
+            simpleSound.Play();
+        }
         private void removeList_Click(object sender, RoutedEventArgs e)
         {
             //DECKER GET YOUR CRAP TOGETHER
