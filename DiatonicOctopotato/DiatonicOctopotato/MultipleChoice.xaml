@@ -12,7 +12,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Image x:Name="image" HorizontalAlignment="Left" Height="481" VerticalAlignment="Top" Width="1194" Source="images/games interface.jpg" Grid.ColumnSpan="2"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="481" VerticalAlignment="Top" Width="1194" Source="images/general study interface screen.jpg" Grid.ColumnSpan="2"/>
 
         <Button x:Name="button" Content="Start Game" HorizontalAlignment="Left" Height="37" Margin="299,255,0,0" VerticalAlignment="Top" Width="82" Click="button_Click"/>
         <Button x:Name="btnTerm1" Content="" HorizontalAlignment="Left" Height="38" Margin="10,169,0,0" VerticalAlignment="Top" Width="102" Grid.Column="1" Click="btnTerm1_Click"/>
