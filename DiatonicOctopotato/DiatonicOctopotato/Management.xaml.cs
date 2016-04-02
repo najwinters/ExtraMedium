@@ -77,10 +77,11 @@ namespace DiatonicOctopotato
             MenuWindow menuWindow = new MenuWindow();
             if (studyLists.SelectedIndex != -1) {
                 AssignmentList.setAssignment(studyLists.SelectedIndex);
+                this.Close();
             }
             else
             {
-                MessageBox.Show("");
+                MessageBox.Show("Please select an assignment first!");
             }
             
         }
