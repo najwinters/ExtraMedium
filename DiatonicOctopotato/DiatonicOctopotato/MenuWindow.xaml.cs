@@ -25,7 +25,7 @@ namespace DiatonicOctopotato
         public MenuWindow()
         {
             InitializeComponent();
-            if (AssignmentList.getCurIndex() == -1)
+            if(AssignmentList.getAssignment() == null)
             {
                 errorBlock.Visibility = Visibility.Visible;
             }
