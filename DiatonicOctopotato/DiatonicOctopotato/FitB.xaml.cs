@@ -19,9 +19,10 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class FitB : Window
     {
+        int termNums = AssignmentList.getAssignment().getTotal();
        /* public string[] setAnswers()
         {
-
+            
             Random rnd = new Random();
             string[] answers;
             int a = rnd.Next(0, termNums--);
@@ -35,16 +36,16 @@ namespace DiatonicOctopotato
             string[] rndTemp = answers.OrderBy(x => rnd.Next()).ToArray();
             return rndTemp;
 
-        }
+        }*/
         private int GiveMeANumber(int a, int b, int c)
         {
-            var exclude = new HashSet<int>() { a, b, c };
+            ;       var exclude = new HashSet<int>() { a, b, c };
             var range = Enumerable.Range(0, termNums--).Where(i => !exclude.Contains(i));
             var rand = new System.Random();
             int index = rand.Next(0, termNums - exclude.Count);
             termNums++;
             return range.ElementAt(index);
-        }*/
+        }
         public FitB()
         {
             InitializeComponent();
@@ -71,7 +72,7 @@ namespace DiatonicOctopotato
         {
 
 
-            if (txtFillInAnswer.Text == correctAnswer)  //AssignmentList.getAssignment().GetList(a, 0))
+            if (txtFillInAnswer.Text.Equals(correctAnswer))  //AssignmentList.getAssignment().GetList(a, 0))
 
             {
                 lblCorrect.Content = "Correct!!";
@@ -97,6 +98,8 @@ namespace DiatonicOctopotato
             Random rnd = new Random();
             a = rnd.Next(0, AssignmentList.getAssignment().getTotal());
             txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
+            correctAnswer = AssignmentList.getAssignment().GetList(a, 0);
+
             txtFillInAnswer.Text = "";
             lblCorrect.Content = "";
             lblCorrect.Background = Brushes.White;
@@ -123,6 +126,7 @@ namespace DiatonicOctopotato
             Random rnd = new Random();
             a = rnd.Next(0, AssignmentList.getAssignment().getTotal());
             txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
+            correctAnswer = AssignmentList.getAssignment().GetList(a, 0);
             txtFillInAnswer.Text = "";
             lblCorrect.Content = "";
             lblCorrect.Background = Brushes.White;

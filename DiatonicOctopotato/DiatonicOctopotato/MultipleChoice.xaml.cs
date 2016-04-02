@@ -67,7 +67,6 @@ namespace DiatonicOctopotato
         public string term4;
         public string correctAnswer;
         string[] currentProblem = new string[4];
-        int termNums;
 
 
         //start game button
