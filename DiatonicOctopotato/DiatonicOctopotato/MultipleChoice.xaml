@@ -27,9 +27,6 @@
         <Border BorderBrush="Black" BorderThickness="1" Margin="433,187,10,315"/>
         <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="208" Height="50" Click="button1_Click" Opacity="0"/>
         <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="223,5,0,0" VerticalAlignment="Top" Width="235" Height="60" Click="button2_Click" Opacity="0"/>
-        <Button x:Name="button3" Content="Button" HorizontalAlignment="Left" Margin="51,65,0,0" VerticalAlignment="Top" Width="131" Height="34" Click="button3_Click" Opacity="0"/>
-        <Button x:Name="button4" Content="Button" HorizontalAlignment="Left" Margin="206,70,0,0" VerticalAlignment="Top" Width="85" Height="29" Opacity="0" Click="button4_Click"/>
-        <Rectangle Fill="#FF6DC9ED" HorizontalAlignment="Left" Height="29" Margin="379,70,0,0" Stroke="#FF6DC9ED" VerticalAlignment="Top" Width="172"/>
 
     </Grid>
 </Window>
