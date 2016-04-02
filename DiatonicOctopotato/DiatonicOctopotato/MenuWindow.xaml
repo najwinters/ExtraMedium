@@ -9,6 +9,9 @@
     <Grid>
         <Image x:Name="image" HorizontalAlignment="Left" Height="118" VerticalAlignment="Top" Width="1194" Source="images/general study interface screen.jpg"/>
         <TextBlock x:Name="errorBlock" HorizontalAlignment="Left" Margin="10,150,0,0" TextWrapping="Wrap" Text="Please Select an Assignment" VerticalAlignment="Top" Height="90" Width="1174" TextAlignment="Center" FontSize="36"/>
+        <Button x:Name="fBBN" Content="fBBN" HorizontalAlignment="Left" Margin="140,397,0,0" VerticalAlignment="Top" Width="164" Height="95"/>
+        <Button x:Name="mCBN" Content="mCBN" HorizontalAlignment="Left" Margin="394,397,0,0" VerticalAlignment="Top" Width="166" Height="95" Click="mCBN_Click_1"/>
+        <Button x:Name="btnFlashCards" Content="btnFlashCards" HorizontalAlignment="Left" Height="95" Margin="680,397,0,0" VerticalAlignment="Top" Width="158"/>
     </Grid>
 </Window>
 
