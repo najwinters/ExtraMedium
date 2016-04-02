@@ -98,7 +98,9 @@ namespace DiatonicOctopotato
             Button answer = (Button)sender;
             if ((string)answer.Content == correctAnswer) 
             {
-                answer.Background = Brushes.PaleGreen;
+                //answer.Background = Brushes.PaleGreen;
+                lblCorrect.Background = Brushes.Green;
+                lblCorrect.Content = "Correct!!";
                 button.IsEnabled = true;
                 score++;
                 lblScore.Content = score;
@@ -109,7 +111,9 @@ namespace DiatonicOctopotato
             }
             else
             {
-                answer.Background = Brushes.Red;
+                //answer.Background = Brushes.Red;
+                lblCorrect.Background = Brushes.Red;
+                lblCorrect.Content = "Incorrect, Try Again :(";
                 score--;
                 lblScore.Content = score;
 
@@ -121,6 +125,7 @@ namespace DiatonicOctopotato
             btnTerm2.Background = Brushes.White;
             btnTerm3.Background = Brushes.White;
             btnTerm4.Background = Brushes.White;
+            lblCorrect.Background = Brushes.White;
         }
 
         private void Window_Closed(object sender, EventArgs e)
