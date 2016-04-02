@@ -91,7 +91,9 @@ namespace DiatonicOctopotato
 
         private void mCBN_Click_1(object sender, RoutedEventArgs e)
         {
-
+            MultipleChoice m = new MultipleChoice();
+            m.Show();
+            this.Close();
         }
 
         private void fBBN_Click_1(object sender, RoutedEventArgs e)
@@ -104,11 +106,18 @@ namespace DiatonicOctopotato
 
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Management apage = new Management();
-            apage.Show();
-            this.Hide();
+            Management m = new Management();
+            m.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow m = new MainWindow();
+            m.Show();
+            this.Close();
         }
     }
 }
