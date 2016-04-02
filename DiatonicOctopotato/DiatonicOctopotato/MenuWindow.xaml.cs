@@ -78,7 +78,7 @@ namespace DiatonicOctopotato
         {
             for (int i = 0; i < 40; i++)
             {
-                if (Assignment.GetList(i, 0) != "")
+                if (AssignmentList.getAssignment().GetList(i, 0) != "")
                 {
                     termNum++;
                 }

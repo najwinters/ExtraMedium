@@ -36,7 +36,7 @@ namespace DiatonicOctopotato
         private void KeyEvent()
         {
 
-            if (txtFillInAnswer.Text == Assignment.GetList(a, 0))
+            if (txtFillInAnswer.Text == AssignmentList.getAssignment().GetList(a, 0))
             {
                 lblCorrect.Content = "Correct";
                 lblCorrect.Background = Brushes.Green;
@@ -54,7 +54,7 @@ namespace DiatonicOctopotato
             //randomly assign a definition
             Random rnd = new Random();
             a = rnd.Next(0, termNums);
-            txtblkDefinition.Text = Assignment.GetList(a, 1);
+            txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
             txtFillInAnswer.Text = "";
             lblCorrect.Content = "";
             lblCorrect.Background = Brushes.White;
@@ -69,14 +69,14 @@ namespace DiatonicOctopotato
             termNums = 0;
             for (int i = 0; i < 40; i++)
             {
-                if (Assignment.GetList(i, 0) != "")
+                if (AssignmentList.getAssignment().GetList(i, 0) != "")
                 {
                     termNums++;
                 }
             }
             for (int i = 0; i < termNums; i++)
             {
-                menuWindow.termList.Items.Add(Assignment.GetList(i, 0));
+                menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
             }
         }
     }
