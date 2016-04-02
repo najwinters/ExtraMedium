@@ -105,10 +105,6 @@ namespace DiatonicOctopotato
             btnBack.IsEnabled = false;
             btnNext.IsEnabled = false;
         }
-        private void Flashcards1_Closed(object sender, EventArgs e)
-        {
-
-        }
 
         private void Flashcards1_Closed_1(object sender, EventArgs e)
         {
@@ -184,14 +180,6 @@ namespace DiatonicOctopotato
                 this.Close();
             }
 
-        }
-
-        private void analyticsBTN_Click(object sender, RoutedEventArgs e)
-        {
-            AnalyticsPage aPage = new AnalyticsPage();
-            aPage.Show();
-            this.Close();
-            
         }
     }
     public class Question
