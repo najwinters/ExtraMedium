@@ -22,7 +22,6 @@ namespace DiatonicOctopotato
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -35,30 +34,6 @@ namespace DiatonicOctopotato
         private void inputListBN_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            tBDef.Text = AssignmentList.getAssignment().getList((termList.SelectedIndex), 1);
-        }
-        public void doLB() {
-            int termNums = 0;
-            for (int i = 0; i < 40; i++)
-            {
-                if (AssignmentList.getAssignment().GetList(i, 0) != "") {
-                    termNums++;
-                }
-            }
-            for (int i = 0; i < termNums; i++) {
-                termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
-            }
-        }
-
-        private void fBBN_Click(object sender, RoutedEventArgs e)
-        {
-            FitB fITB = new FitB();
-            fITB.Show();
-            this.Hide();
         }
     }
 }

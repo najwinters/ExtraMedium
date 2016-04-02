@@ -24,12 +24,8 @@ namespace DiatonicOctopotato
             InitializeComponent();
             txtFillInAnswer.IsEnabled = false;
         }
-
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            MenuWindow menuWindow = new MenuWindow();
-            menuWindow.Show();
-        }
+        int termNums;
+        int a;
 
         private void txtFillInAnswer_KeyDown(object sender, KeyEventArgs e)
         {
@@ -40,7 +36,10 @@ namespace DiatonicOctopotato
         }
         private void KeyEvent()
         {
-            if(txtFillInAnswer.Text == "Mammal")//get the correct answer from the list for the random definition
+
+
+            if (txtFillInAnswer.Text == AssignmentList.getAssignment().GetList(a, 0))
+
             {
                 lblCorrect.Content = "Correct";
                 lblCorrect.Background = Brushes.Green;
@@ -56,14 +55,37 @@ namespace DiatonicOctopotato
         private void btnStartGame_Click(object sender, RoutedEventArgs e)
         {
             //randomly assign a definition
+<<<<<<< HEAD
             txtFillInAnswer.IsEnabled = true;
             txtblkDefinition.Text = "What is a pig";//get a random Definition from the list
+=======
+            Random rnd = new Random();
+            a = rnd.Next(0, termNums);
+            txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
+>>>>>>> 5f98d02ea6057571fbda0597d926af4b699132e5
             txtFillInAnswer.Text = "";
             lblCorrect.Content = "";
             lblCorrect.Background = Brushes.White;
-            btnStartGame.Content = "New Game";
+            btnStartGame.Content = "Next Question";
 
 
+        }
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            MenuWindow menuWindow = new MenuWindow();
+            menuWindow.Show();
+            termNums = 0;
+            for (int i = 0; i < 40; i++)
+            {
+                if (AssignmentList.getAssignment().GetList(i, 0) != "")
+                {
+                    termNums++;
+                }
+            }
+            for (int i = 0; i < termNums; i++)
+            {
+                menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
+            }
         }
     }
 }

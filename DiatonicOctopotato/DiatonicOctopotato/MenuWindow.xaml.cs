@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -26,12 +27,12 @@ namespace DiatonicOctopotato
             InitializeComponent();
 
         }
-
+        int termNum;
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Window1 nTWin = new Window1();
             nTWin.Show();
-            this.Hide();
+           
         }
 
         private void OpenManagement_Click(object sender, RoutedEventArgs e)
@@ -44,7 +45,7 @@ namespace DiatonicOctopotato
         {
             MultipleChoice mCWin = new MultipleChoice();
             mCWin.Show();
-            this.Hide();
+            
 
 
         }
@@ -56,21 +57,14 @@ namespace DiatonicOctopotato
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            tBDef.Text = Assignment.getList((termList.SelectedIndex), 1);
+            tBDef.Text = AssignmentList.getAssignment().getList((termList.SelectedIndex), 1);
         }
         public void doLB()
         {
-            int termNums = 0;
-            for (int i = 0; i < 40; i++)
+            
+            for (int i = 0; i < AssignmentList.getAssignment().getTotal(); i++)
             {
-                if (Assignment.GetList(i, 0) != "")
-                {
-                    termNums++;
-                }
-            }
-            for (int i = 0; i < termNums; i++)
-            {
-                termList.Items.Add(Assignment.GetList(i, 0));
+                termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
             }
         }
 
@@ -79,6 +73,17 @@ namespace DiatonicOctopotato
             FitB fITB = new FitB();
             fITB.Show();
             this.Hide();
+        }
+        private int getTermNum()
+        {
+            for (int i = 0; i < 40; i++)
+            {
+                if (AssignmentList.getAssignment().GetList(i, 0) != "")
+                {
+                    termNum++;
+                }
+            }
+            return termNum;
         }
     }
 }

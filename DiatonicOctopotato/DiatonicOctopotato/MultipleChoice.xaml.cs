@@ -33,7 +33,7 @@ namespace DiatonicOctopotato
             termNums = 0;
             for (int i = 0; i < 40; i++)
             {
-                if (Assignment.GetList(i, 0) != null)
+                if (AssignmentList.getAssignment().GetList(i, 0) != null)
                 {
                     termNums++;
                 }
@@ -41,13 +41,13 @@ namespace DiatonicOctopotato
             Random rnd = new Random();
             string[] answers;
             int a = rnd.Next(0, termNums--);
-            txtblkDefinition.Text = Assignment.GetList(a, 1);
-            correctAnswer = Assignment.getList(a, 0);
+            txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
+            correctAnswer = AssignmentList.getAssignment().getList(a, 0);
             termNums++;
             int b = GiveMeANumber(a, a, a);
             int c = GiveMeANumber(a, b, b);
             int d = GiveMeANumber(a, b, c);
-            answers = new string[4] { correctAnswer, Assignment.GetList(b, 0), Assignment.GetList(c, 0), Assignment.GetList(d, 0)};
+            answers = new string[4] { correctAnswer, AssignmentList.getAssignment().GetList(b, 0), AssignmentList.getAssignment().GetList(c, 0), AssignmentList.getAssignment().GetList(d, 0)};
             string[] rndTemp = answers.OrderBy(x => rnd.Next()).ToArray();
             return rndTemp;
         }
@@ -113,8 +113,22 @@ namespace DiatonicOctopotato
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+
+            MenuWindow menuWindow = new MenuWindow();
+            menuWindow.Show();
+            int termNums = 0;
+            for (int i = 0; i < 40; i++)
+            {
+                if (AssignmentList.getAssignment().GetList(i, 0) != "")
+                {
+                    termNums++;
+                }
+            }
+            for (int i = 0; i < termNums; i++)
+            {
+                menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
+            }
+
         }
     }
 }
