@@ -181,6 +181,15 @@ namespace DiatonicOctopotato
             }
 
         }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void AssignmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
     public class Question
     {

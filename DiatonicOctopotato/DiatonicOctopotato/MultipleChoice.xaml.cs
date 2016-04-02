@@ -153,15 +153,11 @@ namespace DiatonicOctopotato
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            MenuWindow menu = new MenuWindow();
-            menu.Show();
             this.Close();
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            Management m = new Management();
-            m.Show();
             this.Close();
         }
 
