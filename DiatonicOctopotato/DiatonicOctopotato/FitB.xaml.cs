@@ -20,6 +20,7 @@ namespace DiatonicOctopotato
     public partial class FitB : Window
     {
         int termNums = AssignmentList.getAssignment().getTotal();
+        public int score = 0;
        /* public string[] setAnswers()
         {
             
@@ -75,17 +76,21 @@ namespace DiatonicOctopotato
             if (txtFillInAnswer.Text.Equals(correctAnswer))  //AssignmentList.getAssignment().GetList(a, 0))
 
             {
+                score++;
                 lblCorrect.Content = "Correct!!";
                 lblCorrect.Background = Brushes.Green;
                 txtFillInAnswer.IsEnabled = false;
                 btnNextGame.IsEnabled = true;
+                lblScore.Content = score;
             }
             else
             {
+                score--;
                 lblCorrect.Content = "Incorrect. Try Again";
                 lblCorrect.Background = Brushes.Red;
+                lblScore.Content = score;
 
-                
+
             }
 
         }

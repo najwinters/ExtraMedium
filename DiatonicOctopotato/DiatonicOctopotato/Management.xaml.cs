@@ -172,7 +172,8 @@ namespace DiatonicOctopotato
             }
             else
             {
-                studyLists.Items.RemoveAt(studyLists.SelectedIndex);
+                AssignmentList.removeAssignment(studyLists.SelectedIndex);
+                loadAssignmentList();
             }
         }
 
