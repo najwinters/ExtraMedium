@@ -31,6 +31,11 @@ namespace DiatonicOctopotato
             return list[index];
         }
 
+        static public int getCurIndex()
+        {
+            return curAssignment;
+        }
+
         static public int getTotal()
         {
             return total;
