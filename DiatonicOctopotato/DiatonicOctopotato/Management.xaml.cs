@@ -123,9 +123,14 @@ namespace DiatonicOctopotato
         private void Management1_Closed(object sender, EventArgs e)
         {
             MenuWindow menuWindow = new MenuWindow();
-            if (AssignmentList.getTotal() == 0)
+            if (AssignmentList.getTotal() == 0 || AssignmentList.getAssignment().getTotal() == 0)
             {
                 menuWindow.fBBN.IsEnabled = false;
+                menuWindow.mCBN.IsEnabled = false;
+                menuWindow.Show();
+            }
+            else if(AssignmentList.getAssignment().getTotal() < 4)
+            {
                 menuWindow.mCBN.IsEnabled = false;
                 menuWindow.Show();
             }
