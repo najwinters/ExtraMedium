@@ -103,6 +103,13 @@ namespace DiatonicOctopotato
         {
 
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            AnalyticsPage a = new AnalyticsPage();
+            a.Show();
+            this.Close();
+        }
     }
 }
 
