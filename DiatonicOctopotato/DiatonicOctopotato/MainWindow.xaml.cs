@@ -28,6 +28,8 @@ namespace DiatonicOctopotato
         {
             MenuWindow menuWindow = new MenuWindow();
             this.Hide();
+            menuWindow.mCBN.IsEnabled = false;
+            menuWindow.fBBN.IsEnabled = false;
             menuWindow.Show();           
         }
 

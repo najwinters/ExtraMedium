@@ -30,26 +30,25 @@ namespace DiatonicOctopotato
         }
         public string[] setAnswers()
         {
-            termNums = 0;
-            for (int i = 0; i < 40; i++)
+            if (AssignmentList.getAssignment().getTotal() < 4)
             {
-                if (AssignmentList.getAssignment().GetList(i, 0) != null)
-                {
-                    termNums++;
-                }
+                MessageBox.Show("You must have four or more terms before using this feature!");
+                return null;
             }
-            Random rnd = new Random();
-            string[] answers;
-            int a = rnd.Next(0, termNums--);
-            txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
-            correctAnswer = AssignmentList.getAssignment().getList(a, 0);
-            termNums++;
-            int b = GiveMeANumber(a, a, a);
-            int c = GiveMeANumber(a, b, b);
-            int d = GiveMeANumber(a, b, c);
-            answers = new string[4] { correctAnswer, AssignmentList.getAssignment().GetList(b, 0), AssignmentList.getAssignment().GetList(c, 0), AssignmentList.getAssignment().GetList(d, 0)};
-            string[] rndTemp = answers.OrderBy(x => rnd.Next()).ToArray();
-            return rndTemp;
+            else {
+                Random rnd = new Random();
+                string[] answers;
+                int a = rnd.Next(0, termNums--);
+                txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
+                correctAnswer = AssignmentList.getAssignment().getList(a, 0);
+                termNums++;
+                int b = GiveMeANumber(a, a, a);
+                int c = GiveMeANumber(a, b, b);
+                int d = GiveMeANumber(a, b, c);
+                answers = new string[4] { correctAnswer, AssignmentList.getAssignment().GetList(b, 0), AssignmentList.getAssignment().GetList(c, 0), AssignmentList.getAssignment().GetList(d, 0) };
+                string[] rndTemp = answers.OrderBy(x => rnd.Next()).ToArray();
+                return rndTemp;
+            }
         }
         private int GiveMeANumber(int a, int b, int c)
         {
