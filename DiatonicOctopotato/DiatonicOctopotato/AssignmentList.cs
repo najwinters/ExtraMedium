@@ -60,10 +60,6 @@ namespace DiatonicOctopotato
                 MessageBox.Show("You've reached the maximum number of assignments!");
             }
         }
-        static public void getAsmTotal()
-        {
-
-        }
     }
 
 }

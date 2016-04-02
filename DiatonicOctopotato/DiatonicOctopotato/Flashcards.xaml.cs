@@ -95,6 +95,13 @@ namespace DiatonicOctopotato
             term = _term;
             definition = _def;
         }
+
+        private void Flashcards1_Closed(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 
     

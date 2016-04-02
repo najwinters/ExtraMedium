@@ -79,6 +79,26 @@ namespace DiatonicOctopotato
         private void ImportListButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openDialog = new OpenFileDialog();
+            if(openDialog.ShowDialog() == true)
+            {
+                using (StreamReader sr = new StreamReader(openDialog.FileName))
+                {
+                    AssignmentList.createList(sr.ReadLine());
+                    Assignment curAssignment = AssignmentList.getAssignment(AssignmentList.getTotal()-1); //Because Reasons. Don't question it.
+                    while(!sr.EndOfStream)
+                    {
+                        string line = sr.ReadLine();
+                        string[] term = line.Split('\t');
+                        if(term.Length == 2)
+                        {
+                            curAssignment.Save(term[0], curAssignment.getTotal(), 0);
+                            curAssignment.Save(term[1], curAssignment.getTotal(), 1);
+                            curAssignment.incTotal();
+                        }
+                    }
+                }
+            }
+            loadAssignmentList();
         }
 
         private void ExportListButton_Click(object sender, RoutedEventArgs e)
@@ -89,6 +109,7 @@ namespace DiatonicOctopotato
         private void removeList_Click(object sender, RoutedEventArgs e)
         {
             //DECKER GET YOUR CRAP TOGETHER
+            // NO! ~Decker
             if (studyLists.SelectedIndex == -1)
             {
                 MessageBox.Show("Please select an assignment first!");

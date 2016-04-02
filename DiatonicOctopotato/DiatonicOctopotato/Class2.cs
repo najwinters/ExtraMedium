@@ -38,7 +38,10 @@ namespace DiatonicOctopotato
         {   //Just make sure this is only called when a term is added.
             total++;
         }
-
+        public void decTotal()
+        {
+            total--;
+        }
         public void Save(string value, int i, int j)
         {
             list[i, j] = value;
