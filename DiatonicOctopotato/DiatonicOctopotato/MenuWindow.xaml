@@ -21,8 +21,7 @@
         <Button x:Name="OpenManagement" Content="Manage Study List(s)" HorizontalAlignment="Left" Margin="230,0,0,0" VerticalAlignment="Top" Width="209" Click="OpenManagement_Click" Height="63" Opacity="0"/>
         <Button x:Name="btnFlashCards" Content="Flash Cards" HorizontalAlignment="Left" Margin="48,64,0,0" VerticalAlignment="Top" Width="145" Click="btnFlashCards_Click" Height="35" Opacity="0"/>
         <Button x:Name="analyticsBTN" Content="Button" HorizontalAlignment="Left" Margin="370,68,0,0" VerticalAlignment="Top" Width="112" Height="36" Click="analyticsBTN_Click" Opacity="0"/>
-        <Button x:Name="homeBTN" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="112" Height="54" Click="homeBTN_Click" Opacity="0"/>
-
+            <Button x:Name="homeBTN" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="112" Height="54" Click="homeBTN_Click" Opacity="0"/>
     </Grid>
 </Window>
 
