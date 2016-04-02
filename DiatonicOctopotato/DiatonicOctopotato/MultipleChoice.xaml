@@ -11,6 +11,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+
         <Image x:Name="image" HorizontalAlignment="Left" Height="481" VerticalAlignment="Top" Width="1194" Source="images/general study interface screen.jpg" Grid.ColumnSpan="2"/>
 
         <Button x:Name="button" Content="Start Game" HorizontalAlignment="Left" Height="37" Margin="1114,560,-599,0" VerticalAlignment="Top" Width="82" Click="button_Click" Grid.Column="1"/>
@@ -19,13 +20,16 @@
         <Button x:Name="btnTerm3" Content="" HorizontalAlignment="Left" Height="38" Margin="10,255,0,0" VerticalAlignment="Top" Width="102" Grid.Column="1" Click="btnTerm1_Click"/>
         <Button x:Name="btnTerm4" Content="" HorizontalAlignment="Left" Height="38" Margin="10,298,0,0" VerticalAlignment="Top" Width="102" Grid.Column="1" Click="btnTerm1_Click"/>
         <Label x:Name="label1" Content="Match the definition with the term" HorizontalAlignment="Left" Margin="395,123,0,0" VerticalAlignment="Top" Height="26" Width="192" RenderTransformOrigin="0.49,0.5"/>
-        <TextBlock x:Name="txtblkDefinition" HorizontalAlignment="Left" Height="145" Margin="433,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+        <TextBlock x:Name="txtblkDefinition" HorizontalAlignment="Left" Height="145" Margin="433,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
         <Label x:Name="label2" Content="Score:" HorizontalAlignment="Left" Margin="545,360,0,0" VerticalAlignment="Top" Height="26" Width="42"/>
         <Label x:Name="lblScore" Content="0" HorizontalAlignment="Left" Margin="10,360,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.313,0.558" Height="26" Width="16" Grid.Column="1"/>
         <Label x:Name="lblCorrect" Content="" HorizontalAlignment="Left" Height="24" Margin="83,291,0,0" VerticalAlignment="Top" Width="153"/>
         <Border BorderBrush="Black" BorderThickness="1" Margin="433,187,10,315"/>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="121,10,0,0" VerticalAlignment="Top" Width="97" Height="50" Click="button1_Click" Opacity="0"/>
-        <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="218,0,0,0" VerticalAlignment="Top" Width="235" Height="60" Click="button2_Click"/>
+        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="208" Height="50" Click="button1_Click" Opacity="0"/>
+        <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="223,5,0,0" VerticalAlignment="Top" Width="235" Height="60" Click="button2_Click" Opacity="0"/>
+        <Button x:Name="button3" Content="Button" HorizontalAlignment="Left" Margin="201,65,0,0" VerticalAlignment="Top" Width="89" Height="32" Click="button3_Click" Opacity="0"/>
+        <Button x:Name="button4" Content="Button" HorizontalAlignment="Left" Margin="383,70,0,0" VerticalAlignment="Top" Width="105" Height="27" Click="button4_Click" Opacity="0"/>
+        <Button x:Name="button5" Content="Button" HorizontalAlignment="Left" Margin="55,70,0,0" VerticalAlignment="Top" Width="141" Height="27" Click="button5_Click"/>
 
     </Grid>
 </Window>
