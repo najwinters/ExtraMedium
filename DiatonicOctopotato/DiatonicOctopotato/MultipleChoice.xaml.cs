@@ -34,10 +34,10 @@ namespace DiatonicOctopotato
            
                 Random rnd = new Random();
                 string[] answers;
-                int a = rnd.Next(0, termNums--);
+                int z = AssignmentList.getAssignment().getTotal();
+                int a = rnd.Next(0, z--);
                 txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
                 correctAnswer = AssignmentList.getAssignment().getList(a, 0);
-                termNums++;
                 int b = GiveMeANumber(a, a, a);
                 int c = GiveMeANumber(a, b, b);
                 int d = GiveMeANumber(a, b, c);
@@ -48,12 +48,17 @@ namespace DiatonicOctopotato
         }
         private int GiveMeANumber(int a, int b, int c)
         {
-            var exclude = new HashSet<int>() {a,b,c};
-            var range = Enumerable.Range(0, termNums--).Where(i => !exclude.Contains(i));
-            var rand = new System.Random();
-            int index = rand.Next(0, termNums - exclude.Count);
-            termNums++;
-            return range.ElementAt(index);
+            var excludedNumbers = new List<int> {a, b, c};
+            int z = AssignmentList.getAssignment().getTotal();
+            Random rnd = new Random();
+
+            int number;
+
+            do
+            {
+                number = rnd.Next(0, z--);
+            } while (excludedNumbers.Contains(number));
+            return number;
         }
         public string defintion;
         public string term1;
