@@ -19,17 +19,25 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class Flashcards : Window
     {
-
+        int score = 0;
+        int tryCount = 0;
         List<Question> listOQuestions = new List<Question>();
         bool isTerm = false;
         int currentIndex = 0;
         int MAX_TERMS = AssignmentList.getAssignment().getTotal();
+        bool backClicked = false;
+        bool nextClicked = false;
+        bool rightClicked = false;
+        bool wrongClicked = false;
+        
 
 
         public Flashcards()
         {
             Assignment currentAssignment = AssignmentList.getAssignment();
             InitializeComponent();
+            btnBack.IsEnabled = false;
+            btnNext.IsEnabled = false;
             for (int i = 0; i < MAX_TERMS; i++) 
             {
                 
@@ -57,10 +65,14 @@ namespace DiatonicOctopotato
                 //reverse isTerm
                 isTerm = !isTerm;
             }
+
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
+
+            //tryCount++;
+            nextClicked = true;
             currentIndex++;
             isTerm = true;
             //go to the next definition
@@ -69,11 +81,17 @@ namespace DiatonicOctopotato
                 currentIndex = 0;
             }
             btnFlashCard_Click(new object(), new RoutedEventArgs());
+            CheckScore();
+            btnBack.IsEnabled = false;
+            btnNext.IsEnabled = false;
 
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
+            
+            backClicked = true;
+            //tryCount--;
             //go back to the previous definition
             currentIndex--;
             isTerm = true;
@@ -83,6 +101,9 @@ namespace DiatonicOctopotato
                 currentIndex = MAX_TERMS-1;
             }
             btnFlashCard_Click(new object(), new RoutedEventArgs());
+            CheckScore();
+            btnBack.IsEnabled = false;
+            btnNext.IsEnabled = false;
         }
         private void Flashcards1_Closed(object sender, EventArgs e)
         {
@@ -107,6 +128,68 @@ namespace DiatonicOctopotato
                     menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
                 }
             }
+        }
+
+        private void btnRight_Click(object sender, RoutedEventArgs e)
+        {
+            rightClicked = true;
+            //score++;
+            
+            btnBack.IsEnabled = true;
+            btnNext.IsEnabled = true;
+            CheckScore();
+        }
+
+        private void btnWrong_Click(object sender, RoutedEventArgs e)
+        {
+            wrongClicked = true;
+            //score--;
+           
+            btnBack.IsEnabled = true;
+            btnNext.IsEnabled = true;
+            CheckScore();
+        }
+        private void CheckScore()
+        {
+            if(backClicked && rightClicked)
+            {
+                tryCount--;
+                backClicked = false;
+                rightClicked = false;
+                lblScore.Content = score;
+                lblTryCount.Content = tryCount;
+            }
+            if(backClicked && wrongClicked)
+            {
+                tryCount--;
+                backClicked = false;
+                wrongClicked = false;
+                lblScore.Content = score;
+                lblTryCount.Content = tryCount;
+            }
+            if(nextClicked && rightClicked)
+            {
+                tryCount++;
+                score++;
+                rightClicked = false;
+                nextClicked = false;
+                lblScore.Content = score;
+                lblTryCount.Content = tryCount;
+            }
+            if(nextClicked && wrongClicked)
+            {
+                tryCount++;
+                score--;
+                nextClicked = false;
+                wrongClicked = false;
+                lblScore.Content = score;
+                lblTryCount.Content = tryCount;
+            }
+            if(tryCount == 15)
+            {
+                this.Close();
+            }
+
         }
     }
     public class Question

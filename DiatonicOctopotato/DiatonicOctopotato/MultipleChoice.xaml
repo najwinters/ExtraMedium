@@ -16,12 +16,14 @@
             <ColumnDefinition Width="32*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="button" Content="Start Game" HorizontalAlignment="Left" Height="37" Margin="10,10,0,0" VerticalAlignment="Top" Width="82" Click="button_Click" Grid.Column="1"/>
-        <Button x:Name="btnTerm1" Content="Term1" HorizontalAlignment="Left" Height="38" Margin="55,60,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
-        <Button x:Name="btnTerm2" Content="Term2" HorizontalAlignment="Left" Height="38" Margin="55,111,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
-        <Button x:Name="btnTerm3" Content="Term3" HorizontalAlignment="Left" Height="38" Margin="55,167,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
-        <Button x:Name="btnTerm4" Content="Term4" HorizontalAlignment="Left" Height="38" Margin="55,228,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
+        <Button x:Name="btnTerm1" Content="" HorizontalAlignment="Left" Height="38" Margin="55,60,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
+        <Button x:Name="btnTerm2" Content="" HorizontalAlignment="Left" Height="38" Margin="55,111,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
+        <Button x:Name="btnTerm3" Content="" HorizontalAlignment="Left" Height="38" Margin="55,167,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
+        <Button x:Name="btnTerm4" Content="" HorizontalAlignment="Left" Height="38" Margin="55,228,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Click="btnTerm1_Click"/>
         <Label x:Name="label1" Content="Match the definition with the term" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="26" Width="192" Grid.Column="1"/>
-        <TextBlock x:Name="txtblkDefinition" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="145" Margin="10,121,0,0" TextWrapping="Wrap" Text="Definition" VerticalAlignment="Top" Width="154"/>
+        <TextBlock x:Name="txtblkDefinition" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="145" Margin="10,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"><InlineUIContainer>
+        		<Border BorderBrush="Black" BorderThickness="1" Height="145" Width="153"/>
+        	</InlineUIContainer></TextBlock>
         <Label x:Name="label2" Content="Score:" Grid.Column="1" HorizontalAlignment="Left" Margin="20,332,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblScore" Content="0" Grid.Column="1" HorizontalAlignment="Left" Margin="67,332,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.313,0.558"/>
         <Label x:Name="lblCorrect" Grid.ColumnSpan="3" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="44,291,0,0" VerticalAlignment="Top" Width="153"/>
