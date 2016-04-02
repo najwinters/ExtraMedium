@@ -197,14 +197,11 @@ namespace DiatonicOctopotato
             MenuWindow menuWindow = new MenuWindow();
             if (AssignmentList.getTotal() == 0 || AssignmentList.getAssignment().getTotal() == 0)
             {
-                menuWindow.fBBN.IsEnabled = false;
-                menuWindow.mCBN.IsEnabled = false;
-                menuWindow.btnFlashCards.IsEnabled = false;
+
                 menuWindow.Show();
             }
             else if(AssignmentList.getAssignment().getTotal() < 4)
             {
-                menuWindow.mCBN.IsEnabled = false;
                 menuWindow.Show();
             }
             else
@@ -231,14 +228,11 @@ namespace DiatonicOctopotato
             MenuWindow menuWindow = new MenuWindow();
             if (AssignmentList.getTotal() == 0 || AssignmentList.getAssignment().getTotal() == 0)
             {
-                menuWindow.fBBN.IsEnabled = false;
-                menuWindow.mCBN.IsEnabled = false;
-                menuWindow.btnFlashCards.IsEnabled = false;
+
                 menuWindow.Show();
             }
             else if (AssignmentList.getAssignment().getTotal() < 4)
             {
-                menuWindow.mCBN.IsEnabled = false;
                 menuWindow.Show();
             }
             else
@@ -248,7 +242,7 @@ namespace DiatonicOctopotato
 
                 for (int i = 0; i < termNums; i++)
                 {
-                    menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
+                    
                 }
             }
         }
