@@ -57,6 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AssignmentList.cs" />
     <Compile Include="Class2.cs" />
     <Compile Include="FitB.xaml.cs">
       <DependentUpon>FitB.xaml</DependentUpon>
@@ -66,6 +67,9 @@
     </Compile>
     <Compile Include="MultipleChoice.xaml.cs">
       <DependentUpon>MultipleChoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewAssignment.xaml.cs">
+      <DependentUpon>NewAssignment.xaml</DependentUpon>
     </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
@@ -91,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MultipleChoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewAssignment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
