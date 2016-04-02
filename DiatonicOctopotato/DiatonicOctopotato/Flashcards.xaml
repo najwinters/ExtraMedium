@@ -7,13 +7,17 @@
         mc:Ignorable="d"
         Title="Flashcards" Height="675" Width="1200" ResizeMode="NoResize" Closed="Flashcards1_Closed">
     <Grid>
+
+        <Button x:Name="btnFlashCard" Content="Definition" HorizontalAlignment="Left" Height="172" Margin="34,24,0,0" VerticalAlignment="Top" Width="223" Click="btnFlashCard_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Height="34" Margin="22,214,0,0" VerticalAlignment="Top" Width="61" Click="btnBack_Click"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Height="34" Margin="212,214,0,0" VerticalAlignment="Top" Width="61" Click="btnNext_Click"/>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="flashBN" Content="Button" HorizontalAlignment="Left" Margin="345,92,0,0" VerticalAlignment="Top" Width="507" Height="319" Grid.ColumnSpan="2" FontSize="36" Click="flashBN_Click"/>
-        <Button x:Name="backBN" Content="Back" HorizontalAlignment="Left" Margin="345,482,0,0" VerticalAlignment="Top" Width="242" Height="82" FontSize="36"/>
-        <Button x:Name="nextBN" Content="Next" Grid.Column="1" HorizontalAlignment="Left" Margin="10,482,0,0" VerticalAlignment="Top" Width="245" Height="82" FontSize="36" Click="nextBN_Click"/>
+       
+
 
     </Grid>
 </Window>

@@ -19,6 +19,32 @@ namespace DiatonicOctopotato
     /// </summary>
     public partial class FitB : Window
     {
+       /* public string[] setAnswers()
+        {
+
+            Random rnd = new Random();
+            string[] answers;
+            int a = rnd.Next(0, termNums--);
+            txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
+            correctAnswer = AssignmentList.getAssignment().getList(a, 0);
+            termNums++;
+            int b = GiveMeANumber(a, a, a);
+            int c = GiveMeANumber(a, b, b);
+            int d = GiveMeANumber(a, b, c);
+            answers = new string[4] { correctAnswer, AssignmentList.getAssignment().GetList(b, 0), AssignmentList.getAssignment().GetList(c, 0), AssignmentList.getAssignment().GetList(d, 0) };
+            string[] rndTemp = answers.OrderBy(x => rnd.Next()).ToArray();
+            return rndTemp;
+
+        }
+        private int GiveMeANumber(int a, int b, int c)
+        {
+            var exclude = new HashSet<int>() { a, b, c };
+            var range = Enumerable.Range(0, termNums--).Where(i => !exclude.Contains(i));
+            var rand = new System.Random();
+            int index = rand.Next(0, termNums - exclude.Count);
+            termNums++;
+            return range.ElementAt(index);
+        }*/
         public FitB()
         {
             InitializeComponent();
@@ -31,6 +57,8 @@ namespace DiatonicOctopotato
             }
         }
         int a;
+        public string correctAnswer;
+
 
         private void txtFillInAnswer_KeyDown(object sender, KeyEventArgs e)
         {
@@ -43,10 +71,10 @@ namespace DiatonicOctopotato
         {
 
 
-            if (txtFillInAnswer.Text == AssignmentList.getAssignment().GetList(a, 0))
+            if (txtFillInAnswer.Text == correctAnswer)  //AssignmentList.getAssignment().GetList(a, 0))
 
             {
-                lblCorrect.Content = "Correct";
+                lblCorrect.Content = "Correct!!";
                 lblCorrect.Background = Brushes.Green;
                 txtFillInAnswer.IsEnabled = false;
                 btnNextGame.IsEnabled = true;
