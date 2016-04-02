@@ -118,7 +118,6 @@ namespace DiatonicOctopotato
             MenuWindow menuWindow = new MenuWindow();
             if (AssignmentList.getAssignment().getTotal() < 4)
             {
-                
                 menuWindow.Show();
             }
             else

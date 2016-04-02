@@ -89,6 +89,20 @@ namespace DiatonicOctopotato
             this.Hide();
         }
 
+        private void mCBN_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void fBBN_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnFlashCards_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 
