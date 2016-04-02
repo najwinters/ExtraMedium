@@ -9,13 +9,13 @@
     <Grid>
         <Image x:Name="image" HorizontalAlignment="Left" Height="661" VerticalAlignment="Top" Width="1194" Margin="0,0,0,-14" Source="images/assignment sub button.jpg"/>
 
-        <Button x:Name="ImportList" Content="Import List" HorizontalAlignment="Left" Height="40" Margin="745,291,0,0" VerticalAlignment="Top" Width="133" Click="ImportListButton_Click"/>
-        <Button x:Name="ExportList" Content="Export List" HorizontalAlignment="Left" Height="40" Margin="745,336,0,0" VerticalAlignment="Top" Width="133" Click="ExportListButton_Click" RenderTransformOrigin="0.474,0.458"/>
-        <Button x:Name="newList" Content="New List" HorizontalAlignment="Left" Height="40" Margin="745,111,0,0" VerticalAlignment="Top" Width="133" Click="newList_Click"/>
-        <Button x:Name="removeList" Content="Remove List" HorizontalAlignment="Left" Height="40" Margin="745,156,0,0" VerticalAlignment="Top" Width="133" Click="removeList_Click"/>
-        <Button x:Name="editList" Content="Edit List" HorizontalAlignment="Left" Height="40" Margin="745,201,0,0" VerticalAlignment="Top" Width="133" Click="editTerms_Click"/>
+        <Button x:Name="ImportList" Content="Import Assignment" HorizontalAlignment="Left" Height="40" Margin="735,115,0,0" VerticalAlignment="Top" Width="133" Click="ImportListButton_Click"/>
+        <Button x:Name="ExportList" Content="Export Assignment" HorizontalAlignment="Left" Height="40" Margin="735,160,0,0" VerticalAlignment="Top" Width="133" Click="ExportListButton_Click" RenderTransformOrigin="0.474,0.458"/>
+        <Button x:Name="newList" Content="New List" HorizontalAlignment="Left" Height="35" Margin="205,69,0,0" VerticalAlignment="Top" Width="54" Click="newList_Click" Opacity="0"/>
+        <Button x:Name="removeList" Content="Remove List" HorizontalAlignment="Left" Height="35" Margin="320,69,0,0" VerticalAlignment="Top" Width="88" Click="removeList_Click" Opacity="0"/>
+        <Button x:Name="editList" Content="Edit List" HorizontalAlignment="Left" Height="35" Margin="264,69,0,0" VerticalAlignment="Top" Width="51" Click="editTerms_Click" Opacity="0"/>
         <ListBox x:Name="studyLists" HorizontalAlignment="Left" Height="510" Margin="378,111,0,0" VerticalAlignment="Top" Width="342" SelectionChanged="studyLists_SelectionChanged"/>
-        <Button x:Name="selectTerms" Content="Select List" HorizontalAlignment="Left" Height="40" Margin="745,246,0,0" VerticalAlignment="Top" Width="133" Click="selectList_Click"/>
+        <Button x:Name="selectTerms" Content="Select Assignment" HorizontalAlignment="Left" Height="40" Margin="735,205,0,0" VerticalAlignment="Top" Width="133" Click="selectList_Click"/>
         <Button x:Name="homeBTN" Content="Button" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="111" Height="64" Click="homeBTN_Click" Opacity="0"/>
         <Button x:Name="studyBTN" Content="Button" HorizontalAlignment="Left" Margin="121,0,0,0" VerticalAlignment="Top" Width="105" Height="64" Click="studyBTN_Click" Opacity="0"/>
         <Image  HorizontalAlignment="Left" Height="73" VerticalAlignment="Top" Width="370" Margin="212,-9,0,0" Source="images/white assignments.jpg"/>
