@@ -15,8 +15,8 @@
         <Image Source="/images/untitled-3.jpg" Margin="10,0,-10,0" Grid.ColumnSpan="2"/>
         <Rectangle x:Name="topRect" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="88" Stroke="Black" VerticalAlignment="Top" Width="1192" StrokeThickness="0" Grid.ColumnSpan="2"/>
 
-        <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="557" Margin="0,88,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="36"/>
-        <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="557" Margin="622,88,-61,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="36" Grid.Column="1"/>
+        <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="557" Margin="0,88,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="80"/>
+        <Rectangle Fill="#D3D3D3" HorizontalAlignment="Left" Height="557" Margin="571,88,-10,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="36" Grid.Column="1"/>
 
         <Rectangle Name="studybutton" HorizontalAlignment="Left" Height="43" Margin="544,18,0,0" Stroke="#63BD63"  StrokeThickness="1" VerticalAlignment="Top" Width="102" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="52" Margin="254,317,0,0" TextWrapping="Wrap" Text="Study Smarter" VerticalAlignment="Top" Width="221" FontSize="30" Foreground="#FF4A8E8E" TextAlignment="Center"/>
