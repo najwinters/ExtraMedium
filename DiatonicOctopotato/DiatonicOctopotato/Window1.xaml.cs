@@ -41,18 +41,26 @@ namespace DiatonicOctopotato
 
         public void button_Click(object sender, RoutedEventArgs e)
         {
-            string term = termTB.Text;
-            string definition = defTB.Text;
-            Assignment curAssignment = AssignmentList.getAssignment();
-            curAssignment.Save(term, termList.SelectedIndex, 0);
-            curAssignment.Save(definition, termList.SelectedIndex, 1);
-            tNLabel.Content = "Number of Terms: " + curAssignment.getTotal();
-            if (curAssignment.getTotal() == 40) {
-                button.IsEnabled = false;
-                tLLabel.Content = "Term Limit Reached!";
-                tLLabel.Visibility = Visibility.Visible;
+            if (termList.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an item first!");
             }
-            loadTermList();
+            else
+            {
+                string term = termTB.Text;
+                string definition = defTB.Text;
+                Assignment curAssignment = AssignmentList.getAssignment();
+                curAssignment.Save(term, termList.SelectedIndex, 0);
+                curAssignment.Save(definition, termList.SelectedIndex, 1);
+                tNLabel.Content = "Number of Terms: " + curAssignment.getTotal();
+                if (curAssignment.getTotal() == 40)
+                {
+                    button.IsEnabled = false;
+                    tLLabel.Content = "Term Limit Reached!";
+                    tLLabel.Visibility = Visibility.Visible;
+                }
+                loadTermList();
+            }
         }
 
         private void Window_Closed(object sender, EventArgs e)
