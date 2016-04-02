@@ -74,6 +74,7 @@ namespace DiatonicOctopotato
         //start game button
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            button.Content = "Next Question";
             btnTerm1.IsEnabled = true;
             btnTerm2.IsEnabled = true;
             btnTerm3.IsEnabled = true;
@@ -87,6 +88,7 @@ namespace DiatonicOctopotato
             btnTerm3.Content = rndAnswers[2];
             btnTerm4.Content = rndAnswers[3];
             ResetTheButtons();
+            button.IsEnabled = false;
         }
 
         private void btnTerm1_Click(object sender, RoutedEventArgs e)
@@ -95,7 +97,17 @@ namespace DiatonicOctopotato
             if ((string)answer.Content == correctAnswer) 
             {
                 answer.Background = Brushes.PaleGreen;
-                //switch questions                                         
+                button.IsEnabled = true;
+                /*Random rnd = new Random();
+                currentProblem = setAnswers();
+                string[] rndAnswers = currentProblem.OrderBy(x => rnd.Next()).ToArray();
+                btnTerm1.Content = rndAnswers[0];
+                btnTerm2.Content = rndAnswers[1];
+                btnTerm3.Content = rndAnswers[2];
+                btnTerm4.Content = rndAnswers[3];
+                ResetTheButtons();*/
+                //switch questions  
+                                                       
             }
             else
             {
