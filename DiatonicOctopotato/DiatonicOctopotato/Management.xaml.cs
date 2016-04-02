@@ -148,6 +148,7 @@ namespace DiatonicOctopotato
             {
                 menuWindow.fBBN.IsEnabled = false;
                 menuWindow.mCBN.IsEnabled = false;
+                menuWindow.btnFlashCards.IsEnabled = false;
                 menuWindow.Show();
             }
             else if(AssignmentList.getAssignment().getTotal() < 4)

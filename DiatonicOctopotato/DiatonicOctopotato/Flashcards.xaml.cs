@@ -100,11 +100,5 @@ namespace DiatonicOctopotato
             term = _term;
             definition = _def;
         }
-
-        
-
-       
     }
-
-    
 }
