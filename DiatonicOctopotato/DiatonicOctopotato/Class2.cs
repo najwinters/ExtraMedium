@@ -11,7 +11,7 @@ namespace DiatonicOctopotato
         private string name;
         private string[,] list;
         private int total;
-
+        Analytics analytics = new Analytics();
         public Assignment()
         {
             name = "New Study List";

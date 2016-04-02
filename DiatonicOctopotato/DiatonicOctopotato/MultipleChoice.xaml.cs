@@ -135,17 +135,10 @@ namespace DiatonicOctopotato
 
         private void Window_Closed(object sender, EventArgs e)
         {
-
+            Analytics.mCReport(score);
             MenuWindow menuWindow = new MenuWindow();
             menuWindow.Show();
-            int termNums = 0;
-            for (int i = 0; i < 40; i++)
-            {
-                if (AssignmentList.getAssignment().GetList(i, 0) != "")
-                {
-                    termNums++;
-                }
-            }
+            int termNums = AssignmentList.getAssignment().getTotal();
             for (int i = 0; i < termNums; i++)
             {
                 menuWindow.termList.Items.Add(AssignmentList.getAssignment().GetList(i, 0));
