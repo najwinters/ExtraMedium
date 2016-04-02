@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Threading;
+using System.Media;
 
 namespace DiatonicOctopotato
 {
@@ -162,6 +163,46 @@ namespace DiatonicOctopotato
             Management m = new Management();
             m.Show();
             this.Close();
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            Flashcards f = new Flashcards();
+            f.Show();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            FitB f = new FitB();
+            f.Show();
+            this.Close();
+        }
+        private static readonly Key[] _kC = new[] { Key.Up, Key.Up, Key.Down, Key.Down, Key.Left, Key.Right, Key.Left, Key.Right, Key.B, Key.A };
+        int _kCI = 0;
+
+
+        protected override void OnPreviewKeyDown(KeyEventArgs e)
+        {
+            base.OnPreviewKeyDown(e);
+            if (e.Key == _kC[_kCI])
+            {
+                _kCI++;
+                if (_kCI == _kC.Length)
+                {
+                    _kCI = 0;
+                    kEE();
+                }
+            }
+            else
+            {
+                _kCI = 0;
+            }
+        }
+
+        void kEE()
+        {
+            MessageBox.Show("Decker. GET YOUR CRAP TOGETHER.");
         }
     }
 }
