@@ -16,10 +16,11 @@
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="99" Stroke="Black" VerticalAlignment="Top" Width="992"/>
         <Label x:Name="label" Content="Study Terms" HorizontalAlignment="Left" Margin="192,104,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="termList" HorizontalAlignment="Left" Height="377" VerticalAlignment="Top" Width="340" Margin="61,135,0,0" SelectionChanged="listBox_SelectionChanged"/>
-        <Button x:Name="OpenManagement" Content="Manage Study List(s)" HorizontalAlignment="Left" Margin="311,29,0,0" VerticalAlignment="Top" Width="150" Click="OpenManagement_Click" Height="41"/>
+        <Button x:Name="OpenManagement" Content="Manage Study List(s)" HorizontalAlignment="Left" Margin="116,29,0,0" VerticalAlignment="Top" Width="150" Click="OpenManagement_Click" Height="41"/>
         <Button x:Name="mCBN" Content="Multiple Choice" HorizontalAlignment="Left" Margin="544,29,0,0" VerticalAlignment="Top" Width="151" Click="mCBN_Click" Height="41"/>
         <Label x:Name="label1" Content="Definitions" HorizontalAlignment="Left" Margin="654,104,0,0" VerticalAlignment="Top"/>
         <Button x:Name="fBBN" Content="Fill in the Blank&#xA;" HorizontalAlignment="Left" Margin="784,29,0,0" VerticalAlignment="Top" Width="151" Click="fBBN_Click" Height="41" Grid.IsSharedSizeScope="True"/>
+        <Button x:Name="btnFlashCards" Content="Flash Cards" HorizontalAlignment="Left" Margin="332,29,0,0" VerticalAlignment="Top" Width="150" Click="btnFlashCards_Click" Height="41"/>
 
     </Grid>
 </Window>

@@ -11,11 +11,12 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="txtblkDefinition" HorizontalAlignment="Left" Height="80" Margin="60,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
-        <Label x:Name="label" Content="Fill In The Blank" HorizontalAlignment="Left" Height="24" Margin="87,12,0,0" VerticalAlignment="Top" Width="111"/>
+        <Label x:Name="label" Content="Fill In The Blank" HorizontalAlignment="Left" Height="24" Margin="87,10,0,0" VerticalAlignment="Top" Width="111"/>
         <Label x:Name="label_Copy" Content="Fill In the Term That Matches the Definition" HorizontalAlignment="Left" Height="24" Margin="23,41,0,0" VerticalAlignment="Top" Width="238"/>
-        <TextBox x:Name="txtFillInAnswer" HorizontalAlignment="Left" Height="24" Margin="60,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" KeyDown="txtFillInAnswer_KeyDown"/>
+        <TextBox x:Name="txtFillInAnswer" HorizontalAlignment="Left" Height="24" Margin="60,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" KeyDown="txtFillInAnswer_KeyDown" IsEnabled="False"/>
         <Button x:Name="btnStartGame" Content="Start Game" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" VerticalAlignment="Top" Width="72" Click="btnStartGame_Click"/>
         <Label x:Name="lblCorrect" Content="" HorizontalAlignment="Left" Height="48" Margin="60,198,0,0" VerticalAlignment="Top" Width="174" BorderThickness="2"/>
+        <Button x:Name="btnNextGame" Content="Next Question" HorizontalAlignment="Left" Height="26" Margin="185,10,0,0" VerticalAlignment="Top" Width="90" Click="btnNextGame_Click" Visibility="Hidden"/>
 
     </Grid>
 </Window>
