@@ -55,14 +55,10 @@ namespace DiatonicOctopotato
         private void btnStartGame_Click(object sender, RoutedEventArgs e)
         {
             //randomly assign a definition
-<<<<<<< HEAD
-            txtFillInAnswer.IsEnabled = true;
-            txtblkDefinition.Text = "What is a pig";//get a random Definition from the list
-=======
+
             Random rnd = new Random();
             a = rnd.Next(0, termNums);
             txtblkDefinition.Text = AssignmentList.getAssignment().GetList(a, 1);
->>>>>>> 5f98d02ea6057571fbda0597d926af4b699132e5
             txtFillInAnswer.Text = "";
             lblCorrect.Content = "";
             lblCorrect.Background = Brushes.White;
